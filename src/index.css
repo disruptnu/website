@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: "Faucet";
+  src: url("../public/fonts/A2Z-Faucet-Ultra.otf");
+}
+
+@font-face {
+  font-family: "Usual-Light";
+  src: url("../public/fonts/Usual-Light.otf");
+}
+
+@font-face {
+  font-family: "Usual-Regular";
+  src: url("../public/fonts/Usual-Regular.otf");
+}
