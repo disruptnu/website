@@ -47,23 +47,19 @@ const content = {
 
   consulting: {
     consultingBenefits: {
-
       benefit1: "TECHNICAL GUIDANCE",
 
       benefit2: "AGILE PARTNERSHIP",
 
       benefit3: "TARGETED SUPPORT",
-
     },
 
     consultingBenefitImgs: {
-
       consultingImg1: testImage1,
 
       consultingImg2: testImage1,
 
       consultingImg3: testImage1,
-
     },
   },
 
@@ -79,37 +75,42 @@ const content = {
 
       venture5Image: testImage1,
 
-      venture6Image: testImage1
-
+      venture6Image: testImage1,
     },
 
     pastVenturesNames: {
       venture1Name: "Venture 1",
 
       venture2Name: "Venture 2",
-  
+
       venture3Name: "Venture 3",
-  
+
       venture4Name: "Venture 4",
 
       venture5Name: "Venture 5",
-  
+
       venture6Name: "Venture 6",
     },
 
     pastVenturesDescriptions: {
-      venture1Desc: "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      venture1Desc:
+        "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
 
-      venture2Desc: "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  
-      venture3Desc: "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  
-      venture4Desc: "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      venture2Desc:
+        "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
 
-      venture5Desc: "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  
-      venture6Desc: "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    }
+      venture3Desc:
+        "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+
+      venture4Desc:
+        "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+
+      venture5Desc:
+        "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+
+      venture6Desc:
+        "Venture statement lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    },
   },
 
   newsroom: {
@@ -123,7 +124,6 @@ const content = {
       test4Header: "Test Case 4",
     },
   },
-  
 };
 
 export default content;

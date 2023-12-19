@@ -1,11 +1,11 @@
-import './App.css';
-import Home from './Components/Home';
-import About from './Components/About';
-import Ventures from './Components/Ventures';
-import Consulting from './Components/Consulting';
-import PastVentures from './Components/PastVentures';
-import Events from './Components/Events';
-import Newsroom from './Components/Newsroom';
+import "./App.css";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Ventures from "./Components/Ventures";
+import Consulting from "./Components/Consulting";
+import PastVentures from "./Components/PastVentures";
+import Events from "./Components/Events";
+import Newsroom from "./Components/Newsroom";
 import * as React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
@@ -16,13 +16,13 @@ function App() {
     <div className="w-full bg-black">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/About" element={<About />}/>
-          <Route path="/Consulting" element={<Consulting />}/>
-          <Route path="/Ventures" element={<Ventures />}/>
-          <Route path="/PastVentures" element={<PastVentures />}/>
-          <Route path="/Events" element={<Events />}/>
-          <Route path="/Newsroom" element={<Newsroom />}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Consulting" element={<Consulting />} />
+          <Route path="/Ventures" element={<Ventures />} />
+          <Route path="/PastVentures" element={<PastVentures />} />
+          <Route path="/Events" element={<Events />} />
+          <Route path="/Newsroom" element={<Newsroom />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -5,10 +5,9 @@ import linkedin from "../../img/linkedin.svg";
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {
-
   const scrollToTop = () => {
-    window.scrollTo(0, 0)
-  }
+    window.scrollTo(0, 0);
+  };
 
   function handleClickInstagram() {
     window.location = "https://www.instagram.com/neudisrupt";
@@ -27,8 +26,13 @@ export default function Footer() {
           <div class="relative flex h-70 items-center justify-between">
             <div class="flex flex-1 items-center sm:items-stretch">
               <div class="hidden sm:ml-6 sm:block w-1/2">
-                <div class="text-4xl font-bold leading-11 text-white flex"
-                     style={{fontFamily: 'Faucet', fontFeatureSettings: "'dlig' on, 'ss01' on"}}>
+                <div
+                  class="text-4xl font-bold leading-11 text-white flex"
+                  style={{
+                    fontFamily: "Faucet",
+                    fontFeatureSettings: "'dlig' on, 'ss01' on",
+                  }}
+                >
                   WANT MORE?
                 </div>
                 <div class="mt-3 text-md leading-5 text-white">
@@ -55,46 +59,77 @@ export default function Footer() {
                   <a
                     href="/About"
                     class="text-white font-bold text-lg"
-                    aria-current="page">
+                    aria-current="page"
+                  >
                     ABOUT
                   </a>
                 </div>
                 <div>
-                  <NavLink to="/About" className="text-white text-sm font-medium">
+                  <NavLink
+                    to="/About"
+                    className="text-white text-sm font-medium"
+                  >
                     Team
                   </NavLink>
                   <div>
-                    <a href="mailto:%20nufintech@gmail.com" className="text-white text-sm font-medium">
+                    <a
+                      href="mailto:%20nufintech@gmail.com"
+                      className="text-white text-sm font-medium"
+                    >
                       Contact
                     </a>
                   </div>
                   <div className="mt-14">
-                    <NavLink to="/PastVentures" onClick={scrollToTop} className="text-white font-bold text-lg">
+                    <NavLink
+                      to="/PastVentures"
+                      onClick={scrollToTop}
+                      className="text-white font-bold text-lg"
+                    >
                       PORTFOLIO
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink to="/Ventures" onClick={scrollToTop} className="text-white text-sm font-medium">
+                    <NavLink
+                      to="/Ventures"
+                      onClick={scrollToTop}
+                      className="text-white text-sm font-medium"
+                    >
                       Ventures
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink to="/PastVentures" onClick={scrollToTop} className="text-white text-sm font-medium">
+                    <NavLink
+                      to="/PastVentures"
+                      onClick={scrollToTop}
+                      className="text-white text-sm font-medium"
+                    >
                       Past Ventures
                     </NavLink>
                   </div>
                   <div class="mt-14">
-                    <NavLink to="/Newsroom" onClick={scrollToTop} className="text-white font-bold text-lg">
+                    <NavLink
+                      to="/Newsroom"
+                      onClick={scrollToTop}
+                      className="text-white font-bold text-lg"
+                    >
                       BLOG
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink to="/Newsroom" onClick={scrollToTop} className="text-white text-sm font-medium">
+                    <NavLink
+                      to="/Newsroom"
+                      onClick={scrollToTop}
+                      className="text-white text-sm font-medium"
+                    >
                       Newsletters
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink to="/Newsroom" onClick={scrollToTop} className="text-white text-sm font-medium">
+                    <NavLink
+                      to="/Newsroom"
+                      onClick={scrollToTop}
+                      className="text-white text-sm font-medium"
+                    >
                       Publications
                     </NavLink>
                   </div>
@@ -102,43 +137,75 @@ export default function Footer() {
               </div>
               <div>
                 <div>
-                  <NavLink to="/Ventures" onClick={scrollToTop} className="text-white font-bold text-lg">
+                  <NavLink
+                    to="/Ventures"
+                    onClick={scrollToTop}
+                    className="text-white font-bold text-lg"
+                  >
                     PROGRAMS
                   </NavLink>
                 </div>
                 <div>
-                  <NavLink to="/Ventures" onClick={scrollToTop} className="text-white text-sm font-medium">
+                  <NavLink
+                    to="/Ventures"
+                    onClick={scrollToTop}
+                    className="text-white text-sm font-medium"
+                  >
                     Finnovate
                   </NavLink>
                 </div>
                 <div>
-                  <NavLink to="/Consulting" onClick={scrollToTop} className="text-white text-sm font-medium">
+                  <NavLink
+                    to="/Consulting"
+                    onClick={scrollToTop}
+                    className="text-white text-sm font-medium"
+                  >
                     Elevate
                   </NavLink>
                 </div>
                 <div>
-                  <NavLink to="/" onClick={scrollToTop} className="text-white text-sm font-medium">
+                  <NavLink
+                    to="/"
+                    onClick={scrollToTop}
+                    className="text-white text-sm font-medium"
+                  >
                     Misc.
                   </NavLink>
                 </div>
 
                 <div className="mt-8">
-                  <NavLink to="/Events" onClick={scrollToTop} className="text-white font-bold text-lg">
+                  <NavLink
+                    to="/Events"
+                    onClick={scrollToTop}
+                    className="text-white font-bold text-lg"
+                  >
                     EVENTS
                   </NavLink>
                 </div>
                 <div>
-                  <NavLink to="/Events" onClick={scrollToTop} className="text-white text-sm font-medium">
+                  <NavLink
+                    to="/Events"
+                    onClick={scrollToTop}
+                    className="text-white text-sm font-medium"
+                  >
                     Calendar
                   </NavLink>
                 </div>
                 <div>
-                  <NavLink to="/Events" onClick={scrollToTop} className="text-white text-sm font-medium">
+                  <NavLink
+                    to="/Events"
+                    onClick={scrollToTop}
+                    className="text-white text-sm font-medium"
+                  >
                     Fireside Chats
                   </NavLink>
                 </div>
                 <div>
-                  <NavLink to="/Events" onClick={scrollToTop} className="text-white text-sm font-medium">
+                  <NavLink
+                    to="/Events"
+                    onClick={scrollToTop}
+                    className="text-white text-sm font-medium"
+                  >
                     Technology Workshops
                   </NavLink>
                 </div>

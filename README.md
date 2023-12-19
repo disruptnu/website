@@ -22,7 +22,6 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 _(If an instance is already open, it may suggest a different port [i.e. http://localhost:3001])_
 
-
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
@@ -83,24 +82,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Basic rundown of local usage
 
-  - npm start
-    - Starts the development server.
+- npm start
 
-  - npm run build
-    - Bundles the app into static files for production.
+  - Starts the development server.
 
-  - npm test
-    - Starts the test runner.
+- npm run build
 
-  - npm run eject
-    - Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
+  - Bundles the app into static files for production.
 
+- npm test
+
+  - Starts the test runner.
+
+- npm run eject
+  - Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
 
 ## To work locally:
 
-  - run 'npm install' within the directory
+- run 'npm install' within the directory
 
-  - run 'npm install react-router-dom' within the directory
+- run 'npm install react-router-dom' within the directory
 
-  - run 'npm start'
-
+- run 'npm start'

@@ -3,7 +3,6 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-
       width: {
         120: "450px",
         130: "500px",
@@ -34,7 +33,7 @@ module.exports = {
       },
 
       colors: {
-        navigationMenu: '#009AFF',
+        navigationMenu: "#009AFF",
         transparent: "transparent",
         current: "currentColor",
 
@@ -81,7 +80,7 @@ module.exports = {
       },
 
       brightness: {
-        '25': '.25',
+        25: ".25",
       },
 
       backgroundImage: {
@@ -93,4 +92,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
