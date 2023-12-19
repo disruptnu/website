@@ -50,7 +50,7 @@ export default function EventsLanding({
             EVENTS
           </p>
           <p
-            className="text-white mx-auto ml-80 pl-48"
+            className="text-white mx-auto ml-80 pl-48 text-justify"
             style={{ fontFamily: "Usual-Regular" }}
           >
             Finnovate is an 8-week long program where students will be

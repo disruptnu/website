@@ -46,24 +46,19 @@ export default function PastVenturesOpeningScreen({
               />
             </div>
           </div>
-          <div className="w-3/4 flex flex-col items-center pl-8 pt-32">
+          <div
+            className="flex flex-col items-end pt-28 pb-20 w-5/12"
+            style={{ fontFamily: "Faucet" }}
+          >
+            <p className="text-white text-4xl mb-1">disrupt</p>
             <p
-              className="text-white text-4xl mb-1 -mr-96"
-              style={{ fontFamily: "Usual-Light" }}
-            >
-              disrupt
-            </p>
-            <p
-              className="text-white text-8xl pb-8 mr-16"
-              style={{
-                fontFamily: "Faucet",
-                fontFeatureSettings: "'dlig' on, 'ss01' on",
-              }}
+              className="text-white text-8xl pb-8"
+              style={{ fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on" }}
             >
               CONSULTING
             </p>
             <p
-              className="w-3/5 text-white text-md mb-1 justify-center leading-7"
+              className="text-white mx-auto text-justify"
               style={{ fontFamily: "Usual-Regular" }}
             >
               We empower FinTech organizations to tackle business challenges
