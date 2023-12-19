@@ -18,8 +18,8 @@ export default function FundamentalsDescription() {
               fontFeatureSettings: "'dlig' on, 'ss03' on, 'ss02' on, 'ss01' on",
             }}
           >
-            <span className="text-blue-500">3</span> CORE{" "}
-            <span className="text-blue-500">PILLARS</span>
+            <span className="text-blue-500">ONE</span> MAIN{" "}
+            <span className="text-blue-500">VISION</span>
           </p>
           <div
             className="text-white w-2/3 text-2xl mt-12 mr-10"
@@ -30,10 +30,6 @@ export default function FundamentalsDescription() {
               disruptive power of technology in finance and have thus started
               the FinTech initiative on campus to become the leaders of this
               field.
-            </p>
-            <p className="mt-5">
-              Disrupt is a student-led organization that was founded on the
-              basis of 3 pillars.
             </p>
           </div>
         </div>
