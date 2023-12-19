@@ -53,12 +53,11 @@ export default function EventsLanding({
             className="text-white mx-auto ml-80 pl-48 text-justify"
             style={{ fontFamily: "Usual-Regular" }}
           >
-            Finnovate is an 8-week long program where students will be
-            challenged to create a new innovative idea in the FinTech space that
-            aims to disrupt the traditional financial service industry. Students
-            will be formed into groups and attend a series of weekly workshops
-            that will not only enhance their technical skills but their
-            entrepreneurial business skills.
+            We host weekly events ranging from fireside chats, technology
+            workshops, and guest panels to give Northeastern skills and insight
+            into the FinTech industry to show how impactful FinTech can be.
+            These events are open to everyone at Northeastern and no signup is
+            require ahead of time.
           </p>
         </div>
         <div className="flex">
