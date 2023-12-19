@@ -9,7 +9,9 @@ export default function WorkshopCard(props) {
   return (
     <div className="min-w-max min-h-max ml-96 pl-12 pt-12 ">
       <div className="flex items-start pl-28">
-        <p className="text-white text-4xl font-regular pt-44 pr-4 w-20">{props.workshopNum}</p>
+        <p className="text-white text-4xl font-regular pt-44 pr-4 w-20">
+          {props.workshopNum}
+        </p>
 
         <div className="flex space-x-16 items-center ml-4">
           <div className="flex flex-col justify-center items-center">

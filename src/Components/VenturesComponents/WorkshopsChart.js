@@ -6,8 +6,10 @@ import chanceToWinStar from "../../img/chanceToWinStar.svg";
 export default function WorkshopsChart() {
   return (
     <div className="pl-12 pb-72">
-      <p className="text-white font-bold text-5xl mb-12"
-         style={{fontFamily: 'Usual-Regular'}}>
+      <p
+        className="text-white font-bold text-5xl mb-12"
+        style={{ fontFamily: "Usual-Regular" }}
+      >
         WORKSHOP SCHEDULE
       </p>
       <div className="">
@@ -24,15 +26,13 @@ export default function WorkshopsChart() {
           />
         ))}
         <div className="flex items-center">
-          <p className="text-white font-bold text-5xl"
-             style={{fontFamily: 'Usual-Regular'}}>
-              THE CHANCE TO WIN
+          <p
+            className="text-white font-bold text-5xl"
+            style={{ fontFamily: "Usual-Regular" }}
+          >
+            THE CHANCE TO WIN
           </p>
-          <img
-            src={chanceToWinStar}
-            alt="star"
-            className="ml-24 pl-1.5 h-16"
-          />
+          <img src={chanceToWinStar} alt="star" className="ml-24 pl-1.5 h-16" />
         </div>
       </div>
     </div>

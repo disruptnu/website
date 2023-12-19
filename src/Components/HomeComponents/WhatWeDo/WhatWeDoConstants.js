@@ -12,7 +12,7 @@ export const programs = [
       "Lorem ipsum dolor sit amet consectetur. Adipiscing quis eu mi dolor blandit.",
     numberIcon: num1,
     img: venturesImage,
-    navLink: "/Ventures"
+    navLink: "/Ventures",
   },
   {
     name: "ELEVATE",
@@ -20,7 +20,7 @@ export const programs = [
       "Lorem ipsum dolor sit amet consectetur. Adipiscing quis eu mi dolor blandit.",
     numberIcon: num2,
     img: consultingImage,
-    navLink: "/Consulting"
+    navLink: "/Consulting",
   },
   {
     name: "EVENTS",
@@ -28,6 +28,6 @@ export const programs = [
       "Lorem ipsum dolor sit amet consectetur. Adipiscing quis eu mi dolor blandit.",
     numberIcon: num3,
     img: eventsImage,
-    navLink: "/Events"
+    navLink: "/Events",
   },
 ];

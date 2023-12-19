@@ -34,7 +34,11 @@ export default function HamburgerMenuOpen({
         <div className="flex items-center">
           <div>
             <NavLink to="/">
-              <img src={disruptLogo} alt="testLogo" className="w-20 h-20 ml-3 brightness-90" />
+              <img
+                src={disruptLogo}
+                alt="testLogo"
+                className="w-20 h-20 ml-3 brightness-90"
+              />
             </NavLink>
           </div>
         </div>
@@ -76,7 +80,7 @@ export default function HamburgerMenuOpen({
             />
           </div>
           <div className="text-white font-bold relative group">
-          <NavLink to="/Consulting">
+            <NavLink to="/Consulting">
               <span className="text-move">Consulting</span>
             </NavLink>
             <img
