@@ -2,10 +2,6 @@ import React from "react";
 import { newsletter } from "./NewsLetterItems/newsLetterConstants";
 import { NavLink } from "react-router-dom";
 
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
-};
-
 export default function Newsletters() {
   return (
     <div className="border-b border-solid border-b-gray-400">
@@ -59,8 +55,7 @@ export default function Newsletters() {
               </div>
               <div className="shrink-0 sm:flex sm:flex-col sm:items-end mt-auto mb-0">
                 <NavLink
-                  to="/"
-                  onClick={scrollToTop}
+                  to={newsletter.readMoreLink}
                   className="text-white border border-solid py-2 px-6 rounded-md"
                   style={{ fontFamily: "Usual-Light" }}
                 >

@@ -94,7 +94,7 @@ export default function Footer() {
                       onClick={scrollToTop}
                       className="text-white text-sm font-medium"
                     >
-                      Ventures
+                      Finnovate
                     </NavLink>
                   </div>
                   <div>
