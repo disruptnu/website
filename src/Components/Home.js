@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CaseStudy from "./HomeComponents/CaseStudyCard/CaseStudy";
 import WhoWeAre from "./HomeComponents/WhoWeAre";
 import OpeningScreen from "./HomeComponents/OpeningScreen";
-import WhatWeDo from "./HomeComponents/WhatWeDo/WhatWeDo";
+import WhatWeDo from "./HomeComponents/WhatWeDo";
 import Footer from "./HomeComponents/Footer";
 
 export default function Home() {
