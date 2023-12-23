@@ -45,7 +45,7 @@ export default function PastVentureCard(props) {
             >
               {props.description}
             </p>
-            <NavLink onClick={scrollToTop} to="/Ventures">
+            <NavLink onClick={scrollToTop} to="/finnovate">
               <div className="flex items-center text-sm text-[#b5f727] mt-20">
                 <p className="mr-2">Read About Ventures</p>
                 <img src={readMoreArrow} alt="rightArrow" className="mt-0.5" />

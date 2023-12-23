@@ -70,7 +70,7 @@ export default function HamburgerMenuOpen({
             />
           </div>
           <div className="text-white font-bold relative group">
-            <NavLink to="/Ventures" onClick={handleClickHamburgerMenu}>
+            <NavLink to="/finnovate" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Ventures</span>
             </NavLink>
             <img
@@ -80,7 +80,7 @@ export default function HamburgerMenuOpen({
             />
           </div>
           <div className="text-white font-bold relative group">
-            <NavLink to="/Consulting" onClick={handleClickHamburgerMenu}>
+            <NavLink to="/consulting" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Consulting</span>
             </NavLink>
             <img
@@ -90,7 +90,7 @@ export default function HamburgerMenuOpen({
             />
           </div>
           <div className="text-white font-bold relative group">
-            <NavLink to="/Events" onClick={handleClickHamburgerMenu}>
+            <NavLink to="/events" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Events</span>
             </NavLink>
             <img
@@ -100,7 +100,7 @@ export default function HamburgerMenuOpen({
             />
           </div>
           <div className="text-white font-bold relative group">
-            <NavLink to="/Newsroom" onClick={handleClickHamburgerMenu}>
+            <NavLink to="/newsroom" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Newsroom</span>
             </NavLink>
             <img

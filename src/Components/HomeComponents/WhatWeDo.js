@@ -19,7 +19,7 @@ const programs = [
       "Attend our guest speaker events and technology to learn about the ways FinTech in changing industries.",
     numberIcon: num1,
     img: eventsImage,
-    navLink: "/Events",
+    navLink: "/events",
   },
   {
     name: "FINNOVATE",
@@ -27,7 +27,7 @@ const programs = [
       "Develop the skills necessary to create and pitch your very own FinTech Startup.",
     numberIcon: num2,
     img: venturesImage,
-    navLink: "/Ventures",
+    navLink: "/finnovate",
   },
   {
     name: "CONSULTING",
@@ -35,7 +35,7 @@ const programs = [
       "Work with FinTech firms in the Boston area on professional consulting projects.",
     numberIcon: num3,
     img: consultingImage,
-    navLink: "/Consulting",
+    navLink: "/consulting",
   },
 ];
 

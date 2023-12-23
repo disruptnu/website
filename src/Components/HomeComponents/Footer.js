@@ -90,7 +90,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <NavLink
-                      to="/Ventures"
+                      to="/finnovate"
                       onClick={scrollToTop}
                       className="text-white text-sm font-medium"
                     >
@@ -108,7 +108,7 @@ export default function Footer() {
                   </div>
                   <div class="mt-14">
                     <NavLink
-                      to="/Newsroom"
+                      to="/newsroom"
                       onClick={scrollToTop}
                       className="text-white font-bold text-lg"
                     >
@@ -117,7 +117,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <NavLink
-                      to="/Newsroom"
+                      to="/newsroom"
                       onClick={scrollToTop}
                       className="text-white text-sm font-medium"
                     >
@@ -126,7 +126,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <NavLink
-                      to="/Newsroom"
+                      to="/newsroom"
                       onClick={scrollToTop}
                       className="text-white text-sm font-medium"
                     >
@@ -138,7 +138,7 @@ export default function Footer() {
               <div>
                 <div>
                   <NavLink
-                    to="/Ventures"
+                    to="/finnovate"
                     onClick={scrollToTop}
                     className="text-white font-bold text-lg"
                   >
@@ -147,7 +147,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <NavLink
-                    to="/Ventures"
+                    to="/finnovate"
                     onClick={scrollToTop}
                     className="text-white text-sm font-medium"
                   >
@@ -156,7 +156,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <NavLink
-                    to="/Consulting"
+                    to="/consulting"
                     onClick={scrollToTop}
                     className="text-white text-sm font-medium"
                   >
@@ -175,7 +175,7 @@ export default function Footer() {
 
                 <div className="mt-8">
                   <NavLink
-                    to="/Events"
+                    to="/events"
                     onClick={scrollToTop}
                     className="text-white font-bold text-lg"
                   >
@@ -184,7 +184,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <NavLink
-                    to="/Events"
+                    to="/events"
                     onClick={scrollToTop}
                     className="text-white text-sm font-medium"
                   >
@@ -193,7 +193,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <NavLink
-                    to="/Events"
+                    to="/events"
                     onClick={scrollToTop}
                     className="text-white text-sm font-medium"
                   >
@@ -202,7 +202,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <NavLink
-                    to="/Events"
+                    to="/events"
                     onClick={scrollToTop}
                     className="text-white text-sm font-medium"
                   >
