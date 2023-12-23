@@ -54,13 +54,13 @@ export default function PastVenturesOpeningScreen({
             className="text-white text-9xl pb-8"
             style={{ fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on" }}
           >
-            VENTURES
+            FINNOVATE
           </p>
           <p
             className="text-white mx-auto text-justify"
             style={{ fontFamily: "Usual-Regular" }}
           >
-            Disrupt's Ventures is an 8-week long program where students will be
+            Disrupt's Finnovate is an 8-week long program where students will be
             challenged to create a new innovative idea in the FinTech space that
             aims to disrupt the traditional financial service industry. Students
             will be formed into groups and attend a series of weekly workshops
@@ -83,7 +83,7 @@ export default function PastVenturesOpeningScreen({
             className="text-white text-4xl"
             style={{ fontFamily: "Usual-Regular" }}
           >
-            [More info about Ventures/Applying]
+            [More info about Finnovate/Applying]
           </p>
         </div>
       </div>

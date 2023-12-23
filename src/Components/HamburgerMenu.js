@@ -71,7 +71,7 @@ export default function HamburgerMenuOpen({
           </div>
           <div className="text-white font-bold relative group">
             <NavLink to="/finnovate" onClick={handleClickHamburgerMenu}>
-              <span className="text-move">Ventures</span>
+              <span className="text-move">Finnovate</span>
             </NavLink>
             <img
               src={navigationArrowIcon}
