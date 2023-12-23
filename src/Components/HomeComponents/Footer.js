@@ -57,7 +57,7 @@ export default function Footer() {
               <div class="width-1/4 ml-10 pr-20">
                 <div>
                   <a
-                    href="/About"
+                    href="/about"
                     class="text-white font-bold text-lg"
                     aria-current="page"
                   >
@@ -66,7 +66,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <NavLink
-                    to="/About"
+                    to="/about"
                     className="text-white text-sm font-medium"
                   >
                     Team

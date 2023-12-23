@@ -25,7 +25,7 @@ export default function WhoWeAre() {
           collaboration aimed at reshaping the finance industry.
         </p>
         <div className="text-[#b5f727] mb-16">
-          <NavLink onClick={scrollToTop} to="/About">
+          <NavLink onClick={scrollToTop} to="/about">
             <div className="flex items-center justify-center">
               <p className="mr-2">Read more</p>
               <img src={readMoreArrow} alt="rightArrow" className="mt-0.5" />

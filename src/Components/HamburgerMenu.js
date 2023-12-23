@@ -60,7 +60,7 @@ export default function HamburgerMenuOpen({
       <div className="flex-grow">
         <div className="selection:text-blue-500 text-8xl pl-28 flex flex-col">
           <div className="text-white font-bold mt-16 relative group">
-            <NavLink to="/About" onClick={handleClickHamburgerMenu}>
+            <NavLink to="/about" onClick={handleClickHamburgerMenu}>
               <span className="text-move">About</span>
             </NavLink>
             <img
