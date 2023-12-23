@@ -14,28 +14,28 @@ const scrollToTop = () => {
 
 const programs = [
   {
-    name: "VENTURES",
+    name: "EVENTS",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Adipiscing quis eu mi dolor blandit.",
+      "Attend our guest speaker events and technology to learn about the ways FinTech in changing industries.",
     numberIcon: num1,
+    img: eventsImage,
+    navLink: "/Events",
+  },
+  {
+    name: "FINNOVATE",
+    description:
+      "Develop the skills necessary to create and pitch your very own FinTech Startup.",
+    numberIcon: num2,
     img: venturesImage,
     navLink: "/Ventures",
   },
   {
-    name: "ELEVATE",
+    name: "CONSULTING",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Adipiscing quis eu mi dolor blandit.",
-    numberIcon: num2,
+      "Work with FinTech firms in the Boston area on professional consulting projects.",
+    numberIcon: num3,
     img: consultingImage,
     navLink: "/Consulting",
-  },
-  {
-    name: "EVENTS",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Adipiscing quis eu mi dolor blandit.",
-    numberIcon: num3,
-    img: eventsImage,
-    navLink: "/Events",
   },
 ];
 
