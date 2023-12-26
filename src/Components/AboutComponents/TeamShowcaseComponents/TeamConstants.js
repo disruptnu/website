@@ -9,6 +9,9 @@ import rodrigoAldrey from "../../../img/rodrigo_aldrey.png";
 import pattyKang from "../../../img/patty_kang.png";
 import anishSanghi from "../../../img/anish_sanghi.png";
 import joshWang from "../../../img/josh_wang.png";
+import alexanderWong from "../../../img/alexander_wong.png";
+import sethMorton from "../../../img/seth_morton.jpg";
+import philipLeung from "../../../img/philip_leung.png";
 import elvinCheng from "../../../img/elvin_cheng.png";
 
 export const TeamMember = [
@@ -23,7 +26,7 @@ export const TeamMember = [
   },
   {
     key: "member2",
-    headshot: xavierYu,
+    headshot: philipLeung,
     name: "Philip Leung",
     position: "Vice President",
     team: "Executive Team",
@@ -68,7 +71,7 @@ export const TeamMember = [
   },
   {
     key: "member7",
-    headshot: xavierYu,
+    headshot: alexanderWong,
     name: "Alexander Wong",
     position: "Research Analyst",
     team: "Research Team",
@@ -293,7 +296,7 @@ export const TeamMember = [
   },
   {
     key: "member32",
-    headshot: riderBishop,
+    headshot: sethMorton,
     name: "Seth Morton",
     position: "Director of Engagement",
     team: "Marketing Team",

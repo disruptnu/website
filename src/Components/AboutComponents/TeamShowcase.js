@@ -28,7 +28,7 @@ export default function TeamShowcase() {
         <div className="fixed-container ml-10 mr-14 mt-10 w-48">
           {hoveredMember && (
             <img
-              className="h-48"
+              className="sticky top-20 h-48"
               src={
                 TeamMember.find((member) => member.key === hoveredMember)
                   .headshot
