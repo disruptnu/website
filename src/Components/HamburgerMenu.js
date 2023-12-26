@@ -60,7 +60,7 @@ export default function HamburgerMenuOpen({
       <div className="flex-grow">
         <div className="selection:text-blue-500 text-8xl pl-28 flex flex-col">
           <div className="text-white font-bold mt-16 relative group">
-            <NavLink to="/About">
+            <NavLink to="/about" onClick={handleClickHamburgerMenu}>
               <span className="text-move">About</span>
             </NavLink>
             <img
@@ -70,8 +70,8 @@ export default function HamburgerMenuOpen({
             />
           </div>
           <div className="text-white font-bold relative group">
-            <NavLink to="/Ventures">
-              <span className="text-move">Ventures</span>
+            <NavLink to="/finnovate" onClick={handleClickHamburgerMenu}>
+              <span className="text-move">Finnovate</span>
             </NavLink>
             <img
               src={navigationArrowIcon}
@@ -80,7 +80,7 @@ export default function HamburgerMenuOpen({
             />
           </div>
           <div className="text-white font-bold relative group">
-            <NavLink to="/Consulting">
+            <NavLink to="/consulting" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Consulting</span>
             </NavLink>
             <img
@@ -90,7 +90,7 @@ export default function HamburgerMenuOpen({
             />
           </div>
           <div className="text-white font-bold relative group">
-            <NavLink to="/Events">
+            <NavLink to="/events" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Events</span>
             </NavLink>
             <img
@@ -100,7 +100,7 @@ export default function HamburgerMenuOpen({
             />
           </div>
           <div className="text-white font-bold relative group">
-            <NavLink to="/Newsroom">
+            <NavLink to="/newsroom" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Newsroom</span>
             </NavLink>
             <img

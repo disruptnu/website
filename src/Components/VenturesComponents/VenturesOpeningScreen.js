@@ -45,27 +45,22 @@ export default function PastVenturesOpeningScreen({
             />
           </div>
         </div>
-        <div className="w-3/4 flex flex-col items-center pl-8 pt-32">
+        <div
+          className="flex flex-col items-end pt-28 pb-20 w-5/12"
+          style={{ fontFamily: "Faucet" }}
+        >
+          <p className="text-white text-4xl mb-1">disrupt</p>
           <p
-            className="text-white text-4xl mb-1 -mr-96"
-            style={{ fontFamily: "Usual-Light" }}
+            className="text-white text-9xl pb-8"
+            style={{ fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on" }}
           >
-            disrupt
+            FINNOVATE
           </p>
           <p
-            className="text-white text-9xl pb-8 mr-16"
-            style={{
-              fontFamily: "Faucet",
-              fontFeatureSettings: "'dlig' on, 'ss01' on",
-            }}
-          >
-            VENTURES
-          </p>
-          <p
-            className="w-3/5 text-white text-md mb-1 justify-center leading-7"
+            className="text-white mx-auto text-justify"
             style={{ fontFamily: "Usual-Regular" }}
           >
-            Finnovate is an 8-week long program where students will be
+            Disrupt's Finnovate is an 8-week long program where students will be
             challenged to create a new innovative idea in the FinTech space that
             aims to disrupt the traditional financial service industry. Students
             will be formed into groups and attend a series of weekly workshops
@@ -73,6 +68,7 @@ export default function PastVenturesOpeningScreen({
             entrepreneurial business skills.
           </p>
         </div>
+
         <div className="items-center mb-40">
           <p
             className="text-white text-sm pt-12 pb-4 justify-center"
@@ -87,7 +83,7 @@ export default function PastVenturesOpeningScreen({
             className="text-white text-4xl"
             style={{ fontFamily: "Usual-Regular" }}
           >
-            [More info about Ventures/Applying]
+            [More info about Finnovate/Applying]
           </p>
         </div>
       </div>

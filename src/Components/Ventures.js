@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import VenturesOpeningScreen from "./VenturesComponents/VenturesOpeningScreen";
 import WorkshopsChart from "./VenturesComponents/WorkshopsChart";
+import Footer from "./HomeComponents/Footer";
 
 export default function PastVentures() {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -29,6 +30,7 @@ export default function PastVentures() {
         toggleHamburgerMenu={toggleHamburgerMenu}
       />
       <WorkshopsChart />
+      <Footer />
     </div>
   );
 }
