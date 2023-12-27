@@ -1,7 +1,7 @@
 import venturesImage from "../../../img/homeVenturesProgram.svg";
 import consultingImage from "../../../img/homeConsultingProgram.svg";
 import eventsImage from "../../../img/homeEventsProgram.svg";
-import author3 from "../../../img/rider_bishop.jpg";
+import author3 from "../../../img/eboard_photos/rider_bishop.jpg";
 
 export const newsletter = [
   {

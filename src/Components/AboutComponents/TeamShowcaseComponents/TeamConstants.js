@@ -1,22 +1,22 @@
 // import all of the images for each team member
-import riderBishop from "../../../img/rider_bishop.jpg";
-import yvonneLin from "../../../img/yvonne_lin.png";
-import alexChoi from "../../../img/alex_choi.png";
-import xavierYu from "../../../img/xavier_yu.png";
-import kaamilThobani from "../../../img/kaamil_thobani.png";
-import williamSeward from "../../../img/william_seward.png";
-import rodrigoAldrey from "../../../img/rodrigo_aldrey.png";
-import pattyKang from "../../../img/patty_kang.png";
-import anishSanghi from "../../../img/anish_sanghi.png";
-import joshWang from "../../../img/josh_wang.png";
-import alexanderWong from "../../../img/alexander_wong.png";
-import sethMorton from "../../../img/seth_morton.jpg";
-import philipLeung from "../../../img/philip_leung.png";
-import aashkaDave from "../../../img/aashka_dave.png";
-import elvinCheng from "../../../img/elvin_cheng.png";
-import zainabHussainSyed from "../../../img/zainab_hussain_syed.png";
-import aravGoyal from "../../../img/arav_goyal.png";
-import wanruSkuldShao from "../../../img/wanru_skuld_shao.jpg";
+import riderBishop from "../../../img/eboard_photos/rider_bishop.jpg";
+import yvonneLin from "../../../img/eboard_photos/yvonne_lin.png";
+import alexChoi from "../../../img/eboard_photos/alex_choi.png";
+import xavierYu from "../../../img/eboard_photos/xavier_yu.png";
+import kaamilThobani from "../../../img/eboard_photos/kaamil_thobani.png";
+import williamSeward from "../../../img/eboard_photos/william_seward.png";
+import rodrigoAldrey from "../../../img/eboard_photos/rodrigo_aldrey.png";
+import pattyKang from "../../../img/eboard_photos/patty_kang.png";
+import anishSanghi from "../../../img/eboard_photos/anish_sanghi.png";
+import joshWang from "../../../img/eboard_photos/josh_wang.png";
+import alexanderWong from "../../../img/eboard_photos/alexander_wong.png";
+import sethMorton from "../../../img/eboard_photos/seth_morton.jpg";
+import philipLeung from "../../../img/eboard_photos/philip_leung.png";
+import aashkaDave from "../../../img/eboard_photos/aashka_dave.png";
+import elvinCheng from "../../../img/eboard_photos/elvin_cheng.png";
+import zainabHussainSyed from "../../../img/eboard_photos/zainab_hussain_syed.png";
+import aravGoyal from "../../../img/eboard_photos/arav_goyal.png";
+import wanruSkuldShao from "../../../img/eboard_photos/wanru_skuld_shao.jpg";
 
 export const TeamMember = [
   {
