@@ -12,7 +12,11 @@ import joshWang from "../../../img/josh_wang.png";
 import alexanderWong from "../../../img/alexander_wong.png";
 import sethMorton from "../../../img/seth_morton.jpg";
 import philipLeung from "../../../img/philip_leung.png";
+import aashkaDave from "../../../img/aashka_dave.png";
 import elvinCheng from "../../../img/elvin_cheng.png";
+import zainabHussainSyed from "../../../img/zainab_hussain_syed.png";
+import aravGoyal from "../../../img/arav_goyal.png";
+import wanruSkuldShao from "../../../img/wanru_skuld_shao.jpg";
 
 export const TeamMember = [
   {
@@ -107,7 +111,7 @@ export const TeamMember = [
   },
   {
     key: "member11",
-    headshot: xavierYu,
+    headshot: wanruSkuldShao,
     name: "Wanru Shao",
     position: "Research Analyst",
     team: "Research Team",
@@ -179,7 +183,7 @@ export const TeamMember = [
   },
   {
     key: "member19",
-    headshot: xavierYu,
+    headshot: aashkaDave,
     name: "Aashka Dave",
     position: "Event Coordinator",
     team: "Events Team",
@@ -188,7 +192,7 @@ export const TeamMember = [
   },
   {
     key: "member20",
-    headshot: xavierYu,
+    headshot: zainabHussainSyed,
     name: "Zainab Hussain Syed",
     position: "Event Coordinator",
     team: "Events Team",
@@ -233,7 +237,7 @@ export const TeamMember = [
   },
   {
     key: "member25",
-    headshot: xavierYu,
+    headshot: aravGoyal,
     name: "Arav Goyal",
     position: "Technology Programmer",
     team: "Technology Team",
