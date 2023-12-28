@@ -15,7 +15,9 @@ import philipLeung from "../../../img/eboard_photos/philip_leung.png";
 import aashkaDave from "../../../img/eboard_photos/aashka_dave.png";
 import elvinCheng from "../../../img/eboard_photos/elvin_cheng.png";
 import zainabHussainSyed from "../../../img/eboard_photos/zainab_hussain_syed.png";
+import anyaSolanki from "../../../img/eboard_photos/anya_solanki.png";
 import aravGoyal from "../../../img/eboard_photos/arav_goyal.png";
+import michaelRicardo from "../../../img/eboard_photos/michael_ricardo.png";
 import wanruSkuldShao from "../../../img/eboard_photos/wanru_skuld_shao.jpg";
 
 export const TeamMember = [
@@ -84,7 +86,7 @@ export const TeamMember = [
   },
   {
     key: "member8",
-    headshot: xavierYu,
+    headshot: anyaSolanki,
     name: "Anya Solanki",
     position: "Research Analyst",
     team: "Research Team",
@@ -93,7 +95,7 @@ export const TeamMember = [
   },
   {
     key: "member9",
-    headshot: xavierYu,
+    headshot: michaelRicardo,
     name: "Michael Ricardo",
     position: "Research Analyst",
     team: "Research Team",
