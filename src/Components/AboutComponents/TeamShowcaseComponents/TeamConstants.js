@@ -19,6 +19,11 @@ import anyaSolanki from "../../../img/eboard_photos/anya_solanki.png";
 import aravGoyal from "../../../img/eboard_photos/arav_goyal.png";
 import michaelRicardo from "../../../img/eboard_photos/michael_ricardo.png";
 import wanruSkuldShao from "../../../img/eboard_photos/wanru_skuld_shao.jpg";
+import diyaJhamtani from "../../../img/eboard_photos/diya_jhamtani.png";
+import emilyKyne from "../../../img/eboard_photos/emily_kyne.png";
+import jackAnderson from "../../../img/eboard_photos/jack_anderson.png";
+import justinWee from "../../../img/eboard_photos/justin_wee.png";
+import unknownImage from "../../../img/eboard_photos/unknown.png";
 
 export const TeamMember = [
   {
@@ -59,7 +64,7 @@ export const TeamMember = [
   },
   {
     key: "member5",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Tarun Anbarasu",
     position: "Director of Research",
     team: "Reserach Team",
@@ -68,7 +73,7 @@ export const TeamMember = [
   },
   {
     key: "member6",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Anderson Lo",
     position: "Research Analyst",
     team: "Research Team",
@@ -104,7 +109,7 @@ export const TeamMember = [
   },
   {
     key: "member10",
-    headshot: xavierYu,
+    headshot: emilyKyne,
     name: "Emily Kyne",
     position: "Research Analyst",
     team: "Research Team",
@@ -122,7 +127,7 @@ export const TeamMember = [
   },
   {
     key: "member12",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Svarra Shah",
     position: "Reserach Analyst",
     team: "Research Team",
@@ -131,7 +136,7 @@ export const TeamMember = [
   },
   {
     key: "member13",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Srijith Gomattam",
     position: "Research Analyst",
     team: "Research Team",
@@ -149,7 +154,7 @@ export const TeamMember = [
   },
   {
     key: "member15",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Aden Levy",
     position: "Co-Director of Finnovate",
     team: "Finnovate Team",
@@ -167,7 +172,7 @@ export const TeamMember = [
   },
   {
     key: "member17",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Tej Chakravarthy",
     position: "Co-Director of Finnovate",
     team: "Finnovate Team",
@@ -176,7 +181,7 @@ export const TeamMember = [
   },
   {
     key: "member18",
-    headshot: xavierYu,
+    headshot: jackAnderson,
     name: "Jack Anderson",
     position: "Director of Events",
     team: "Events Team",
@@ -203,7 +208,7 @@ export const TeamMember = [
   },
   {
     key: "member21",
-    headshot: xavierYu,
+    headshot: justinWee,
     name: "Justin Wee",
     position: "Collab Event Coordinator",
     team: "Events Team",
@@ -230,7 +235,7 @@ export const TeamMember = [
   },
   {
     key: "member24",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Arnav Mishra",
     position: "Technology Programmer",
     team: "Technology Team",
@@ -248,7 +253,7 @@ export const TeamMember = [
   },
   {
     key: "member26",
-    headshot: xavierYu,
+    headshot: diyaJhamtani,
     name: "Diya Jhamtani",
     position: "Technology Programmer",
     team: "Technology Team",
@@ -257,7 +262,7 @@ export const TeamMember = [
   },
   {
     key: "member27",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Vilasini Nathan",
     position: "Technology Programmer",
     team: "Technology Team",
@@ -284,7 +289,7 @@ export const TeamMember = [
   },
   {
     key: "member30",
-    headshot: alexChoi,
+    headshot: unknownImage,
     name: "Siya Patel",
     position: "Student Outreach",
     team: "Marketing Team",
@@ -293,7 +298,7 @@ export const TeamMember = [
   },
   {
     key: "member31",
-    headshot: rodrigoAldrey,
+    headshot: unknownImage,
     name: "Jacob Chen",
     position: "Industry Outreach",
     team: "Marketing Team",
@@ -307,24 +312,6 @@ export const TeamMember = [
     position: "Director of Engagement",
     team: "Marketing Team",
     linkedin: "https://www.linkedin.com/in/kaamil-thobani-9a7237210/",
-    alt: "",
-  },
-  {
-    key: "member33",
-    headshot: joshWang,
-    name: "Josh Wang",
-    position: "Co-Director",
-    team: "Elevate",
-    linkedin: "https://www.linkedin.com/in/joshwang-p/",
-    alt: "",
-  },
-  {
-    key: "member34",
-    headshot: elvinCheng,
-    name: "Elvin Cheng",
-    position: "Co-Director",
-    team: "Elevate",
-    linkedin: "https://www.linkedin.com/in/elvin-cheng/",
     alt: "",
   },
 ];
