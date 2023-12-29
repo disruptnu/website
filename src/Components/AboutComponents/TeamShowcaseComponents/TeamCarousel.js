@@ -53,17 +53,13 @@ export default function TeamCarousel() {
             <img
               src={leftScroll}
               alt="Left Scroll Arrow"
-              className={`hover:cursor-pointer mr-5 ml-10 ${
-                CARD.length * 296 > window.innerWidth ? "" : "hidden"
-              }`}
+              className={`hover:cursor-pointer mr-5 ml-10`}
               onClick={scrollLeft}
             />
             <img
               src={rightScroll}
               alt="Right Scroll Arrow"
-              className={`hover:cursor-pointer ${
-                CARD.length * 296 > window.innerWidth ? "" : "hidden"
-              }`}
+              className="hover:cursor-pointer"
               onClick={scrollRight}
             />
           </div>

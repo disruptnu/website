@@ -108,17 +108,13 @@ export default function CaseStudy() {
             <img
               src={leftScroll}
               alt="Left Scroll Arrow"
-              className={`hover:cursor-pointer mx-5 ${
-                CARD.length * 296 > window.innerWidth ? "" : "hidden"
-              }`}
+              className={`hover:cursor-pointer mx-5`}
               onClick={scrollLeft}
             />
             <img
               src={rightScroll}
               alt="Right Scroll Arrow"
-              className={`hover:cursor-pointer ${
-                CARD.length * 296 > window.innerWidth ? "" : "hidden"
-              }`}
+              className={`hover:cursor-pointer  `}
               onClick={scrollRight}
             />
           </div>

@@ -1,18 +1,29 @@
 // import all of the images for each team member
-import riderBishop from "../../../img/rider_bishop.jpg";
-import yvonneLin from "../../../img/yvonne_lin.png";
-import alexChoi from "../../../img/alex_choi.png";
-import xavierYu from "../../../img/xavier_yu.png";
-import kaamilThobani from "../../../img/kaamil_thobani.png";
-import williamSeward from "../../../img/william_seward.png";
-import rodrigoAldrey from "../../../img/rodrigo_aldrey.png";
-import pattyKang from "../../../img/patty_kang.png";
-import anishSanghi from "../../../img/anish_sanghi.png";
-import joshWang from "../../../img/josh_wang.png";
-import alexanderWong from "../../../img/alexander_wong.png";
-import sethMorton from "../../../img/seth_morton.jpg";
-import philipLeung from "../../../img/philip_leung.png";
-import elvinCheng from "../../../img/elvin_cheng.png";
+import riderBishop from "../../../img/eboard_photos/rider_bishop.jpg";
+import yvonneLin from "../../../img/eboard_photos/yvonne_lin.png";
+import alexChoi from "../../../img/eboard_photos/alex_choi.png";
+import xavierYu from "../../../img/eboard_photos/xavier_yu.png";
+import kaamilThobani from "../../../img/eboard_photos/kaamil_thobani.png";
+import williamSeward from "../../../img/eboard_photos/william_seward.png";
+import rodrigoAldrey from "../../../img/eboard_photos/rodrigo_aldrey.png";
+import pattyKang from "../../../img/eboard_photos/patty_kang.png";
+import anishSanghi from "../../../img/eboard_photos/anish_sanghi.png";
+import joshWang from "../../../img/eboard_photos/josh_wang.png";
+import alexanderWong from "../../../img/eboard_photos/alexander_wong.png";
+import sethMorton from "../../../img/eboard_photos/seth_morton.jpg";
+import philipLeung from "../../../img/eboard_photos/philip_leung.png";
+import aashkaDave from "../../../img/eboard_photos/aashka_dave.png";
+import elvinCheng from "../../../img/eboard_photos/elvin_cheng.png";
+import zainabHussainSyed from "../../../img/eboard_photos/zainab_hussain_syed.png";
+import anyaSolanki from "../../../img/eboard_photos/anya_solanki.png";
+import aravGoyal from "../../../img/eboard_photos/arav_goyal.png";
+import michaelRicardo from "../../../img/eboard_photos/michael_ricardo.png";
+import wanruSkuldShao from "../../../img/eboard_photos/wanru_skuld_shao.jpg";
+import diyaJhamtani from "../../../img/eboard_photos/diya_jhamtani.png";
+import emilyKyne from "../../../img/eboard_photos/emily_kyne.png";
+import jackAnderson from "../../../img/eboard_photos/jack_anderson.png";
+import justinWee from "../../../img/eboard_photos/justin_wee.png";
+import unknownImage from "../../../img/eboard_photos/unknown.png";
 
 export const TeamMember = [
   {
@@ -53,7 +64,7 @@ export const TeamMember = [
   },
   {
     key: "member5",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Tarun Anbarasu",
     position: "Director of Research",
     team: "Reserach Team",
@@ -62,7 +73,7 @@ export const TeamMember = [
   },
   {
     key: "member6",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Anderson Lo",
     position: "Research Analyst",
     team: "Research Team",
@@ -80,7 +91,7 @@ export const TeamMember = [
   },
   {
     key: "member8",
-    headshot: xavierYu,
+    headshot: anyaSolanki,
     name: "Anya Solanki",
     position: "Research Analyst",
     team: "Research Team",
@@ -89,7 +100,7 @@ export const TeamMember = [
   },
   {
     key: "member9",
-    headshot: xavierYu,
+    headshot: michaelRicardo,
     name: "Michael Ricardo",
     position: "Research Analyst",
     team: "Research Team",
@@ -98,7 +109,7 @@ export const TeamMember = [
   },
   {
     key: "member10",
-    headshot: xavierYu,
+    headshot: emilyKyne,
     name: "Emily Kyne",
     position: "Research Analyst",
     team: "Research Team",
@@ -107,7 +118,7 @@ export const TeamMember = [
   },
   {
     key: "member11",
-    headshot: xavierYu,
+    headshot: wanruSkuldShao,
     name: "Wanru Shao",
     position: "Research Analyst",
     team: "Research Team",
@@ -116,7 +127,7 @@ export const TeamMember = [
   },
   {
     key: "member12",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Svarra Shah",
     position: "Reserach Analyst",
     team: "Research Team",
@@ -125,7 +136,7 @@ export const TeamMember = [
   },
   {
     key: "member13",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Srijith Gomattam",
     position: "Research Analyst",
     team: "Research Team",
@@ -143,7 +154,7 @@ export const TeamMember = [
   },
   {
     key: "member15",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Aden Levy",
     position: "Co-Director of Finnovate",
     team: "Finnovate Team",
@@ -161,7 +172,7 @@ export const TeamMember = [
   },
   {
     key: "member17",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Tej Chakravarthy",
     position: "Co-Director of Finnovate",
     team: "Finnovate Team",
@@ -170,7 +181,7 @@ export const TeamMember = [
   },
   {
     key: "member18",
-    headshot: xavierYu,
+    headshot: jackAnderson,
     name: "Jack Anderson",
     position: "Director of Events",
     team: "Events Team",
@@ -179,7 +190,7 @@ export const TeamMember = [
   },
   {
     key: "member19",
-    headshot: xavierYu,
+    headshot: aashkaDave,
     name: "Aashka Dave",
     position: "Event Coordinator",
     team: "Events Team",
@@ -188,7 +199,7 @@ export const TeamMember = [
   },
   {
     key: "member20",
-    headshot: xavierYu,
+    headshot: zainabHussainSyed,
     name: "Zainab Hussain Syed",
     position: "Event Coordinator",
     team: "Events Team",
@@ -197,7 +208,7 @@ export const TeamMember = [
   },
   {
     key: "member21",
-    headshot: xavierYu,
+    headshot: justinWee,
     name: "Justin Wee",
     position: "Collab Event Coordinator",
     team: "Events Team",
@@ -224,7 +235,7 @@ export const TeamMember = [
   },
   {
     key: "member24",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Arnav Mishra",
     position: "Technology Programmer",
     team: "Technology Team",
@@ -233,7 +244,7 @@ export const TeamMember = [
   },
   {
     key: "member25",
-    headshot: xavierYu,
+    headshot: aravGoyal,
     name: "Arav Goyal",
     position: "Technology Programmer",
     team: "Technology Team",
@@ -242,7 +253,7 @@ export const TeamMember = [
   },
   {
     key: "member26",
-    headshot: xavierYu,
+    headshot: diyaJhamtani,
     name: "Diya Jhamtani",
     position: "Technology Programmer",
     team: "Technology Team",
@@ -251,7 +262,7 @@ export const TeamMember = [
   },
   {
     key: "member27",
-    headshot: xavierYu,
+    headshot: unknownImage,
     name: "Vilasini Nathan",
     position: "Technology Programmer",
     team: "Technology Team",
@@ -278,7 +289,7 @@ export const TeamMember = [
   },
   {
     key: "member30",
-    headshot: alexChoi,
+    headshot: unknownImage,
     name: "Siya Patel",
     position: "Student Outreach",
     team: "Marketing Team",
@@ -287,7 +298,7 @@ export const TeamMember = [
   },
   {
     key: "member31",
-    headshot: rodrigoAldrey,
+    headshot: unknownImage,
     name: "Jacob Chen",
     position: "Industry Outreach",
     team: "Marketing Team",
@@ -301,24 +312,6 @@ export const TeamMember = [
     position: "Director of Engagement",
     team: "Marketing Team",
     linkedin: "https://www.linkedin.com/in/kaamil-thobani-9a7237210/",
-    alt: "",
-  },
-  {
-    key: "member33",
-    headshot: joshWang,
-    name: "Josh Wang",
-    position: "Co-Director",
-    team: "Elevate",
-    linkedin: "https://www.linkedin.com/in/joshwang-p/",
-    alt: "",
-  },
-  {
-    key: "member34",
-    headshot: elvinCheng,
-    name: "Elvin Cheng",
-    position: "Co-Director",
-    team: "Elevate",
-    linkedin: "https://www.linkedin.com/in/elvin-cheng/",
     alt: "",
   },
 ];
