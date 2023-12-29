@@ -1,6 +1,6 @@
-import testImage1 from "../../../img/testImage1.png";
 import finnovate1 from "../../../img/finnovate1.svg";
 import techWorkshop2 from "../../../img/tech-workshop 2.svg";
+import finnovate2 from "../../../img/homeVenturesProgram.svg";
 
 export const CARD = [
   {
@@ -14,23 +14,8 @@ export const CARD = [
     alt: "Second image",
   },
   {
-    key: "test3",
-    img: testImage1,
-    alt: "Third test image alternative",
-  },
-  {
-    key: "test4",
-    img: testImage1,
-    alt: "Fourth test image alternative",
-  },
-  {
-    key: "test5",
-    img: testImage1,
-    alt: "Fifth test image alternative",
-  },
-  {
-    key: "test6",
-    img: testImage1,
-    alt: "Sixth test image alternative",
+    key: "finnovate#2",
+    img: finnovate2,
+    alt: "Third image",
   },
 ];
