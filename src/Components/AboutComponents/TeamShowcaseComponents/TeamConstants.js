@@ -8,12 +8,10 @@ import williamSeward from "../../../img/eboard_photos/william_seward.png";
 import rodrigoAldrey from "../../../img/eboard_photos/rodrigo_aldrey.png";
 import pattyKang from "../../../img/eboard_photos/patty_kang.png";
 import anishSanghi from "../../../img/eboard_photos/anish_sanghi.png";
-import joshWang from "../../../img/eboard_photos/josh_wang.png";
 import alexanderWong from "../../../img/eboard_photos/alexander_wong.png";
 import sethMorton from "../../../img/eboard_photos/seth_morton.jpg";
 import philipLeung from "../../../img/eboard_photos/philip_leung.png";
 import aashkaDave from "../../../img/eboard_photos/aashka_dave.png";
-import elvinCheng from "../../../img/eboard_photos/elvin_cheng.png";
 import zainabHussainSyed from "../../../img/eboard_photos/zainab_hussain_syed.png";
 import anyaSolanki from "../../../img/eboard_photos/anya_solanki.png";
 import aravGoyal from "../../../img/eboard_photos/arav_goyal.png";
@@ -23,6 +21,9 @@ import diyaJhamtani from "../../../img/eboard_photos/diya_jhamtani.png";
 import emilyKyne from "../../../img/eboard_photos/emily_kyne.png";
 import jackAnderson from "../../../img/eboard_photos/jack_anderson.png";
 import justinWee from "../../../img/eboard_photos/justin_wee.png";
+import tejChakravarthy from "../../../img/eboard_photos/tej_chakravarthy.png";
+import jacobChen from "../../../img/eboard_photos/jacob_chen.png";
+import srijithGomattam from "../../../img/eboard_photos/srijith_gomattam.png";
 import unknownImage from "../../../img/eboard_photos/unknown.png";
 
 export const TeamMember = [
@@ -136,7 +137,7 @@ export const TeamMember = [
   },
   {
     key: "member13",
-    headshot: unknownImage,
+    headshot: srijithGomattam,
     name: "Srijith Gomattam",
     position: "Research Analyst",
     team: "Research Team",
@@ -172,7 +173,7 @@ export const TeamMember = [
   },
   {
     key: "member17",
-    headshot: unknownImage,
+    headshot: tejChakravarthy,
     name: "Tej Chakravarthy",
     position: "Co-Director of Finnovate",
     team: "Finnovate Team",
@@ -298,7 +299,7 @@ export const TeamMember = [
   },
   {
     key: "member31",
-    headshot: unknownImage,
+    headshot: jacobChen,
     name: "Jacob Chen",
     position: "Industry Outreach",
     team: "Marketing Team",
