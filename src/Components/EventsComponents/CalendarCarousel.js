@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import { CARD } from "./eventConstants";
+import { EVENT_DATA } from "./eventConstants";
 import EventCard from "./eventCard";
 import arrowLeft from "../../img/arrowLeft.svg";
 import arrowRight from "../../img/arrowRight.svg";
 
 const CalendarCarousel = () => {
   const months = [
-    "JANUARY 2023",
-    "FEBRUARY 2023",
-    "MARCH 2023",
-    "APRIL 2023",
-    "MAY 2023",
-    "JUNE 2023",
-    "JULY 2023",
-    "AUGUST 2023",
-    "SEPTEMBER 2023",
-    "OCTOBER 2023",
-    "NOVEMBER 2023",
-    "DECEMBER 2023",
+    "JANUARY 2024",
+    "FEBRUARY 2024",
+    "MARCH 2024",
+    "APRIL 2024",
+    "MAY 2024",
+    "JUNE 2024",
+    "JULY 2024",
+    "AUGUST 2024",
+    "SEPTEMBER 2024",
+    "OCTOBER 2024",
+    "NOVEMBER 2024",
+    "DECEMBER 2024",
   ];
   const [currentMonth, setCurrentMonth] = useState(0);
 
@@ -49,7 +49,7 @@ const CalendarCarousel = () => {
         </div>
         <div className="flex justify-between items-center align-middle text-white text-xs ml-5 my-10 font-bold"></div>
         <div className="flex flex-nowrap justify-center h-3/4 text-2xl pb-14 mt-4 mx-auto overflow-x-hidden w-5/6">
-          {CARD.map((card) => (
+          {EVENT_DATA.map((card) => (
             <EventCard
               key={card.key}
               image={card.img}

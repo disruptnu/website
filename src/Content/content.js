@@ -3,48 +3,6 @@ import testhighqual from "../img/high-qual-test-image.jpg";
 
 // ALl of the static text content for the website (headers, info, etc.) is stored in the Content folder.
 const content = {
-  home: {
-    caseStudies: {
-      overallHeader: "/ Case Studies",
-
-      test1Header: "LOREM IPSUM",
-
-      test2Header: "Lorem Ipsum",
-
-      test3Header: "Test Case 3",
-
-      test4Header: "Test Case 4",
-    },
-  },
-
-  events: {
-    calendar: {
-      overallHeader: "/ Calendar",
-
-      test1Header: "Test Case 1",
-
-      test2Header: "Test Case 2",
-
-      test3Header: "Test Case 3",
-
-      test4Header: "Test Case 4",
-    },
-  },
-
-  workshops: {
-    workshopsCalendar: {
-      overallHeader: "/ Workshops",
-
-      test1Header: "Test Case 1",
-
-      test2Header: "Test Case 2",
-
-      test3Header: "Test Case 3",
-
-      test4Header: "Test Case 4",
-    },
-  },
-
   consulting: {
     consultingBenefits: {
       benefit1: "TECHNICAL GUIDANCE",

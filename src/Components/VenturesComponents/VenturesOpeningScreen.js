@@ -13,13 +13,6 @@ export default function PastVenturesOpeningScreen({
   function handleClickHamburgerMenu() {
     toggleHamburgerMenu();
   }
-  // Enable to test side bar style menu
-  /*const hamburgerMenuStyle = {
-        transform: hamburgerMenuOpen ? 'translateX(0)' : 'translateX(+100%)', // Slide in from the left when open
-        transition: 'transform 1.0s ease-in-out', // Add a smooth transition effect
-        WebkitTransition: '-webkit-transform 1.0s ease-in-out',
-        MozTransition: '-moz-transform 1.0s ease-in-out',
-    };*/
 
   if (!hamburgerMenuOpen) {
     return (

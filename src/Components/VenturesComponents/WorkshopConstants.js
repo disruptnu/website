@@ -1,9 +1,17 @@
-import content from "../../Content/content.js";
-
-export const CARD = [
+export const WORKSHOP_CARDS = [
+  {
+    key: "kickoff1",
+    header: "Finnovate Kickoff #1",
+    workshopNum: "1.",
+    date: "SEP 23 2023",
+    startTime: "6:00 PM",
+    endTime: "8:00 PM",
+    topic1: "Intro to SQL",
+    topic2: "Data Analysis with Python",
+  },
   {
     key: "workshop1",
-    header: content.workshops.workshopsCalendar.test1Header,
+    header: "Workshop #1",
     workshopNum: "1.",
     date: "SEP 23 2023",
     startTime: "6:00 PM",
@@ -13,7 +21,7 @@ export const CARD = [
   },
   {
     key: "workshop2",
-    header: content.workshops.workshopsCalendar.test2Header,
+    header: "Workshop #2",
     workshopNum: "2.",
     date: "SEP 23 2023",
     startTime: "6:00 PM",
@@ -23,7 +31,7 @@ export const CARD = [
   },
   {
     key: "workshop3",
-    header: content.workshops.workshopsCalendar.test3Header,
+    header: "Workshop #3",
     workshopNum: "3.",
     date: "SEP 23 2023",
     startTime: "6:00 PM",
@@ -33,7 +41,7 @@ export const CARD = [
   },
   {
     key: "workshop4",
-    header: content.workshops.workshopsCalendar.test4Header,
+    header: "Workshop #4",
     workshopNum: "4.",
     date: "SEP 23 2023",
     startTime: "6:00 PM",
@@ -43,7 +51,7 @@ export const CARD = [
   },
   {
     key: "workshop5",
-    header: content.workshops.workshopsCalendar.test4Header,
+    header: "Workshop #5",
     workshopNum: "5.",
     date: "SEP 23 2023",
     startTime: "6:00 PM",
@@ -53,7 +61,7 @@ export const CARD = [
   },
   {
     key: "workshop6",
-    header: content.workshops.workshopsCalendar.test4Header,
+    header: "Workshop #6",
     workshopNum: "6.",
     date: "SEP 23 2023",
     startTime: "6:00 PM",
@@ -63,7 +71,7 @@ export const CARD = [
   },
   {
     key: "workshop7",
-    header: content.workshops.workshopsCalendar.test4Header,
+    header: "Workshop #7",
     workshopNum: "7.",
     date: "SEP 23 2023",
     startTime: "6:00 PM",
@@ -73,7 +81,7 @@ export const CARD = [
   },
   {
     key: "workshop8",
-    header: content.workshops.workshopsCalendar.test4Header,
+    header: "Workshop #8",
     workshopNum: "8.",
     date: "SEP 23 2023",
     startTime: "6:00 PM",
@@ -82,18 +90,8 @@ export const CARD = [
     topic2: "Data Analysis with Python",
   },
   {
-    key: "workshop9",
-    header: content.workshops.workshopsCalendar.test4Header,
-    workshopNum: "9.",
-    date: "SEP 23 2023",
-    startTime: "6:00 PM",
-    endTime: "8:00 PM",
-    topic1: "Intro to SQL",
-    topic2: "Data Analysis with Python",
-  },
-  {
     key: "pitchDay",
-    header: content.workshops.workshopsCalendar.test4Header,
+    header: "Workshop #",
     workshopNum: "Pitch Day",
     date: "SEP 23 2023",
     startTime: "6:00 PM",

@@ -55,7 +55,7 @@ export default function Newsletters() {
               </div>
               <div className="shrink-0 sm:flex sm:flex-col sm:items-end mt-auto mb-0">
                 <NavLink
-                  to={newsletter.readMoreLink}
+                  to={newsletter.navLink}
                   className="text-white border border-solid py-2 px-6 rounded-md"
                   style={{ fontFamily: "Usual-Light" }}
                 >

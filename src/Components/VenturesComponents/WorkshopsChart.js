@@ -1,5 +1,5 @@
 import React from "react";
-import { CARD } from "./WorkshopConstants";
+import { WORKSHOP_CARDS } from "./WorkshopConstants";
 import WorkshopCard from "./WorkshopCard";
 import chanceToWinStar from "../../img/chanceToWinStar.svg";
 
@@ -13,7 +13,7 @@ export default function WorkshopsChart() {
         WORKSHOP SCHEDULE
       </p>
       <div className="">
-        {CARD.map((card) => (
+        {WORKSHOP_CARDS.map((card) => (
           <WorkshopCard
             key={card.key}
             header={card.header}
