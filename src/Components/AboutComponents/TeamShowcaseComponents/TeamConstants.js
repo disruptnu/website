@@ -24,6 +24,7 @@ import justinWee from "../../../img/eboard_photos/justin_wee.png";
 import tejChakravarthy from "../../../img/eboard_photos/tej_chakravarthy.png";
 import jacobChen from "../../../img/eboard_photos/jacob_chen.png";
 import srijithGomattam from "../../../img/eboard_photos/srijith_gomattam.png";
+import tarunAnbarasu from "../../../img/eboard_photos/tarun_anbarasu.png";
 import unknownImage from "../../../img/eboard_photos/unknown.png";
 
 export const TeamMember = [
@@ -65,7 +66,7 @@ export const TeamMember = [
   },
   {
     key: "member5",
-    headshot: unknownImage,
+    headshot: tarunAnbarasu,
     name: "Tarun Anbarasu",
     position: "Director of Research",
     team: "Reserach Team",
