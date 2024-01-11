@@ -5,43 +5,42 @@ import { NavLink } from "react-router-dom";
 import caseImage1 from "../../img/CaseImage1.svg";
 import caseImage2 from "../../img/CaseImage2.svg";
 import caseImage3 from "../../img/CaseImage3.svg";
-import content from "../../Content/content.js";
 
 const CARD = [
   {
     key: "test1",
     img: caseImage1,
-    header: content.home.caseStudies.test1Header,
+    header: "Intro To SQL",
     alt: "First test image alternative",
   },
   {
     key: "test2",
     img: caseImage2,
-    header: content.home.caseStudies.test2Header,
+    header: "Finnovate Pitch Day",
     alt: "Second test image alternative",
   },
   {
     key: "test3",
     img: caseImage3,
-    header: content.home.caseStudies.test3Header,
+    header: "Speaker Event 1",
     alt: "Third test image alternative",
   },
   {
     key: "test4",
     img: caseImage1,
-    header: content.home.caseStudies.test4Header,
+    header: "Speaker Event 2",
     alt: "Fourth test image alternative",
   },
   {
     key: "test5",
     img: caseImage1,
-    header: "Test Case 5",
+    header: "Speaker Event 2",
     alt: "Fifth test image alternative",
   },
   {
     key: "test6",
     img: caseImage1,
-    header: "Test Case 6",
+    header: "Speaker Event 3",
     alt: "Sixth test image alternative",
   },
 ];

@@ -12,7 +12,7 @@ export const newsletter = [
     authorHeadshot: author3,
     author: "Tarun Anbarasu",
     img: venturesImage,
-    readMoreLink:
+    navLink:
       "https://disrupt-fintech.medium.com/financial-report-the-rise-of-real-estate-technology-in-the-european-venture-capital-ecosystem-bec7f2e51c6b",
   },
   {
