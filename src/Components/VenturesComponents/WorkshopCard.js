@@ -35,18 +35,31 @@ export default function WorkshopCard(props) {
                   <div className="flex items-center">
                     <img src={workshopLongArrow} alt="" className="w-2" />
                     <div className="ml-4 space-y-4">
-                      <div className="flex items-center">
-                        <img src={num1} alt="num1" className="w-6 h-6 mr-4" />
-                        <p className="text-white text-md font-regular">
-                          {props.topic1}
-                        </p>
-                      </div>
-                      <div className="flex items-center">
-                        <img src={num2} alt="num2" className="w-6 h-6 mr-4" />
-                        <p className="text-white text-md font-regular">
-                          {props.topic2}
-                        </p>
-                      </div>
+                      {props.topic1 ? (
+                        <div className="flex items-center">
+                          <img src={num1} alt="num1" className="w-6 h-6 mr-4" />
+                          <p className="text-white text-md font-regular">
+                            {props.topic1}
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="flex items-center">
+                          <img src={num1} alt="num1" className="w-6 h-6 mr-4" />
+                          <p className="text-white text-md font-regular">
+                            {props.header}
+                          </p>
+                        </div>
+                      )}{" "}
+                      {props.topic2 ? (
+                        <div className="flex items-center">
+                          <img src={num2} alt="num2" className="w-6 h-6 mr-4" />
+                          <p className="text-white text-md font-regular">
+                            {props.topic2}
+                          </p>
+                        </div>
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </div>
                   <p className="text-white text-2xl font-bold">

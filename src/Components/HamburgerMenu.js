@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import disruptLogo from "../img/logo A.svg";
+import disruptLogoBlack from "../img/logo_black.svg";
 import hamburgerIcon from "../img/hamburgerIcon.svg";
 import navigationArrowIcon from "../img/navigationArrowIcon.svg";
 import "./HamburgerMenuStyles.css";
@@ -35,9 +35,9 @@ export default function HamburgerMenuOpen({
           <div>
             <NavLink to="/">
               <img
-                src={disruptLogo}
+                src={disruptLogoBlack} // get one that replaces the blue for bl
                 alt="testLogo"
-                className="w-20 h-20 ml-3 brightness-90"
+                className="w-16 ml-4 mt-4 brightness-90"
               />
             </NavLink>
           </div>
