@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import HamburgerMenu from "../HamburgerMenu";
-import disruptLogo from "../../img/logo A.svg";
+import disruptLogo from "../../img/logo_a.svg";
 import hamburgerIcon from "../../img/hamburgerIcon.svg";
 
 export default function WhyDisrupt({ hamburgerMenuOpen, toggleHamburgerMenu }) {
@@ -20,7 +20,7 @@ export default function WhyDisrupt({ hamburgerMenuOpen, toggleHamburgerMenu }) {
                 <img
                   src={disruptLogo}
                   alt="testLogo"
-                  className="w-20 h-20 ml-3"
+                  className="w-16 ml-4 mt-4"
                 />
               </NavLink>
             </div>

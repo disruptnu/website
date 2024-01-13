@@ -1,6 +1,6 @@
 import React from "react";
 import HamburgerMenu from "../HamburgerMenu.js";
-import disruptLogo from "../../img/logo A.svg";
+import disruptLogo from "../../img/logo_a.svg";
 import hamburgerIcon from "../../img/hamburgerIcon.svg";
 import backgroundVideo from "../../img/testStockVideoBackground.mp4";
 
@@ -41,7 +41,7 @@ export default function OpeningScreen({
               <img
                 src={disruptLogo}
                 alt="testLogo"
-                className="w-20 h-20 ml-3"
+                className="w-16 ml-4 mt-4"
               />
             </div>
           </div>

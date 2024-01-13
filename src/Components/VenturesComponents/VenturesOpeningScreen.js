@@ -1,6 +1,6 @@
 import React from "react";
 import HamburgerMenu from "../HamburgerMenu";
-import disruptLogo from "../../img/logo A.svg";
+import disruptLogo from "../../img/logo_a.svg";
 import hamburgerIcon from "../../img/hamburgerIcon.svg";
 import arrowDown from "../../img/arrowDown.svg";
 import { NavLink } from "react-router-dom";
@@ -24,7 +24,7 @@ export default function PastVenturesOpeningScreen({
                 <img
                   src={disruptLogo}
                   alt="testLogo"
-                  className="w-20 h-20 ml-3"
+                  className="w-16 ml-4 mt-4"
                 />
               </NavLink>
             </div>
@@ -72,12 +72,12 @@ export default function PastVenturesOpeningScreen({
           <img src={arrowDown} alt="" className="ml-8" />
         </div>
         <div className="pb-32">
-          <p
+          {/* <p
             className="text-white text-4xl"
             style={{ fontFamily: "Usual-Regular" }}
           >
             [More info about Finnovate/Applying]
-          </p>
+          </p> */}
         </div>
       </div>
     );
