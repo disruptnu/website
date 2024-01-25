@@ -29,27 +29,28 @@ const CalendarCarousel = () => {
     setCurrentMonth((prevMonth) => (prevMonth - 1 + 12) % 12);
   };
 
-  // Justify start on the div before the card map is making it such that it's starting more to the left,
-  // do we want to center it or keep it to the left so it can carousel between more if they're added
-  // CURRENTLY IS AT JUSTIFY-CENTER
+  const filteredEvents = EVENT_DATA.filter((event) => {
+    const monthInitial = months[currentMonth].charAt(0);
+    return event.month && event.month.charAt(0) === monthInitial;
+  });
 
   return (
     <div>
       <div className="border-b border-solid border-b-gray-400">
-        <div className="w-screen flex items-center px-5 py-6">
+        <div className="flex items-center w-screen px-5 py-6">
           <div className="flex items-center space-x-5 pl-36">
             <button className="flex items-center" onClick={prevMonth}>
               <img src={arrowLeft} alt="" />
             </button>
-            <p className="text-white text-4xl mb-1">{months[currentMonth]}</p>
+            <p className="mb-1 text-4xl text-white">{months[currentMonth]}</p>
             <button className="flex items-center" onClick={nextMonth}>
               <img src={arrowRight} alt="" />
             </button>
           </div>
         </div>
-        <div className="flex justify-between items-center align-middle text-white text-xs ml-5 my-10 font-bold"></div>
-        <div className="flex flex-nowrap justify-center h-3/4 text-2xl pb-14 mt-4 mx-auto overflow-x-hidden w-5/6">
-          {EVENT_DATA.map((card) => (
+        <div className="flex items-center justify-between my-10 ml-5 text-xs font-bold text-white align-middle"></div>
+        <div className="flex justify-center w-5/6 mx-auto mt-4 overflow-x-hidden text-2xl flex-nowrap h-3/4 pb-14">
+          {filteredEvents.map((card) => (
             <EventCard
               key={card.key}
               image={card.img}
