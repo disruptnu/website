@@ -40,14 +40,14 @@ export default function About() {
       <TeamShowcase />
       <div>
         <p
-          className="text-white text-6xl font-bold text-left w-4/5 ml-10 mb-20 pt-20"
+          className="w-4/5 pt-20 mb-20 ml-10 text-6xl font-bold text-left text-white"
           style={{
             fontFamily: "Faucet",
             fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on",
           }}
         >
           LET'S BUILD A FINTECH COMMUNITY{" "}
-          <span className="text-blue-500">TOGETHER</span>.
+          <span className="text-green-500">TOGETHER</span>.
         </p>
       </div>
       <Footer />
