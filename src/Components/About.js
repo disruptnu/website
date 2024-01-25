@@ -47,7 +47,7 @@ export default function About() {
           }}
         >
           LET'S BUILD A FINTECH COMMUNITY{" "}
-          <span className="text-green-500">TOGETHER</span>.
+          <span className="text-blue-500">TOGETHER</span>.
         </p>
       </div>
       <Footer />

@@ -7,6 +7,7 @@ The website for Disrupt, a FinTech-based Northeastern University student organiz
 - Preet Singh (Project Lead)
 - Brian Kapusta (Tech Lead) bkapusta2@gmail.com
 - Helen Miao (Developer) miao.he@northeastern.edu
+- Kaamil Thobani (Disrupt Tech Director) thobani.@northeastern.edu
 
 # Getting Started with Create React App
 
