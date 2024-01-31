@@ -58,8 +58,18 @@ export default function HamburgerMenuOpen({
         </div>
       </div>
       <div className="flex-grow">
-        <div className="selection:text-blue-500 text-8xl pl-28 flex flex-col">
-          <div className="text-white font-bold mt-16 relative group">
+        <div className="selection:text-blue-500 text-7xl pl-28 flex flex-col">
+          <div className="text-white font-bold mt-8 relative group">
+            <NavLink to="/" onClick={handleClickHamburgerMenu}>
+              <span className="text-move">Home</span>
+            </NavLink>
+            <img
+              src={navigationArrowIcon}
+              alt="navigationArrowIcon"
+              className="hidden absolute top-1/2 transform -translate-y-1/2 group-hover:block"
+            />
+          </div>
+          <div className="text-white font-bold relative group">
             <NavLink to="/about" onClick={handleClickHamburgerMenu}>
               <span className="text-move">About</span>
             </NavLink>
