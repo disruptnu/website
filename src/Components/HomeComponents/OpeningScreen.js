@@ -15,7 +15,7 @@ export default function OpeningScreen({
 
   function handleClickJoin() {
     window.location =
-      "https://airtable.com/appYvJkhyjQlVvoqV/shrXCWB0tMh79Ty5i";
+      "https://join.slack.com/t/disruptthefin-jlz8378/shared_invite/zt-2by2eubit-TX1I42vHghkBAW965jexlw";
   }
 
   const videoStyle = {
