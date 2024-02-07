@@ -1,11 +1,11 @@
 import React from "react";
-import PillarSection from "./ThreePillars/pillarSection";
-import { Pillar } from "../FundamentalsComponents/ThreePillars/fundamentalsConstants";
+import PillarSection from "../FundamentalsComponents/ThreePillars/pillarSection";
+import { Pillar } from "./ThreePillars/fundamentalsConstants"; // Adjust the import path as necessary
 
 export default function ThreePillars() {
   return (
-    <div className="min-w-max min-h-max">
-      <div className="grid grid-cols-3 divide-x divide-gray-500 divide-solid h-40 w-screen mt-4">
+    <div className="max-w-full overflow-hidden">
+      <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3">
         {Pillar.map((pillar) => (
           <PillarSection
             key={pillar.key}

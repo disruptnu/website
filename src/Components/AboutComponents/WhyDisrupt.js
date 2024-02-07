@@ -5,62 +5,35 @@ import disruptLogo from "../../img/logo_a.svg";
 import hamburgerIcon from "../../img/hamburgerIcon.svg";
 
 export default function WhyDisrupt({ hamburgerMenuOpen, toggleHamburgerMenu }) {
-  // Use this state to toggle the hamburger menu, false = closed, true = open
+  // Toggle hamburger menu
   function handleClickHamburgerMenu() {
     toggleHamburgerMenu();
   }
 
   if (!hamburgerMenuOpen) {
     return (
-      <div className="w-screen h-screen relative">
-        <div className="w-screen h-20 flex items-start justify-between">
-          <div className="flex items-center">
-            <div>
-              <NavLink to="/">
-                <img
-                  src={disruptLogo}
-                  alt="testLogo"
-                  className="w-16 ml-4 mt-4"
-                />
-              </NavLink>
-            </div>
-          </div>
-          <div className="flex items-center py-4 border border-solid rounded-full border-[#b5f727] mr-5 mt-5 hover:scale-110">
-            <img
-              src={hamburgerIcon}
-              alt="hamburgerMenuIcon"
-              onClick={handleClickHamburgerMenu}
-              className="w-14 h-5 hover:cursor-pointer"
-            />
-          </div>
+      <div className="relative w-screen min-h-screen">
+        <div className="flex items-center justify-between w-full p-4 md:p-8">
+          <NavLink to="/">
+            <img src={disruptLogo} alt="Disrupt Logo" className="w-16 h-auto" />
+          </NavLink>
+          <button onClick={handleClickHamburgerMenu} className="py-2 px-4 border border-solid rounded-full border-[#b5f727] hover:scale-110 transition-transform duration-200" aria-label="Open Menu">
+            <img src={hamburgerIcon} alt="Menu" className="h-auto w-14" />
+          </button>
         </div>
-        <div className="w-screen flex flex-col items-start pl-32 mt-44">
-          <div
-            className="text-white font-bold py-8 text-7xl"
-            style={{
-              fontFamily: "Faucet",
-              fontFeatureSettings: "'dlig' on, 'ss03' on, 'ss02' on, 'ss01' on",
-            }}
-          >
-            <p>WHY DISRUPT?</p>
-          </div>
-          <p
-            className="text-white text-2xl pb-8 w-1/2"
-            style={{ fontFamily: "Usual-Regular" }}
-          >
-            At Northeastern University, we have recognized the disruptive power
-            of technology in finance and have started Disrupt to collaborate to
-            change the finance industry.
+        <div className="flex flex-col items-start pl-8 mt-24 md:pl-32 md:mt-44">
+          <h1 className="py-4 text-5xl font-bold text-white md:py-8 md:text-7xl" style={{ fontFamily: "Faucet", fontFeatureSettings: "'dlig' on, 'ss03' on, 'ss02' on, 'ss01' on" }}>
+            WHY DISRUPT?
+          </h1>
+          <p className="w-full pb-8 text-lg text-white md:text-2xl md:w-1/2" style={{ fontFamily: "Usual-Regular" }}>
+            At Northeastern University, we have recognized the disruptive power of technology in finance and have started Disrupt to collaborate to change the finance industry.
           </p>
         </div>
       </div>
     );
   } else {
     return (
-      <HamburgerMenu
-        hamburgerMenuOpen={hamburgerMenuOpen}
-        toggleHamburgerMenu={toggleHamburgerMenu}
-      />
+      <HamburgerMenu hamburgerMenuOpen={hamburgerMenuOpen} toggleHamburgerMenu={toggleHamburgerMenu} />
     );
   }
 }
