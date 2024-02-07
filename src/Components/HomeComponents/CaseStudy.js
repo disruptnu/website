@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
+import { NavLink } from "react-router-dom";
 import leftScroll from "../../img/LeftGreenArrow.svg";
 import rightScroll from "../../img/RightGreenArrow.svg";
-import { NavLink } from "react-router-dom";
 import caseImage1 from "../../img/CaseImage1.svg";
 import caseImage2 from "../../img/CaseImage2.svg";
 import caseImage3 from "../../img/CaseImage3.svg";
@@ -47,11 +47,11 @@ const CARD = [
 
 function CaseStudyCard(props) {
   return (
-    <div className="px-10 flex flex-col items-center min-w-max min-h-max">
-      <img className="rounded-sm pb-2 w-96" src={props.image} alt={props.alt} />
-      <div className="flex justify-between w-96 mx-5">
+    <div className="flex flex-col items-center px-5 sm:px-10">
+      <img className="w-full pb-2 rounded-sm" src={props.image} alt={props.alt} />
+      <div className="flex justify-between w-full mx-2 sm:mx-5">
         <h3
-          className="text-blue-500 font-bold"
+          className="text-sm font-bold text-blue-500 sm:text-base"
           style={{
             fontFamily: "Faucet",
             fontFeatureSettings: "'ss03' on, 'ss02' on, 'ss01' on",
@@ -59,7 +59,7 @@ function CaseStudyCard(props) {
         >
           {props.header}
         </h3>
-        <p className="text-white text-sm font-bold border border-solid border-white rounded-md py-1 px-2 text-center">
+        <p className="px-2 py-1 text-xs font-bold text-center text-white border border-white border-solid rounded-md sm:text-sm">
           Tag
         </p>
       </div>
@@ -74,69 +74,48 @@ export default function CaseStudy() {
     window.scrollTo(0, 0);
   };
 
-  // Scroll left
   const scrollLeft = () => {
     if (containerRef.current) {
+      const containerWidth = containerRef.current.clientWidth;
+      const cardWidth = 320; // Adjust this value based on the actual width of your cards
+      const scrollAmount = Math.floor(containerWidth / cardWidth) * cardWidth;
       containerRef.current.scrollBy({
-        left: -500,
+        left: -scrollAmount,
         behavior: "smooth",
       });
     }
   };
-  // Scroll right
+  
   const scrollRight = () => {
     if (containerRef.current) {
+      const containerWidth = containerRef.current.clientWidth;
+      const cardWidth = 320; // Adjust this value based on the actual width of your cards
+      const scrollAmount = Math.floor(containerWidth / cardWidth) * cardWidth;
       containerRef.current.scrollBy({
-        left: +500,
+        left: scrollAmount,
         behavior: "smooth",
       });
     }
   };
-
-  // const totalCardWidth = CARD.length * 296; // Assuming each card is 300px wide
+  
 
   return (
     <div>
       <div className="border-b border-solid border-b-gray-400">
-        <div
-          className="flex justify-between items-center align-middle text-white text-xs ml-10 my-10 font-bold"
-          style={{ fontFamily: "Usual-Light" }}
-        >
-          <h6 className="w-32">/ CASE STUDIES</h6>
-          <div className="flex justify-end text-blue-500 text-lg w-screen h-5 pr-10">
-            <img
-              src={leftScroll}
-              alt="Left Scroll Arrow"
-              className={`hover:cursor-pointer mx-5`}
-              onClick={scrollLeft}
-            />
-            <img
-              src={rightScroll}
-              alt="Right Scroll Arrow"
-              className={`hover:cursor-pointer  `}
-              onClick={scrollRight}
-            />
+        <div className="flex items-center justify-between my-5 ml-5 text-xs font-bold text-white align-middle sm:my-10 sm:ml-10 sm:text-sm" style={{ fontFamily: "Usual-Light" }}>
+          <h6 className="w-32">CASE STUDIES</h6>
+          <div className="flex justify-end w-screen h-5 pr-5 text-lg text-blue-500 sm:w-auto sm:pr-10">
+            <img src={leftScroll} alt="Left Scroll Arrow" className="mx-2 hover:cursor-pointer sm:mx-5" onClick={scrollLeft} />
+            <img src={rightScroll} alt="Right Scroll Arrow" className="mx-2 hover:cursor-pointer sm:mx-5" onClick={scrollRight} />
           </div>
         </div>
-        <div
-          className="flex flex-nowrap justify-start w-full h-3/4 text-2xl pb-14 mt-4 mx-auto overflow-x-hidden divide-x divide-gray-800"
-          ref={containerRef}
-        >
+        <div className="flex justify-start w-full mx-auto mt-4 overflow-x-auto text-2xl divide-x divide-gray-800 sm:overflow-x-hidden flex-nowrap h-3/4 pb-14" ref={containerRef}>
           {CARD.map((card) => (
-            <CaseStudyCard
-              key={card.key}
-              image={card.img}
-              header={card.header}
-              alt={card.alt}
-            />
+            <CaseStudyCard key={card.key} image={card.img} header={card.header} alt={card.alt} />
           ))}
         </div>
         <div className="flex justify-center pb-14">
-          <NavLink
-            to="/PastVentures"
-            onClick={scrollToTop}
-            className="text-white text-base px-4 py-2 font-bold bg-black border border-solid border-[#b5f727] hover:text-black hover:bg-[#b5f727] rounded-full"
-          >
+          <NavLink to="/PastVentures" onClick={scrollToTop} className="text-white text-base px-4 py-2 font-bold bg-black border border-solid border-[#b5f727] hover:text-black hover:bg-[#b5f727] rounded-full">
             View All Cases
           </NavLink>
         </div>
