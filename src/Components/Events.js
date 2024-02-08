@@ -21,15 +21,17 @@ export default function Events() {
     return () => {
       document.body.style.overflow = "auto";
     };
-  });
+  }, [hamburgerMenuOpen]); // Add hamburgerMenuOpen as a dependency to re-run effect when it changes
 
   return (
-    <div>
+    <div className="flex flex-col h-full">
       <EventsLanding
         toggleHamburgerMenu={toggleHamburgerMenu}
         hamburgerMenuOpen={hamburgerMenuOpen}
       />
-      <Calendar />
+      <div className="flex-grow">
+        <Calendar />
+      </div>
       <Footer />
     </div>
   );
