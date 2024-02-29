@@ -29,14 +29,11 @@ export default function PastVenturesOpeningScreen({
               </NavLink>
             </div>
           </div>
-          <div className="flex items-center py-4 border border-solid rounded-full border-[#b5f727] mr-5 mt-5 hover:scale-110">
-            <img
-              src={hamburgerIcon}
-              alt="hamburgerMenuIcon"
-              onClick={handleClickHamburgerMenu}
-              className="h-5 w-14 hover:cursor-pointer"
-            />
-          </div>
+          <div className={`absolute top-5 right-5 z-30 ${hamburgerMenuOpen ? 'hidden' : 'block'}`}>
+        <button onClick={toggleHamburgerMenu} className="p-2 rounded-full bg-[#b5f727] hover:bg-green-700">
+          <img src={hamburgerIcon} alt="Menu" className="w-8 h-8" />
+        </button>
+      </div>
         </div>
         <div className="flex flex-col items-center w-full px-4 pt-10 pb-10 sm:items-end sm:pt-28 sm:pb-20 sm:w-8/12 md:w-5/12">
           <p className="mb-2 text-2xl text-white sm:text-4xl">disrupt</p>

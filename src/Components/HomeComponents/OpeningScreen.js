@@ -2,32 +2,36 @@ import React from "react";
 import HamburgerMenu from "../HamburgerMenu.js";
 import disruptLogo from "../../img/logo_a.svg";
 import hamburgerIcon from "../../img/hamburgerIcon.svg";
-import backgroundVideo from "../../img/testStockVideoBackground.mp4";
+import backgroundVideo from "../../img/MiniAdDisrupt(NEW BRANDING).mp4";
 
 export default function OpeningScreen({ hamburgerMenuOpen, toggleHamburgerMenu }) {
   return (
-    <div className="relative w-screen h-screen">
+    <div className="relative flex flex-col items-center justify-start w-screen h-screen overflow-hidden">
+      {/* Logo at the top center */}
+      <div className="z-20 mt-5">
+        <img src={disruptLogo} alt="Disrupt Logo" className="w-16 h-auto" />
+      </div>
+
       {/* Render the video */}
-      <video autoPlay loop muted className="absolute top-0 left-0 z-0 object-cover w-full h-full">
+      <video autoPlay loop muted className="absolute top-0 left-0 z-0 object-cover w-screen h-screen">
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
+    
       {/* Render the hamburger button */}
-      <div className={`absolute top-5 left-5 z-20 ${hamburgerMenuOpen ? 'hidden' : 'block'}`}>
+      <div className={`absolute top-5 left-5 z-30 ${hamburgerMenuOpen ? 'hidden' : 'block'}`}>
         <button onClick={toggleHamburgerMenu} className="p-2 rounded-full bg-[#b5f727] hover:bg-green-700">
           <img src={hamburgerIcon} alt="Menu" className="w-8 h-8" />
         </button>
       </div>
 
-      {/* Render the content */}
-      <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10 ${hamburgerMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'}`}>
-        <img src={disruptLogo} alt="Disrupt Logo" className="w-16 h-auto mx-auto mb-8" />
-        <h1 className="mb-4 text-4xl font-bold sm:text-6xl md:text-7xl">Disrupt</h1>
-        <p className="mb-8 text-xl sm:text-2xl md:text-3xl">
+      {/* Overlay Content within the video area */}
+      <div className={`absolute bottom-10 w-full flex flex-col items-center z-10 ${hamburgerMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'}`}>
+        <h1 className="text-2xl font-bold text-center text-white sm:text-4xl md:text-5xl">Disrupt</h1>
+        <p className="mb-4 text-base text-center text-white sm:text-lg md:text-xl">
           Northeastern's student-led fintech group; where curiosity meets innovation.
         </p>
-        <button onClick={() => window.location = "https://airtable.com/appYvJkhyjQlVvoqV/shrXCWB0tMh79Ty5i"} className="bg-transparent border border-[#b5f727] text-[#b5f727] hover:bg-[#b5f727] hover:text-black rounded-full px-6 py-3 transition-colors">
+        <button onClick={() => window.location = "https://airtable.com/appYvJkhyjQlVvoqV/shrXCWB0tMh79Ty5i"} className="px-6 py-3 text-white transition-colors bg-transparent border border-white rounded-full hover:bg-white hover:text-black">
           Join Us
         </button>
       </div>
