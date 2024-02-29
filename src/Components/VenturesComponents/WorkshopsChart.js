@@ -5,14 +5,10 @@ import chanceToWinStar from "../../img/chanceToWinStar.svg";
 
 export default function WorkshopsChart() {
   return (
-    <div className="pl-12 pb-72">
-      <p
-        className="text-white font-bold text-5xl mb-12"
-        style={{ fontFamily: "Usual-Regular" }}
-      >
-        WORKSHOP SCHEDULE
-      </p>
-      <div className="">
+    <div className="flex flex-col items-center px-4 pb-10 sm:px-12 ">
+  <p className="items-center mb-8 text-3xl font-bold text-white sm:text-5xl sm:mb-12">WORKSHOP SCHEDULE</p>
+ 
+      <div className="flex-col items-center">
         {WORKSHOP_CARDS.map((card) => (
           <WorkshopCard
             key={card.key}
@@ -25,15 +21,12 @@ export default function WorkshopsChart() {
             topic2={card.topic2}
           />
         ))}
-        <div className="flex items-center">
-          <p
-            className="text-white font-bold text-5xl"
-            style={{ fontFamily: "Usual-Regular" }}
-          >
-            THE CHANCE TO WIN
-          </p>
-          <img src={chanceToWinStar} alt="star" className="ml-24 pl-1.5 h-16" />
-        </div>
+        <div className="flex items-center justify-start">
+      <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mr-6 md:mr-12 lg:mr-24 font-[Usual-Regular]">
+        THE CHANCE TO WIN
+      </p>
+      <img src={chanceToWinStar} alt="star" className="h-12 md:h-16 lg:h-20" />
+    </div>
       </div>
     </div>
   );

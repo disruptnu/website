@@ -16,15 +16,15 @@ export default function PastVenturesOpeningScreen({
 
   if (!hamburgerMenuOpen) {
     return (
-      <div className="w-screen relative flex flex-col items-center justify-center">
-        <div className="w-screen flex items-start justify-between">
+      <div className="relative flex flex-col items-center justify-center w-screen px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-start justify-between w-full px-4 py-5 sm:flex-row">
           <div className="flex items-center">
             <div>
               <NavLink to="/">
                 <img
                   src={disruptLogo}
                   alt="testLogo"
-                  className="w-16 ml-4 mt-4"
+                  className="w-16 mt-4 ml-4"
                 />
               </NavLink>
             </div>
@@ -34,23 +34,15 @@ export default function PastVenturesOpeningScreen({
               src={hamburgerIcon}
               alt="hamburgerMenuIcon"
               onClick={handleClickHamburgerMenu}
-              className="w-14 h-5 hover:cursor-pointer"
+              className="h-5 w-14 hover:cursor-pointer"
             />
           </div>
         </div>
-        <div
-          className="flex flex-col items-end pt-28 pb-20 w-5/12"
-          style={{ fontFamily: "Faucet" }}
-        >
-          <p className="text-white text-4xl mb-1">disrupt</p>
+        <div className="flex flex-col items-center w-full px-4 pt-10 pb-10 sm:items-end sm:pt-28 sm:pb-20 sm:w-8/12 md:w-5/12">
+          <p className="mb-2 text-2xl text-white sm:text-4xl">disrupt</p>
+          <p className="pb-5 text-6xl text-white sm:text-9xl sm:pb-8">FINNOVATE</p>
           <p
-            className="text-white text-9xl pb-8"
-            style={{ fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on" }}
-          >
-            FINNOVATE
-          </p>
-          <p
-            className="text-white mx-auto text-justify"
+            className="mx-auto text-justify text-white"
             style={{ fontFamily: "Usual-Regular" }}
           >
             Disrupt's Finnovate is an 8-week long program where students will be
@@ -64,7 +56,7 @@ export default function PastVenturesOpeningScreen({
 
         <div className="items-center mb-40">
           <p
-            className="text-white text-sm pt-12 pb-4 justify-center"
+            className="justify-center pt-12 pb-4 text-sm text-white"
             style={{ fontFamily: "Usual-Light" }}
           >
             READ MORE
@@ -73,7 +65,7 @@ export default function PastVenturesOpeningScreen({
         </div>
         <div className="pb-32">
           {/* <p
-            className="text-white text-4xl"
+            className="text-4xl text-white"
             style={{ fontFamily: "Usual-Regular" }}
           >
             [More info about Finnovate/Applying]

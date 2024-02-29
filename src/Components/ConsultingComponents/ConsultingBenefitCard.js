@@ -2,25 +2,25 @@ import React from "react";
 
 export default function ConsultingBenefitCard(props) {
   return (
-    <div className="px-5 pt-16 w-2/5 min-h-max">
-      <div className="bg-black border pt-16 h-full flex flex-col">
-        <div className="pl-8 pr-auto mb-12 flex flex-col justify-between">
+    <div className="items-center pt-16 w-2/5px-5 flex-center min-h-max">
+      <div className="flex flex-col h-full pt-16 bg-black border">
+        <div className="flex flex-col justify-between pl-8 mb-12 pr-auto">
           <div>
             <p
-              className="text-white text-4xl font-black text-left w-3/5 leading-10"
+              className="w-3/5 text-4xl font-black leading-10 text-left text-white"
               style={{ fontFamily: "Usual-Regular" }}
             >
               {props.header}
             </p>
           </div>
           <img
-            className="w-64 pt-12 self-center"
+            className="self-center w-64 pt-12"
             src={props.img}
             alt={props.alt}
           />
 
           <p
-            className="text-white text-lg font-regular text-left pt-8 pr-8"
+            className="pt-8 pr-8 text-lg text-left text-white font-regular"
             style={{ fontFamily: "Usual-Regular" }}
           >
             {props.description}
