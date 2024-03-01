@@ -2,7 +2,7 @@ import React from "react";
 
 const EventCard = ({ image, header, alt, day, month }) => {
   return (
-    <div className="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg">
+    <div className="flex flex-col items-center max-w-xs overflow-hidden bg-white rounded-lg shadow-lg">
       <img className="w-full" src={image} alt={alt} />
       <div className="px-6 py-4">
         <div className="mb-2 text-xl font-bold">{header}</div>

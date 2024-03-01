@@ -21,10 +21,10 @@ export default function WorkshopsChart() {
           />
         ))}
         <div className="flex items-center justify-center">
-          <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mr-6 md:mr-12 lg:mr-24 font-[Usual-Regular]">
+          <p className="text-center text-4xl md:text-5xl lg:text-6xl py-8 font-bold text-white mr-6 md:mr-12 lg:mr-24 font-[Usual-Regular]">
             THE CHANCE TO WIN
           </p>
-          <img src={chanceToWinStar} alt="star" className="h-12 md:h-16 lg:h-20" />
+          <img src={chanceToWinStar} alt="star" className="items-center h-12 md:h-16 lg:h-20" />
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ export default function EventsLanding({
   }
 
   return (
-    <div className={`relative h-screen ${showMenuBackground ? 'bg-green-500' : ''}`}>
+    <div className={`relative h-screen flex-col items-cetner ${showMenuBackground ? 'bg-green-500' : ''}`}>
       <div className={`absolute top-0 left-0 z-10 flex items-center justify-between w-full h-20 px-5 ${hamburgerMenuOpen ? 'hidden' : ''}`}>
         {/* Conditionally apply 'hidden' class based on hamburgerMenuOpen state */}
         <div className="flex items-center">
@@ -40,9 +40,9 @@ export default function EventsLanding({
       {!hamburgerMenuOpen && (
         <div className="relative z-0 flex flex-col items-center justify-center h-full">
           <div className="w-8/12 text-center">
-            <p className="mb-1 text-4xl text-white">disrupt</p>
+            <p className="mb-1 text-4xl text-white texts-center">disrupt</p>
             <p
-              className="pb-8 mx-auto text-justify text-white text-8xl"
+              className="flex pb-8 mx-auto text-center text-white text-8xl"
               style={{ fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on" }}
             >
               EVENTS

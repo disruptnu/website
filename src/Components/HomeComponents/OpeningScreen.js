@@ -29,7 +29,8 @@ export default function OpeningScreen({ hamburgerMenuOpen, toggleHamburgerMenu }
       <div className={`absolute bottom-10 w-full flex flex-col items-center z-10 ${hamburgerMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'}`}>
         <h1 className="text-2xl font-bold text-center text-white sm:text-4xl md:text-5xl">Disrupt</h1>
         <p className="mb-4 text-base text-center text-white sm:text-lg md:text-xl">
-          Northeastern's student-led fintech group; where curiosity meets innovation.
+        Northeastern's student-led fintech group;<br/>{" "}
+            <em>where curiosity meets innovation</em>
         </p>
         <button onClick={() => window.location = "https://airtable.com/appYvJkhyjQlVvoqV/shrXCWB0tMh79Ty5i"} className="px-6 py-3 text-white transition-colors bg-transparent border border-white rounded-full hover:bg-white hover:text-black">
           Join Us

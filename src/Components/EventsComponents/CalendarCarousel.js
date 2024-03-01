@@ -35,7 +35,7 @@ const CalendarCarousel = () => {
   });
 
   return (
-    <div className="border-b border-solid border-b-gray-400">
+    <div className="=items-center border-b border-solid border-b-gray-400">
       <div className="flex items-center w-full px-5 py-6">
         <div className="flex items-center space-x-5">
           <button className="flex items-center" onClick={prevMonth}>
@@ -47,7 +47,7 @@ const CalendarCarousel = () => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-4 px-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-14">
+      <div className="grid items-center grid-cols-1 gap-4 px-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-14">
         {filteredEvents.map((card) => (
           <EventCard
             key={card.key}

@@ -10,9 +10,9 @@ export default function PastVenturesOpeningScreen({
   toggleHamburgerMenu,
 }) {
   // Use this state to toggle the hamburger menu, false = closed, true = open
-  function handleClickHamburgerMenu() {
-    toggleHamburgerMenu();
-  }
+  // function handleClickHamburgerMenu() {
+  //   toggleHamburgerMenu();
+  // }
 
   if (!hamburgerMenuOpen) {
     return (
