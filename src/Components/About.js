@@ -5,6 +5,8 @@ import ThreePillars from "./AboutComponents/FundamentalsComponents/ThreePillars"
 import TeamShowcase from "./AboutComponents/TeamShowcase";
 import TeamCarousel from "./AboutComponents/TeamShowcaseComponents/TeamCarousel";
 import Footer from "./HomeComponents/Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function About() {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -39,16 +41,9 @@ export default function About() {
       <TeamCarousel />
       <TeamShowcase />
       <div>
-        <p
-          className="w-4/5 pt-20 mb-20 ml-10 text-6xl font-bold text-left text-white"
-          style={{
-            fontFamily: "Faucet",
-            fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on",
-          }}
-        >
-          LET'S BUILD A FINTECH COMMUNITY{" "}
-          <span className="text-green-500">TOGETHER</span>.
-        </p>
+      <p className="w-4/5 pt-20 mb-20 ml-10 text-2xl font-bold text-left text-white sm:text-4xl md:text-5xl lg:text-6xl">
+  LET'S BUILD A FINTECH COMMUNITY <span className="text-green-500">TOGETHER</span>.
+      </p>
       </div>
       <Footer />
     </div>

@@ -4,66 +4,46 @@ import { NavLink } from "react-router-dom";
 
 export default function Newsletters() {
   return (
-    <div className="border-b border-solid border-b-gray-400">
-      <div
-        className="text-white text-xs pl-10 pt-10 font-bold"
-        style={{ fontFamily: "Usual-Light" }}
-      >
+    <div className="border-b border-gray-400">
+      <div className="pl-4 pt-4 pb-2 text-xs text-white font-bold">
         <h6>/ NEWSLETTERS</h6>
       </div>
-      <ul className="divide-y divide-gray-800 px-80 mb-10">
-        {newsletter.map((newsletter) => (
-          <div className="flex flex-col justify-center">
-            <li
-              key={newsletter.description}
-              className="flex justify-between gap-x-6 py-5 w-11/12"
-            >
-              <div className="flex min-w-0 gap-x-4">
-                <img
-                  className="h-60 w-80 flex-none bg-black"
-                  src={newsletter.img}
-                  alt=""
-                />
-                <div className="min-w-0 flex-auto text-white mt-1">
-                  <p
-                    className="text-4xl font-bold leading-11 text-white mb-2"
-                    style={{ fontFamily: "Usual-Light" }}
-                  >
-                    {newsletter.name}
-                  </p>
-                  <p
-                    className="text-lg italic text-white mb-3"
-                    style={{ fontFamily: "Usual-Light" }}
-                  >
-                    {newsletter.date}
-                  </p>
-                  <p
-                    className="mt-1 text-md leading-5 text-white mb-3"
-                    style={{ fontFamily: "Usual-Light" }}
-                  >
-                    {newsletter.description}
-                  </p>
-                  <p className="flex">
-                    <img
-                      className="pb-10 mr-3 w-6 rounded-full"
-                      src={newsletter.authorHeadshot}
-                      alt=""
-                    />
-                    {newsletter.author}
-                  </p>
+      <ul className="divide-y divide-gray-800">
+        {newsletter.map((item) => (
+          <li key={item.description} className="flex flex-col md:flex-row justify-between gap-4 p-4">
+            <img
+              className="h-40 md:h-60 w-full md:w-80 object-cover"
+              src={item.img}
+              alt=""
+            />
+            <div className="flex flex-col justify-between">
+              <div>
+                <p className="text-2xl md:text-4xl font-bold leading-tight text-white mb-2">
+                  {item.name}
+                </p>
+                <p className="text-sm italic text-white mb-3">
+                  {item.date}
+                </p>
+                <p className="text-sm leading-tight text-white mb-3">
+                  {item.description}
+                </p>
+                <div className="flex items-center">
+                  <img
+                    className="w-6 h-6 rounded-full mr-2"
+                    src={item.authorHeadshot}
+                    alt=""
+                  />
+                  {item.author}
                 </div>
               </div>
-              <div className="shrink-0 sm:flex sm:flex-col sm:items-end mt-auto mb-0">
-                <NavLink
-                  to={newsletter.navLink}
-                  className="text-white border border-solid py-2 px-6 rounded-md"
-                  style={{ fontFamily: "Usual-Light" }}
-                >
-                  Read More
-                </NavLink>
-              </div>
-            </li>
-          </div>
+              <NavLink
+                to={item.navLink}
+                className="text-white border border-solid py-2 px-6 rounded-md mt-4 self-start md:self-end"
+              >
+                Read More
+              </NavLink>
+            </div>
+          </li>
         ))}
       </ul>
     </div>

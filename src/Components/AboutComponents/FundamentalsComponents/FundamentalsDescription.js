@@ -2,36 +2,21 @@ import React from "react";
 
 export default function FundamentalsDescription() {
   return (
-    <div className="border-b border-solid border-b-gray-400 font-bold">
-      <div
-        className="text-white text-xs pl-10 pt-5"
-        style={{ fontFamily: "Usual-Light" }}
-      >
-        <h6>/ Disrupt Fundamentals</h6>
+    <div className="font-bold border-b border-solid border-b-gray-400">
+      <div className="pt-5 pl-4 text-xs text-white sm:pl-10" style={{ fontFamily: "Usual-Light" }}>
+        <h6>Disrupt Fundamentals</h6>
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-row mb-12">
-          <p
-            className="text-white text-5xl mx-10 mt-12 w-1/3"
-            style={{
-              fontFamily: "Faucet",
-              fontFeatureSettings: "'dlig' on, 'ss03' on, 'ss02' on, 'ss01' on",
-            }}
-          >
-            <span className="text-blue-500">ONE</span> MAIN{" "}
-            <span className="text-blue-500">VISION</span>
+      <div className="flex flex-col items-center justify-center px-4 sm:px-10">
+        <p className="w-full my-12 text-3xl text-center text-white sm:text-5xl sm:text-left" style={{
+            fontFamily: "Faucet",
+            fontFeatureSettings: "'dlig' on, 'ss03' on, 'ss02' on, 'ss01' on",
+          }}>
+          <span className="text-blue-500">ONE</span> MAIN <span className="text-blue-500">VISION</span>
+        </p>
+        <div className="w-full mb-12 text-xl text-white sm:text-2xl" style={{ fontFamily: "Usual-Regular" }}>
+          <p>
+            Northeastern University and its students have recognized the disruptive power of technology in finance and have thus started the FinTech initiative on campus to become leaders of this field.
           </p>
-          <div
-            className="text-white w-2/3 text-2xl mt-12 mr-10"
-            style={{ fontFamily: "Usual-Regular" }}
-          >
-            <p>
-              Northeastern University and its students have recognized the
-              disruptive power of technology in finance and have thus started
-              the FinTech initiative on campus to become the leaders of this
-              field.
-            </p>
-          </div>
         </div>
       </div>
     </div>
