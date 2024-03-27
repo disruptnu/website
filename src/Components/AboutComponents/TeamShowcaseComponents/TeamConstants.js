@@ -43,7 +43,7 @@ export const TeamMember = [
     name: "Philip Leung",
     position: "Vice President",
     team: "Executive Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/philipleungg/",
     alt: "",
   },
   {
@@ -52,7 +52,7 @@ export const TeamMember = [
     name: "Anish Sanghi",
     position: "Scheduling Coordinator",
     team: "Executive Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/anishsanghi/",
     alt: "",
   },
   {
@@ -61,7 +61,7 @@ export const TeamMember = [
     name: "Xavier Yu",
     position: "Treasurer",
     team: "Executive Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/xavier-yu/",
     alt: "",
   },
   {
@@ -69,8 +69,8 @@ export const TeamMember = [
     headshot: tarunAnbarasu,
     name: "Tarun Anbarasu",
     position: "Director of Research",
-    team: "Research Team",
-    linkedin: "",
+    team: "Reserach Team",
+    linkedin: "https://www.linkedin.com/in/tarun-anbarasu-107019256/",
     alt: "",
   },
   {
@@ -79,7 +79,7 @@ export const TeamMember = [
     name: "Anderson Lo",
     position: "Research Analyst",
     team: "Research Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/anderson-lo-6714a41ab/",
     alt: "",
   },
   {
@@ -88,7 +88,7 @@ export const TeamMember = [
     name: "Alexander Wong",
     position: "Research Analyst",
     team: "Research Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/alexwo-ng/",
     alt: "",
   },
   {
@@ -97,7 +97,7 @@ export const TeamMember = [
     name: "Anya Solanki",
     position: "Research Analyst",
     team: "Research Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/anyasolanki/",
     alt: "",
   },
   {
@@ -106,7 +106,7 @@ export const TeamMember = [
     name: "Michael Ricardo",
     position: "Research Analyst",
     team: "Research Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/michael-ricardo-328957249/",
     alt: "",
   },
   {
@@ -115,7 +115,7 @@ export const TeamMember = [
     name: "Emily Kyne",
     position: "Research Analyst",
     team: "Research Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/emily-kyne/",
     alt: "",
   },
   {
@@ -124,16 +124,16 @@ export const TeamMember = [
     name: "Wanru Shao",
     position: "Research Analyst",
     team: "Research Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/skuld-shao/",
     alt: "",
   },
   {
     key: "member12",
     headshot: unknownImage,
-    name: "Svarra Shah",
+    name: "Svaraa Shah",
     position: "Reserach Analyst",
     team: "Research Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/svaraa-shah/",
     alt: "",
   },
   {
@@ -142,7 +142,7 @@ export const TeamMember = [
     name: "Srijith Gomattam",
     position: "Research Analyst",
     team: "Research Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/srijith-gomattam/",
     alt: "",
   },
   {
@@ -151,7 +151,7 @@ export const TeamMember = [
     name: "Yvonne Lin",
     position: "Co-Director of Finnovate",
     team: "Finnovate Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/lin-yvonne/",
     alt: "",
   },
   {
@@ -160,7 +160,7 @@ export const TeamMember = [
     name: "Aden Levy",
     position: "Co-Director of Finnovate",
     team: "Finnovate Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/adenlevy/",
     alt: "",
   },
   {
@@ -169,7 +169,7 @@ export const TeamMember = [
     name: "Alex Choi",
     position: "Co-Director of Finnovate",
     team: "Finnovate Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/alexbhchoi/",
     alt: "",
   },
   {
@@ -178,7 +178,7 @@ export const TeamMember = [
     name: "Tej Chakravarthy",
     position: "Co-Director of Finnovate",
     team: "Finnovate Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/tej-chakravarthy-3b37132a2/",
     alt: "",
   },
   {
@@ -187,7 +187,7 @@ export const TeamMember = [
     name: "Jack Anderson",
     position: "Director of Events",
     team: "Events Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/jack-anderson-62b236222/",
     alt: "",
   },
   {
@@ -196,7 +196,7 @@ export const TeamMember = [
     name: "Aashka Dave",
     position: "Event Coordinator",
     team: "Events Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/aashka-dave/",
     alt: "",
   },
   {
@@ -205,7 +205,7 @@ export const TeamMember = [
     name: "Zainab Hussain Syed",
     position: "Event Coordinator",
     team: "Events Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/zainabhussain03/",
     alt: "",
   },
   {
@@ -214,7 +214,7 @@ export const TeamMember = [
     name: "Justin Wee",
     position: "Collab Event Coordinator",
     team: "Events Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/justin-wee-894149259/",
     alt: "",
   },
   {
@@ -223,7 +223,7 @@ export const TeamMember = [
     name: "Kaamil Thobani",
     position: "Director of Technology",
     team: "Technology Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/kaamil-thobani-9a7237210/",
     alt: "",
   },
   {
@@ -232,7 +232,7 @@ export const TeamMember = [
     name: "William Seward",
     position: "Technology Programmer",
     team: "Technology Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/william-seward-2a04aa262/",
     alt: "",
   },
   {
@@ -241,7 +241,7 @@ export const TeamMember = [
     name: "Arnav Mishra",
     position: "Technology Programmer",
     team: "Technology Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/arnav-mishra-1960001b1/",
     alt: "",
   },
   {
@@ -250,7 +250,7 @@ export const TeamMember = [
     name: "Arav Goyal",
     position: "Technology Programmer",
     team: "Technology Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/aravgoyal/",
     alt: "",
   },
   {
@@ -259,7 +259,7 @@ export const TeamMember = [
     name: "Diya Jhamtani",
     position: "Technology Programmer",
     team: "Technology Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/diya-jhamtani-a4b763237/",
     alt: "",
   },
   {
@@ -268,7 +268,7 @@ export const TeamMember = [
     name: "Vilasini Nathan",
     position: "Technology Programmer",
     team: "Technology Team",
-    linkedin: "https://www.linkedin.com/in/xavier-yu/",
+    linkedin: "https://www.linkedin.com/in/vilasini-nathan/",
     alt: "",
   },
   {
@@ -276,8 +276,8 @@ export const TeamMember = [
     headshot: rodrigoAldrey,
     name: "Rodrigo Aldrey",
     position: "Co-Director of Marketing",
-    team: "Marketing Team",
-    linkedin: "",
+    team: "Marketing",
+    linkedin: "https://www.linkedin.com/in/rodrigo-aldrey-558808244/",
     alt: "",
   },
   {
@@ -286,7 +286,7 @@ export const TeamMember = [
     name: "Patty Kang",
     position: "Co-Director of Marketing",
     team: "Marketing Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/peiti-kang-653212250/",
     alt: "",
   },
   {
@@ -304,7 +304,7 @@ export const TeamMember = [
     name: "Jacob Chen",
     position: "Industry Outreach",
     team: "Marketing Team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/jjacobchen/",
     alt: "",
   },
   {
@@ -313,7 +313,7 @@ export const TeamMember = [
     name: "Seth Morton",
     position: "Director of Engagement",
     team: "Marketing Team",
-    linkedin: "https://www.linkedin.com/in/kaamil-thobani-9a7237210/",
+    linkedin: "https://www.linkedin.com/in/seth-morton-118574242/",
     alt: "",
   },
 ];
