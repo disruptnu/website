@@ -9,80 +9,45 @@ export default function PastVenturesOpeningScreen({
   hamburgerMenuOpen,
   toggleHamburgerMenu,
 }) {
-  // Use this state to toggle the hamburger menu, false = closed, true = open
-  function handleClickHamburgerMenu() {
-    toggleHamburgerMenu();
-  }
-  // Enable to test side bar style menu
-  /*const hamburgerMenuStyle = {
-        transform: hamburgerMenuOpen ? 'translateX(0)' : 'translateX(+100%)', // Slide in from the left when open
-        transition: 'transform 1.0s ease-in-out', // Add a smooth transition effect
-        WebkitTransition: '-webkit-transform 1.0s ease-in-out',
-        MozTransition: '-moz-transform 1.0s ease-in-out',
-    };*/
-
-  if (!hamburgerMenuOpen) {
-    return (
-      <div>
-        <div className="w-screen relative flex flex-col items-center justify-center">
-          <div className="w-screen flex items-start justify-between">
-            <div className="flex items-center">
-              <div>
-                <NavLink to="/">
-                  <img
-                    src={disruptLogo}
-                    alt="testLogo"
-                    className="w-16 ml-4 mt-4"
-                  />
-                </NavLink>
-              </div>
-            </div>
-            <div className="flex items-center py-4 border border-solid rounded-full border-[#b5f727] mr-5 mt-5 hover:scale-110">
-              <img
-                src={hamburgerIcon}
-                alt="hamburgerMenuIcon"
-                onClick={handleClickHamburgerMenu}
-                className="w-14 h-5 hover:cursor-pointer"
-              />
-            </div>
-          </div>
+  return hamburgerMenuOpen ? (
+    <HamburgerMenu
+      hamburgerMenuOpen={hamburgerMenuOpen}
+      toggleHamburgerMenu={toggleHamburgerMenu}
+    />
+  ) : (
+    <div>
+      <div className="relative flex flex-col items-center justify-center w-screen">
+        {/* Logo and Hamburger Menu */}
+        <div className="flex items-start justify-between w-screen">
+          <NavLink to="/">
+            <img src={disruptLogo} alt="Disrupt Logo" className="w-16 mt-4 ml-4" />
+          </NavLink>
           <div
-            className="flex flex-col items-end pt-28 pb-20 w-5/12"
-            style={{ fontFamily: "Faucet" }}
+            className="flex items-center py-4 border border-solid rounded-full border-[#b5f727] mr-5 mt-5 hover:scale-110 cursor-pointer"
+            onClick={toggleHamburgerMenu}
           >
-            <p className="text-white text-4xl mb-1">disrupt</p>
-            <p
-              className="text-white text-8xl pb-8"
-              style={{ fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on" }}
-            >
-              CONSULTING
-            </p>
-            <p
-              className="text-white mx-auto text-justify"
-              style={{ fontFamily: "Usual-Regular" }}
-            >
-              We empower FinTech organizations to tackle business challenges
-              through pro-bono consulting. You have problems and projects that
-              are important but don't have the bandwidth for. Founded out of
-              Disrupt, the FinTech Initiative at Northeastern University,
-              Consulting bridges that gap with impactful analysis and solutions.
-            </p>
+            <img src={hamburgerIcon} alt="Hamburger Menu Icon" className="h-5 w-14" />
           </div>
         </div>
 
-        <div className="sm:flex sm:flex-col sm:items-end mt-12 mr-16">
-          <button>
-            <img src={arrowDown} alt="" />
-          </button>
+        {/* Main Content */}
+        <div className="flex flex-col items-end w-5/12 pb-20 pt-28" style={{ fontFamily: "Faucet" }}>
+          <p className="mb-1 text-4xl text-white">disrupt</p>
+          <p className="flex-col pb-8 text-4xl text-white sm:text-2xl md:text-5xl" style={{ fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on" }}>
+            CONSULTING
+          </p>
+          <p className="mx-auto text-justify text-white" style={{ fontFamily: "Usual-Regular" }}>
+            We empower FinTech organizations to tackle business challenges through pro-bono consulting...
+          </p>
         </div>
       </div>
-    );
-  } else {
-    return (
-      <HamburgerMenu
-        hamburgerMenuOpen={hamburgerMenuOpen}
-        toggleHamburgerMenu={toggleHamburgerMenu}
-      />
-    );
-  }
+
+      {/* Arrow Down Button */}
+      <div className="mt-12 mr-16 sm:flex sm:flex-col sm:items-end">
+        <button>
+          <img src={arrowDown} alt="Scroll Down" />
+        </button>
+      </div>
+    </div>
+  );
 }

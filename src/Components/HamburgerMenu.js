@@ -32,15 +32,15 @@ export default function HamburgerMenuOpen({
   }
 
   return (
-    <div className="w-screen h-screen top-0 right-0 bg-navigationMenu z-20 flex flex-col">
-      <div className="w-screen h-20 flex items-start justify-between">
+    <div className="top-0 right-0 z-20 flex flex-col w-screen h-screen bg-navigationMenu">
+      <div className="flex items-start justify-between w-screen h-20">
         <div className="flex items-center">
           <div>
             <NavLink to="/">
               <img
                 src={disruptLogoBlack} // get one that replaces the blue for bl
                 alt="testLogo"
-                className="w-16 ml-4 mt-4 brightness-90"
+                className="w-16 mt-4 ml-4 brightness-90"
               />
             </NavLink>
           </div>
@@ -61,71 +61,71 @@ export default function HamburgerMenuOpen({
         </div>
       </div>
       <div className="flex-grow">
-        <div className="selection:text-blue-500 text-7xl pl-28 flex flex-col">
-          <div className="text-white font-bold mt-8 relative group">
+        <div className="flex flex-col pl-4 text-4xl selection:text-blue-500 sm:text-5xl sm:pl-28">
+          <div className="relative mt-8 font-bold text-white group">
             <NavLink to="/" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Home</span>
             </NavLink>
             <img
               src={navigationArrowIcon}
               alt="navigationArrowIcon"
-              className="hidden absolute top-1/2 transform -translate-y-1/2 group-hover:block"
+              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
             />
           </div>
-          <div className="text-white font-bold relative group">
+          <div className="relative font-bold text-white group">
             <NavLink to="/about" onClick={handleClickHamburgerMenu}>
               <span className="text-move">About</span>
             </NavLink>
             <img
               src={navigationArrowIcon}
               alt="navigationArrowIcon"
-              className="hidden absolute top-1/2 transform -translate-y-1/2 group-hover:block"
+              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
             />
           </div>
-          <div className="text-white font-bold relative group">
+          <div className="relative font-bold text-white group">
             <NavLink to="/finnovate" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Finnovate</span>
             </NavLink>
             <img
               src={navigationArrowIcon}
               alt="navigationArrowIcon"
-              className="hidden absolute top-1/2 transform -translate-y-1/2 group-hover:block"
+              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
             />
           </div>
-          <div className="text-white font-bold relative group">
+          <div className="relative font-bold text-white group">
             <NavLink to="/consulting" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Consulting</span>
             </NavLink>
             <img
               src={navigationArrowIcon}
               alt="navigationArrowIcon"
-              className="hidden absolute top-1/2 transform -translate-y-1/2 group-hover:block"
+              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
             />
           </div>
-          <div className="text-white font-bold relative group">
+          <div className="relative font-bold text-white group">
             <NavLink to="/events" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Events</span>
             </NavLink>
             <img
               src={navigationArrowIcon}
               alt="navigationArrowIcon"
-              className="hidden absolute top-1/2 transform -translate-y-1/2 group-hover:block"
+              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
             />
           </div>
-          <div className="text-white font-bold relative group">
+          <div className="relative font-bold text-white group">
             <NavLink to="/newsroom" onClick={handleClickHamburgerMenu}>
               <span className="text-move">Newsroom</span>
             </NavLink>
             <img
               src={navigationArrowIcon}
               alt="navigationArrowIcon"
-              className="hidden absolute top-1/2 transform -translate-y-1/2 group-hover:block"
+              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
             />
           </div>
         </div>
         <div></div>
       </div>
-      <div className="absolute right-16 bottom-16 text-white text-4xl font-light group">
+      <div className="absolute text-4xl font-light text-white right-16 bottom-16 group">
         <div>
           <button onClick={handleClickEmail}>
             <h1>Email</h1>

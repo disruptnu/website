@@ -1,33 +1,18 @@
 import React from "react";
 
-export default function eventCard(props) {
+const EventCard = ({ image, header, alt, day, month }) => {
   return (
-    <div className="px-5 flex flex-col items-center min-w-max min-h-max">
-      <div className="bg-neutral-800 pt-24">
-        <div className="pb-8 place-items-center">
-          <h1
-            className="text-white text-7xl font-bold text-center pb-2"
-            style={{ fontFamily: "Usual-Light" }}
-          >
-            {props.day}
-          </h1>
-          <h3
-            className="text-white text-4xl font-bold text-center pb-8"
-            style={{ fontFamily: "Usual-Light" }}
-          >
-            {props.month}
-          </h3>
-          <h3
-            className="text-white text-4xl font-bold text-center pl-4 pr-4"
-            style={{ fontFamily: "Usual-Regular" }}
-          >
-            {props.header}
-          </h3>
-          <div className="flex justify-center items-center m-1">
-            <i class="fa-solid fa-money-bill-trend-up mt-1 text-8xl pt-4"></i>
-          </div>
-        </div>
+    <div className="flex flex-col items-center max-w-xs overflow-hidden bg-white rounded-lg shadow-lg">
+      <img className="w-full" src={image} alt={alt} />
+      <div className="px-6 py-4">
+        <div className="mb-2 text-xl font-bold">{header}</div>
+        <p className="text-base text-gray-700">
+          <span className="font-bold">Date: </span>
+          {month} {day}
+        </p>
       </div>
     </div>
   );
-}
+};
+
+export default EventCard;
