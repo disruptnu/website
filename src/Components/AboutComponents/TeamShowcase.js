@@ -1,60 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 import { TeamMember } from "./TeamShowcaseComponents/TeamConstants";
 import MemberLine from "./TeamShowcaseComponents/MemberLine";
 
 export default function TeamShowcase() {
-  const [hoveredMember, setHoveredMember] = useState(null);
-
-  const handleMouseEnter = (memberKey) => {
-    setHoveredMember(memberKey);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredMember(null);
-  };
-
   return (
-    <div className="min-w-max min-h-max mt-28 mb-20 ml-10">
-      <p
-        className="text-white text-3xl font-bold w-1/4"
-        style={{
-          fontFamily: "Faucet",
-          fontFeatureSettings: "'dlig' on, 'ss03' on, 'ss02' on, 'ss01' on",
-        }}
-      >
+    <div className="mx-auto mb-20 ml-10 mt-28 max-w-7xl">
+      <p className="mb-4 text-3xl font-bold text-white">
         MEET THE TEAM
       </p>
-      <div className="flex flex-row">
-        <div className="fixed-container ml-10 mr-14 mt-10 w-48">
-          {hoveredMember && (
-            <img
-              className="sticky top-20 h-48"
-              src={
-                TeamMember.find((member) => member.key === hoveredMember)
-                  .headshot
-              }
-              alt=""
-            />
-          )}
-        </div>
-        <div className="divide-y divide-gray-500 divide-solid w-3/4">
-          {TeamMember.map((member) => (
-            <div
-              key={member.key}
-              onMouseEnter={() => handleMouseEnter(member.key)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <MemberLine
-                headshot={member.headshot}
-                name={member.name}
-                position={member.position}
-                team={member.team}
-                linkedin={member.linkedin}
-                alt={member.alt}
-              />
-            </div>
-          ))}
-        </div>
+      {/* Adding Headers */}
+      <div className="justify-between hidden px-4 py-2 text-white md:flex">
+        <h3 className="text-lg font-bold">Name</h3>
+        <h3 className="text-lg font-bold">Title</h3>
+        <h3 className="text-lg font-bold">Team</h3>
+      </div>
+      <div className="grid grid-cols-1 gap-4">
+        {TeamMember.map((member) => (
+          <MemberLine
+            key={member.key}
+            headshot={member.headshot}
+            name={member.name}
+            position={member.position}
+            team={member.team}
+            linkedin={member.linkedin}
+            alt={member.alt}
+          />
+        ))}
       </div>
     </div>
   );

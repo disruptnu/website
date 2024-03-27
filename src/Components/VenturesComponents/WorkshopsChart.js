@@ -5,17 +5,12 @@ import chanceToWinStar from "../../img/chanceToWinStar.svg";
 
 export default function WorkshopsChart() {
   return (
-    <div className="pl-12 pb-72">
-      <p
-        className="text-white font-bold text-5xl mb-12"
-        style={{ fontFamily: "Usual-Regular" }}
-      >
-        WORKSHOP SCHEDULE
-      </p>
-      <div className="">
-        {WORKSHOP_CARDS.map((card) => (
-          <WorkshopCard
-            key={card.key}
+    <div className="flex flex-col items-center w-full pb-10 sm:px-12">
+    <p className="mb-8 text-3xl font-bold text-center text-white sm:mb-12 sm:text-5xl">WORKSHOP SCHEDULE</p>
+    <div className="">
+      {/* Assuming WorkshopCard components are block elements or flex items that can be centered */}
+      {WORKSHOP_CARDS.map((card) => (
+        <WorkshopCard
             header={card.header}
             workshopNum={card.workshopNum}
             date={card.date}
@@ -25,14 +20,11 @@ export default function WorkshopsChart() {
             topic2={card.topic2}
           />
         ))}
-        <div className="flex items-center">
-          <p
-            className="text-white font-bold text-5xl"
-            style={{ fontFamily: "Usual-Regular" }}
-          >
+        <div className="flex items-center justify-center">
+          <p className="text-center text-4xl md:text-5xl lg:text-6xl py-8 font-bold text-white mr-6 md:mr-12 lg:mr-24 font-[Usual-Regular]">
             THE CHANCE TO WIN
           </p>
-          <img src={chanceToWinStar} alt="star" className="ml-24 pl-1.5 h-16" />
+          <img src={chanceToWinStar} alt="star" className="items-center h-12 md:h-16 lg:h-20" />
         </div>
       </div>
     </div>

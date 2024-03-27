@@ -13,13 +13,13 @@ export default function WhoWeAre() {
       style={{ fontFamily: "Usual-Regular" }}
     >
       <div
-        className="text-white text-xs pl-10 pt-5 font-bold"
+        className="pt-5 pl-10 text-xs font-bold text-white"
         style={{ fontFamily: "Usual-Light" }}
       >
-        <h6>/ WHO WE ARE</h6>
+        <h6>WHO WE ARE</h6>
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <p className="text-white font-bold text-2xl pb-8 mt-24 mx-auto w-1/2 text-left">
+      <div className="flex flex-col items-center justify-center">
+        <p className="w-1/2 pb-8 mx-auto mt-24 text-2xl font-bold text-left text-white">
           At Northeastern University, we have recognized the disruptive
           influence of technology in finance and have started Disrupt to foster
           collaboration aimed at reshaping the finance industry.
