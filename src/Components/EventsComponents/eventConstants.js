@@ -33,5 +33,12 @@ export const EVENT_DATA = [
     day: "6",
     month: "FEB",
   },
-
+  {
+    key: "march8",
+    img: testImage1,
+    header: "API Workshop",
+    alt: "First test image alternative",
+    day: "8",
+    month: "MAR",
+  },
 ];
