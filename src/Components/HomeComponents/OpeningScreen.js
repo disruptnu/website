@@ -4,6 +4,7 @@ import disruptLogo from "../../img/logo_a.svg";
 import hamburgerIcon from "../../img/hamburgerIcon.svg";
 import backgroundVideo from "../../img/MiniAdDisrupt(NEW BRANDING).mp4";
 
+
 export default function OpeningScreen({ hamburgerMenuOpen, toggleHamburgerMenu }) {
   return (
     <div className="relative flex flex-col items-center justify-start w-screen h-screen overflow-hidden">
