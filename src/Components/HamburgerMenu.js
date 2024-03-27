@@ -15,7 +15,7 @@ export default function HamburgerMenuOpen({
 
   function handleClickJoin() {
     window.location =
-      "https://airtable.com/appYvJkhyjQlVvoqV/shrXCWB0tMh79Ty5i";
+      "https://join.slack.com/t/disruptthefin-jlz8378/shared_invite/zt-2by2eubit-TX1I42vHghkBAW965jexlw";
   }
 
   function handleClickInstagram() {
@@ -26,6 +26,9 @@ export default function HamburgerMenuOpen({
   }
   function handleClickEmail() {
     window.location = "mailto:%20nufintech@gmail.com";
+  }
+  function handleClickNewsletter() {
+    window.location = "https://disrupt-fintech.medium.com/";
   }
 
   return (
@@ -139,7 +142,9 @@ export default function HamburgerMenuOpen({
           </button>
         </div>
         <div>
-          <NavLink to="#">Newsletter</NavLink>
+          <button onClick={handleClickNewsletter}>
+            <h1>Newsletter</h1>
+          </button>
         </div>
       </div>
     </div>
