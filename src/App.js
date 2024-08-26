@@ -6,6 +6,7 @@ import Consulting from "./Components/Consulting";
 import PastVentures from "./Components/PastVentures";
 import Events from "./Components/Events";
 import Newsroom from "./Components/Newsroom";
+import HackathonPage from "./Components/HackathonPage";
 import * as React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/PastVentures" element={<PastVentures />} />
           <Route path="/events" element={<Events />} />
           <Route path="/newsroom" element={<Newsroom />} />
+          <Route path="/hackathon" element={<HackathonPage />} />
         </Routes>
       </BrowserRouter>
     </div>

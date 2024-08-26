@@ -122,6 +122,16 @@ export default function HamburgerMenuOpen({
               className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
             />
           </div>
+          <div className="relative font-bold text-white group">
+            <NavLink to="/hackathon" onClick={handleClickHamburgerMenu}>
+              <span className="text-move">Hackathon</span>
+            </NavLink>
+            <img
+              src={navigationArrowIcon}
+              alt="navigationArrowIcon"
+              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
+            />
+          </div>
         </div>
         <div></div>
       </div>

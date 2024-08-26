@@ -3,6 +3,18 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+
+      keyframes: {
+
+        flicker: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.5 },
+        },
+      },
+      animation: {
+        flicker: 'flicker 1.5s infinite',
+      },
+
       width: {
         120: "450px",
         130: "500px",
@@ -12,6 +24,7 @@ module.exports = {
         Faucet: ["Faucet", "sans-serif"],
         UsualLight: ["UsualLight", "sans-serif"],
         UsualRegular: ["UsualRegular", "sans-serif"],
+        PressStart: ["'Press Start 2P'", "cursive"], // Google Font
       },
 
       fontSize: {
@@ -33,6 +46,7 @@ module.exports = {
       },
 
       colors: {
+        customDarkBlue: 'rgba(3, 22, 54, 1)', // Create a custom color
         navigationMenu: "#009AFF",
         transparent: "transparent",
         current: "currentColor",
