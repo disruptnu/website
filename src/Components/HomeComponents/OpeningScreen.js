@@ -32,9 +32,9 @@ export default function OpeningScreen({ hamburgerMenuOpen, toggleHamburgerMenu }
         Northeastern's student-led fintech group;<br/>{" "}
             <em>where curiosity meets innovation</em>
         </p>
-        <button onClick={() => window.location = "https://airtable.com/appYvJkhyjQlVvoqV/shrXCWB0tMh79Ty5i"} className="px-6 py-3 text-white transition-colors bg-transparent border border-white rounded-full hover:bg-white hover:text-black">
-          Join Us
-        </button>
+        {/*<button onClick={() => window.location = "https://airtable.com/appYvJkhyjQlVvoqV/shrXCWB0tMh79Ty5i"} className="px-6 py-3 text-white transition-colors bg-transparent border border-white rounded-full hover:bg-white hover:text-black">*/}
+        {/*  Join Us*/}
+        {/*</button>*/}
       </div>
 
       {/* Render the hamburger menu */}
