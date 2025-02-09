@@ -1,6 +1,8 @@
-import finnovate1 from "../../../img/finnovate1.svg";
-import techWorkshop2 from "../../../img/tech-workshop 2.svg";
+import finnovate1 from "../../../img/finnovate1.PNG";
+import techWorkshop2 from "../../../img/tech-workshop2.svg";
+import fintack1 from "../../../img/FinhackImg1.PNG";
 import finnovate2 from "../../../img/homeVenturesProgram.svg";
+import finnovate3 from "../../../img/finnovate3.PNG";
 
 export const CARD = [
   {
@@ -9,8 +11,8 @@ export const CARD = [
     alt: "First image",
   },
   {
-    key: "techWorkshop#2",
-    img: techWorkshop2,
+    key: "finhack#1",
+    img: fintack1,
     alt: "Second image",
   },
   {
@@ -18,4 +20,19 @@ export const CARD = [
     img: finnovate2,
     alt: "Third image",
   },
+  {
+    key: "techWorkshop#2",
+    img: techWorkshop2,
+    alt: "Fourth image",
+  },
+  {
+    key: "finnovate#3",
+    img: finnovate3,
+    alt: "fifth image",
+  },
+  // {
+  //   key: "finhack#2",
+  //   img: finhack2,
+  //   alt: "sixth image",
+  // },
 ];
