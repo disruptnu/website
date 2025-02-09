@@ -43,7 +43,7 @@ export default function WhatWeDo() {
   return (
     <div className="border-b border-solid border-b-gray-400">
       <div className="pt-10 pl-10 text-xs font-bold text-white" style={{ fontFamily: "Usual-Light" }}>
-        <h6>/ WHAT WE DO</h6>
+        <h6>WHAT WE DO</h6>
       </div>
       <ul className="px-10 mb-10 divide-y divide-gray-800 md:px-20 lg:px-40 xl:px-80">
         {programs.map((program) => (

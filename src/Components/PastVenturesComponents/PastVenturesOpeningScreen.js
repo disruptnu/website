@@ -39,13 +39,13 @@ export default function PastVenturesOpeningScreen({
           <div className="w-screen h-3/4 flex flex-col justify-center items-center">
             <div className=" w-auto flex flex-col items-cente justify-center">
               <p
-                className="h-3/4 text-white font-semibold text-120"
+                className="h-3/4 text-white font-semibold text-8xl"
                 style={{
                   fontFamily: "Faucet",
                   fontFeatureSettings: "'dlig' on, 'ss01' on",
                 }}
               >
-                PAST VENTURES
+                PAST FINNOVATE EVENTS
               </p>
               <p
                 className="text-white text-2xl self-end"

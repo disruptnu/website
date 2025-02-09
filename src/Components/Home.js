@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CaseStudy from "./HomeComponents/CaseStudy";
+import Events from "./HomeComponents/Events";
 import WhoWeAre from "./HomeComponents/WhoWeAre";
 import OpeningScreen from "./HomeComponents/OpeningScreen";
 import WhatWeDo from "./HomeComponents/WhatWeDo";
@@ -31,7 +31,7 @@ export default function Home() {
         toggleHamburgerMenu={toggleHamburgerMenu}
       />
       <WhoWeAre />
-      <CaseStudy />
+      <Events />
       <WhatWeDo />
       <Footer />
     </div>

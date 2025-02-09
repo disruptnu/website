@@ -103,7 +103,7 @@ export default function Footer() {
                       onClick={scrollToTop}
                       className="text-white text-sm font-medium"
                     >
-                      Past Ventures
+                      Past Finnovate Events
                     </NavLink>
                   </div>
                   <div class="mt-14">
@@ -160,7 +160,7 @@ export default function Footer() {
                     onClick={scrollToTop}
                     className="text-white text-sm font-medium"
                   >
-                    Elevate
+                    Consulting
                   </NavLink>
                 </div>
                 <div>
@@ -180,33 +180,6 @@ export default function Footer() {
                     className="text-white font-bold text-lg"
                   >
                     EVENTS
-                  </NavLink>
-                </div>
-                <div>
-                  <NavLink
-                    to="/events"
-                    onClick={scrollToTop}
-                    className="text-white text-sm font-medium"
-                  >
-                    Calendar
-                  </NavLink>
-                </div>
-                <div>
-                  <NavLink
-                    to="/events"
-                    onClick={scrollToTop}
-                    className="text-white text-sm font-medium"
-                  >
-                    Fireside Chats
-                  </NavLink>
-                </div>
-                <div>
-                  <NavLink
-                    to="/events"
-                    onClick={scrollToTop}
-                    className="text-white text-sm font-medium"
-                  >
-                    Technology Workshops
                   </NavLink>
                 </div>
               </div>

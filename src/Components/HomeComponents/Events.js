@@ -67,7 +67,7 @@ function CaseStudyCard(props) {
   );
 }
 
-export default function CaseStudy() {
+export default function Events() {
   const containerRef = useRef(null);
 
   const scrollToTop = () => {
@@ -103,7 +103,7 @@ export default function CaseStudy() {
     <div>
       <div className="border-b border-solid border-b-gray-400">
         <div className="flex items-center justify-between my-5 ml-5 text-xs font-bold text-white align-middle sm:my-10 sm:ml-10 sm:text-sm" style={{ fontFamily: "Usual-Light" }}>
-          <h6 className="w-32">Events</h6>
+          <h6 className="w-32">EVENTS</h6>
           <div className="flex justify-end w-screen h-5 pr-5 text-lg text-blue-500 sm:w-auto sm:pr-10">
             <img src={leftScroll} alt="Left Scroll Arrow" className="mx-2 hover:cursor-pointer sm:mx-5" onClick={scrollLeft} />
             <img src={rightScroll} alt="Right Scroll Arrow" className="mx-2 hover:cursor-pointer sm:mx-5" onClick={scrollRight} />

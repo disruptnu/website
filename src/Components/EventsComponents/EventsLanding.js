@@ -39,29 +39,18 @@ export default function EventsLanding({
       </div>
       {!hamburgerMenuOpen && (
         <div className="relative z-0 flex flex-col items-center justify-center h-full">
-          <div className="w-8/12 text-center">
-            <p className="mb-1 text-4xl text-white texts-center">disrupt</p>
-            <p
-              className="flex pb-8 mx-auto text-center text-white text-8xl"
-              style={{ fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on" }}
-            >
+          <div className="flex flex-col items-end w-7/12 pb-20 pt-28 pl-10" style={{ fontFamily: "Faucet" }}>
+            <p className="mb-1 text-4xl text-white">disrupt</p>
+            <p className="flex-col pb-8 text-9xl text-white sm:text-4xl md:text-7xl" style={{ fontFeatureSettings: "'dlig' on, 'ss02' on, 'ss01' on" }}>
               EVENTS
             </p>
-            <p className="pl-10 pr-10 mx-auto text-justify text-white">
-              We host weekly events ranging from fireside chats, technology
+            <p className="mx-auto text-left text-white" style={{ fontFamily: "Usual-Regular" }}>
+              We host bi-weekly events ranging from fireside chats, technology
               workshops, and guest panels to give Northeastern skills and insight
               into the FinTech industry to show how impactful FinTech can be.
               These events are open to everyone at Northeastern and no signup is
               require ahead of time.
             </p>
-          </div>
-          <div className="flex mt-8">
-            <button className="text-white text-base px-12 py-2 font-normal bg-black border border-solid rounded-md hover:bg-[#b5f727] hover:text-black mr-4">
-              GOOGLE
-            </button>
-            <button className="text-white text-base px-12 py-2 font-normal bg-black border border-solid rounded-md hover:bg-[#b5f727] hover:text-black">
-              OUTLOOK
-            </button>
           </div>
         </div>
       )}
