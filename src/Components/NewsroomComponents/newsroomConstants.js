@@ -1,4 +1,3 @@
-import featuredImage1 from "../../../src/img/CaseImage1.svg";
 import featuredImage2 from "../../../src/img/CaseImage2.svg";
 import featuredImage3 from "../../../src/img/CaseImage3.svg";
 

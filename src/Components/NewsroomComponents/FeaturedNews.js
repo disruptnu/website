@@ -33,10 +33,10 @@ export default function FeaturedNews() {
   const featuredNews = newsletter.slice(0, 3);
 
   return (
-    <div className="my-10">
-      <h6 className="ml-4 text-xs font-bold text-white" style={{ fontFamily: "Usual-Light" }}>
-        / FEATURED
-      </h6>
+      <div className="border-b border-gray-400">
+          <div className="pl-4 pt-4 pb-2 text-xs text-white font-bold">
+              <h6>/ FEATURED</h6>
+          </div>
       <div className="flex flex-col items-center justify-center md:flex-row md:justify-around md:items-stretch">
         {featuredNews.map((card) => (
           <FeaturedCard

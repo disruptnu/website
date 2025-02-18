@@ -2,6 +2,7 @@ import venturesImage from "../../../img/homeVenturesProgram.svg";
 import consultingImage from "../../../img/homeConsultingProgram.svg";
 import eventsImage from "../../../img/homeEventsProgram.svg";
 import tarunAnbarasu from "../../../img/eboard_photos/tarun_anbarasu.png";
+import andersonLo from "../../../img/eboard_photos/anderson_lo.png";
 
 export const newsletter = [
   {
@@ -20,7 +21,7 @@ export const newsletter = [
     date: "November 8, 2023",
     description:
       "On September 27, 2023, the renowned cryptocurrency trading platform Binance struck a deal with the newly-launched cryptocurrency exchange, CommEx.",
-    authorHeadshot: tarunAnbarasu,
+    authorHeadshot: andersonLo,
     author: "Anderson Lo",
     img: consultingImage,
     navLink:

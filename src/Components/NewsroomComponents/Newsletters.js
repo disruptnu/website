@@ -28,13 +28,10 @@ export default function Newsletters() {
                   {item.description}
                 </p>
                 <div className="flex items-center">
-                  <img
-                    className="w-6 h-6 rounded-full mr-2"
-                    src={item.authorHeadshot}
-                    alt=""
-                  />
-                  {item.author}
+                  <img className="w-6 h-6 rounded-full mr-2" src={item.authorHeadshot} alt="" />
+                  <p className="text-white font-semibold">{item.author}</p>
                 </div>
+
               </div>
               <NavLink
                 to={item.navLink}
