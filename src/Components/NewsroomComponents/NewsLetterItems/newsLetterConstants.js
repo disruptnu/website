@@ -1,40 +1,43 @@
-import venturesImage from "../../../img/homeVenturesProgram.svg";
 import consultingImage from "../../../img/homeConsultingProgram.svg";
 import eventsImage from "../../../img/homeEventsProgram.svg";
-import tarunAnbarasu from "../../../img/eboard_photos/tarun_anbarasu.png";
-import andersonLo from "../../../img/eboard_photos/anderson_lo.png";
-
+import unknown from "../../../img/eboard_photos/unknown.png";
+import deepseekOpenAI from "../../../img/DeepseekOpenAI.PNG";
+import evoFintech from "../../../img/evoFintech.png";
+import womenInTech from "../../../img/womenInTech.png";
 export const newsletter = [
   {
-    name: "The Rise of Real-Estate Technology in the European Venture Capital Ecosystem",
-    date: "November 16, 2023",
+    name: "Navigating the Waves of Change: DeepSeek vs. OpenAI",
+    date: "February 12, 2025",
     description:
-      "A technical report based on research on the rise of Real-Estate Tecnology in Europe",
-    authorHeadshot: tarunAnbarasu,
-    author: "Tarun Anbarasu",
-    img: venturesImage,
+      "DeepSeek, a rapidly emerging AI firm from China, is reshaping the fintech landscape by developing cost-efficient" +
+        ", open-source large language models that challenge industry giants like OpenAI, Google, and Microsoft.",
+    authorHeadshot: unknown,
+    author: "Piya Sarkar & Wilson Chang",
+    img: deepseekOpenAI,
     navLink:
       "https://disrupt-fintech.medium.com/financial-report-the-rise-of-real-estate-technology-in-the-european-venture-capital-ecosystem-bec7f2e51c6b",
   },
   {
-    name: "CommEx Acquires Binance’s Russian Operations: A Strategic Move in the Crypto Exchange Landscape",
-    date: "November 8, 2023",
+    name: "The Evolution of Fintech",
+    date: "November 21, 2024",
     description:
-      "On September 27, 2023, the renowned cryptocurrency trading platform Binance struck a deal with the newly-launched cryptocurrency exchange, CommEx.",
-    authorHeadshot: andersonLo,
-    author: "Anderson Lo",
-    img: consultingImage,
+      "Fintech has evolved from the invention of ATMs in 1967 to today’s AI-driven financial services, with key milestones including digital banking" +
+        ", blockchain, mobile payments, and neobanks revolutionizing global finance.",
+    authorHeadshot: unknown,
+    author: "Anya Solanki & Wilson Chen",
+    img: evoFintech,
     navLink:
-      "https://disrupt-fintech.medium.com/commex-acquires-binances-russian-operations-a-strategic-move-in-the-crypto-exchange-landscape-e790b80d9c60",
+      "https://disrupt-fintech.medium.com/the-evolution-of-fintech-4b1b75d1f47d",
   },
   {
-    name: "Moody’s Adoption of AI: A Game-Changer for the Financial Services Industry",
-    date: "October 18, 2023",
+    name: "She Means Business: Women Breaking into FinTech",
+    date: "October 12, 2024",
     description:
-      "AI has the potential to revolutionize the way that financial services are delivered and Moody’s is at the forefront of this revolution.",
-    authorHeadshot: tarunAnbarasu,
-    author: "Tarun Anbarasu",
-    img: eventsImage,
+      "Despite fintech’s male-dominated culture, women can break barriers by embracing interdisciplinary learning" +
+        ", strategic thinking, and self-advocacy to drive innovation and inclusivity.",
+    authorHeadshot: unknown,
+    author: "Anjola Babalola & Piya Sarkar & Yulan Wang",
+    img: womenInTech,
     navLink:
       "https://disrupt-fintech.medium.com/moodys-adoption-of-ai-a-game-changer-for-the-financial-services-industry-0fdc299b6f04",
   },

@@ -59,9 +59,6 @@ function CaseStudyCard(props) {
         >
           {props.header}
         </h3>
-        <p className="px-2 py-1 text-xs font-bold text-center text-white border border-white border-solid rounded-md sm:text-sm">
-          Tag
-        </p>
       </div>
     </div>
   );
