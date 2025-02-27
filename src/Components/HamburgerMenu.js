@@ -2,20 +2,19 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import disruptLogoBlack from "../img/logo_black.svg";
 import hamburgerIcon from "../img/hamburgerIcon.svg";
-import navigationArrowIcon from "../img/navigationArrowIcon.svg";
 import "./HamburgerMenuStyles.css";
 
 export default function HamburgerMenuOpen({
-  hamburgerMenuOpen,
-  toggleHamburgerMenu,
-}) {
+                                            hamburgerMenuOpen,
+                                            toggleHamburgerMenu,
+                                          }) {
   function handleClickHamburgerMenu() {
     toggleHamburgerMenu();
   }
 
   function handleClickJoin() {
     window.location =
-      "https://join.slack.com/t/disruptthefin-jlz8378/shared_invite/zt-2by2eubit-TX1I42vHghkBAW965jexlw";
+        "https://join.slack.com/t/disruptthefin-jlz8378/shared_invite/zt-2by2eubit-TX1I42vHghkBAW965jexlw";
   }
 
   function handleClickInstagram() {
@@ -32,121 +31,85 @@ export default function HamburgerMenuOpen({
   }
 
   return (
-    <div className="top-0 right-0 z-20 flex flex-col w-screen h-screen bg-navigationMenu">
-      <div className="flex items-start justify-between w-screen h-20">
-        <div className="flex items-center">
-          <div>
-            <NavLink to="/">
-              <img
-                src={disruptLogoBlack} // get one that replaces the blue for bl
+      <div
+          className={`
+        fixed top-0 left-0 z-50 flex flex-col h-screen
+        transform transition-transform duration-300
+        bg-blue-500 /* 这里随便写菜单背景色 */
+        w-64
+        ${hamburgerMenuOpen ? "translate-x-0" : "-translate-x-full"}
+      `}
+      >
+        <div className="flex items-center justify-between h-16 px-4 bg-black">
+          <NavLink to="/" onClick={handleClickHamburgerMenu}>
+            <img
+                src={disruptLogoBlack}
                 alt="testLogo"
-                className="w-16 mt-4 ml-4 brightness-90"
-              />
-            </NavLink>
+                className="w-12 brightness-90"
+            />
+          </NavLink>
+
+          <div className="flex items-center space-x-4">
+            <button
+                onClick={handleClickJoin}
+                className="text-black text-sm font-bold bg-[#b5f727] px-4 py-2 rounded-md"
+            >
+              JOIN
+            </button>
+            <img
+                src={hamburgerIcon}
+                alt="hamburgerMenuIcon"
+                onClick={handleClickHamburgerMenu}
+                className="w-8 h-8 hover:cursor-pointer filter grayscale brightness-200"
+            />
           </div>
         </div>
-        <div className="flex items-center py-8">
-          <button
-            className="text-black text-xl font-bold bg-[#b5f727] px-12 py-3 rounded-md hover:bg-[#b5f727] hover:text-black"
-            onClick={handleClickJoin}
-          >
-            JOIN
-          </button>
-          <img
-            src={hamburgerIcon}
-            alt="hamburgerMenuIcon"
-            onClick={handleClickHamburgerMenu}
-            className="w-24 h-6 hover:cursor-pointer filter grayscale brightness-200"
+
+        <div className="flex-grow overflow-y-auto py-6 px-4">
+          <NavItem to="/" label="Home" onClick={handleClickHamburgerMenu} />
+          <NavItem to="/about" label="About" onClick={handleClickHamburgerMenu} />
+          <NavItem
+              to="/finnovate"
+              label="Finnovate"
+              onClick={handleClickHamburgerMenu}
+          />
+          <NavItem
+              to="/consulting"
+              label="Consulting"
+              onClick={handleClickHamburgerMenu}
+          />
+          <NavItem to="/events" label="Events" onClick={handleClickHamburgerMenu} />
+          <NavItem
+              to="/newsroom"
+              label="Newsroom"
+              onClick={handleClickHamburgerMenu}
           />
         </div>
-      </div>
-      <div className="flex-grow">
-        <div className="flex flex-col pl-4 text-4xl selection:text-blue-500 sm:text-5xl sm:pl-28">
-          <div className="relative mt-8 font-bold text-white group">
-            <NavLink to="/" onClick={handleClickHamburgerMenu}>
-              <span className="text-move">Home</span>
-            </NavLink>
-            <img
-              src={navigationArrowIcon}
-              alt="navigationArrowIcon"
-              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
-            />
-          </div>
-          <div className="relative font-bold text-white group">
-            <NavLink to="/about" onClick={handleClickHamburgerMenu}>
-              <span className="text-move">About</span>
-            </NavLink>
-            <img
-              src={navigationArrowIcon}
-              alt="navigationArrowIcon"
-              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
-            />
-          </div>
-          <div className="relative font-bold text-white group">
-            <NavLink to="/finnovate" onClick={handleClickHamburgerMenu}>
-              <span className="text-move">Finnovate</span>
-            </NavLink>
-            <img
-              src={navigationArrowIcon}
-              alt="navigationArrowIcon"
-              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
-            />
-          </div>
-          <div className="relative font-bold text-white group">
-            <NavLink to="/consulting" onClick={handleClickHamburgerMenu}>
-              <span className="text-move">Consulting</span>
-            </NavLink>
-            <img
-              src={navigationArrowIcon}
-              alt="navigationArrowIcon"
-              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
-            />
-          </div>
-          <div className="relative font-bold text-white group">
-            <NavLink to="/events" onClick={handleClickHamburgerMenu}>
-              <span className="text-move">Events</span>
-            </NavLink>
-            <img
-              src={navigationArrowIcon}
-              alt="navigationArrowIcon"
-              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
-            />
-          </div>
-          <div className="relative font-bold text-white group">
-            <NavLink to="/newsroom" onClick={handleClickHamburgerMenu}>
-              <span className="text-move">Newsroom</span>
-            </NavLink>
-            <img
-              src={navigationArrowIcon}
-              alt="navigationArrowIcon"
-              className="absolute hidden transform -translate-y-1/2 top-1/2 group-hover:block"
-            />
-          </div>
-        </div>
-        <div></div>
-      </div>
-      <div className="absolute text-4xl font-light text-white right-16 bottom-16 group">
-        <div>
-          <button onClick={handleClickEmail}>
-            <h1>Email</h1>
-          </button>
-        </div>
-        <div>
-          <button onClick={handleClickInstagram}>
-            <h1>Instagram</h1>
-          </button>
-        </div>
-        <div>
-          <button onClick={handleClickLinkedIn}>
-            <h1>LinkedIn</h1>
-          </button>
-        </div>
-        <div>
-          <button onClick={handleClickNewsletter}>
-            <h1>Newsletter</h1>
-          </button>
+
+        <div className="flex flex-col items-end text-white text-base font-light pr-4 pb-4 space-y-2">
+          <button onClick={handleClickEmail}>Email</button>
+          <button onClick={handleClickInstagram}>Instagram</button>
+          <button onClick={handleClickLinkedIn}>LinkedIn</button>
+          <button onClick={handleClickNewsletter}>Newsletter</button>
         </div>
       </div>
-    </div>
+  );
+}
+
+function NavItem({ to, label, onClick }) {
+  return (
+      <div className="mb-4">
+        <NavLink
+            to={to}
+            onClick={onClick}
+            className="
+          text-2xl font-bold text-white
+          transition-all
+          hover:ml-2  /* hover时往右移动2px */
+        "
+        >
+          {label}
+        </NavLink>
+      </div>
   );
 }
