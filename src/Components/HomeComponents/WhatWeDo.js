@@ -3,9 +3,14 @@ import { NavLink } from "react-router-dom";
 import venturesImage from "../../img/homeVenturesProgram.svg";
 import consultingImage from "../../img/homeConsultingProgram.svg";
 import eventsImage from "../../img/homeEventsProgram.svg";
+import quantImage from "../../img/finnovate1.svg" //replace with quant image 
+import techImage from "../../img/finnovate1.svg" //replace with tech image 
 import num1 from "../../img/num1.svg";
 import num2 from "../../img/num2.svg";
 import num3 from "../../img/num3.svg";
+import num4 from "../../img/num3.svg"; //replace with num4 svg
+import num5 from "../../img/num3.svg"; //replace with num5 svg
+
 import chevronBtn from "../../img/chevronBtn.svg";
 
 const scrollToTop = () => {
@@ -36,6 +41,22 @@ const programs = [
     numberIcon: num3,
     img: consultingImage,
     navLink: "/consulting",
+  },
+  {
+    name: "QUANT",
+    description:
+      "Develop important quantative skills and host quant workshops",
+    numberIcon: num4, 
+    img: quantImage, 
+    navLink: "/consulting", //Replace with /quant or whichever route the consulting is
+  },
+   {
+    name: "TECH",
+    description:
+      "Develop important technical skills and host workshops",
+    numberIcon: num5, 
+    img: techImage, 
+    navLink: "/tech", //Replace with /quant or whichever route the consulting is
   },
 ];
 
