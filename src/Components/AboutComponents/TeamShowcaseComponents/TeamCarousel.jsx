@@ -9,11 +9,10 @@ import TeamShowcaseCard from "./TeamShowcaseCard";
 
 export default function TeamCarousel() {
   return (
-    <div className="mb-20 ml-10 mt-60">
-      <h2 className="mb-20 text-3xl font-bold text-white md:text-4xl lg:text-5xl xl:text-6xl" style={{ fontFamily: "Faucet" }}>
-        DISRUPT IS COLLABORATIVE, INCLUSIVE, & AGILE
+    <section className="px-6 py-16 max-w-5xl mx-auto">
+      <h2 className="text-3xl md:text-5xl font-faucet text-white mb-10">
+        Disrupt is Collaborative, Inclusive, & Agile
       </h2>
-
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}
@@ -21,9 +20,8 @@ export default function TeamCarousel() {
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
-          600: { slidesPerView: 1, slidesPerGroup: 1 },
-          768: { slidesPerView: 2, slidesPerGroup: 2 },
-          1024: { slidesPerView: 3, slidesPerGroup: 3 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
         }}
       >
         {CARD.map((card) => (
@@ -32,6 +30,6 @@ export default function TeamCarousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 }

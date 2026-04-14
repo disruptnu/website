@@ -1,48 +1,26 @@
 import React from "react";
 import { newsletter } from "./NewsLetterItems/newsLetterConstants";
-import { NavLink } from "react-router-dom";
 
 export default function Newsletters() {
-    return (
-        <div className="border-b border-gray-400">
-            <div className="pl-4 pt-4 pb-2 text-xs text-white font-bold">
-                <h6>/ NEWSLETTERS</h6>
+  return (
+    <section className="px-6 py-16 max-w-5xl mx-auto">
+      <p className="text-sm text-gray-400 uppercase tracking-wide mb-8">Newsletters</p>
+      <div className="space-y-8">
+        {newsletter.map((item) => (
+          <div key={item.name} className="flex flex-col md:flex-row gap-6 border-b border-gray-800 pb-8">
+            <img className="w-full md:w-64 h-40 object-cover rounded" src={item.img} alt={item.name} />
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-white mb-1">{item.name}</h3>
+              <p className="text-sm text-gray-400 mb-2">{item.date}</p>
+              <p className="text-gray-300 mb-3">{item.description}</p>
+              <p className="text-sm text-gray-400 mb-3">By {item.author}</p>
+              <a href={item.navLink} target="_blank" rel="noopener noreferrer" className="text-brand-lime hover:underline text-sm">
+                Read more &rarr;
+              </a>
             </div>
-            <ul className="divide-y divide-gray-800">
-                {newsletter.map((item) => (
-                    <li key={item.description} className="flex flex-col md:flex-row justify-between gap-4 p-4">
-                        <img
-                            className="w-[350px] h-[200px] bg-white flex items-center justify-center"
-                            src={item.img}
-                            alt=""
-                        />
-                        <div className="flex flex-col justify-between">
-                            <div>
-                                <p className="text-2xl md:text-4xl font-bold leading-tight text-white mb-2">
-                                    {item.name}
-                                </p>
-                                <p className="text-sm italic text-white mb-3">
-                                    {item.date}
-                                </p>
-                                <p className="text-sm leading-tight text-white mb-3">
-                                    {item.description}
-                                </p>
-                                <div className="flex items-center">
-                                    {/*<img className="w-6 h-6 rounded-full mr-2" src={item.authorHeadshot} alt="" />*/}
-                                    <p className="text-white font-semibold">{item.author}</p>
-                                </div>
-
-                            </div>
-                            <NavLink
-                                to={item.navLink}
-                                className="text-white border border-solid py-2 px-6 rounded-md mt-4 self-start md:self-end"
-                            >
-                                Read More
-                            </NavLink>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

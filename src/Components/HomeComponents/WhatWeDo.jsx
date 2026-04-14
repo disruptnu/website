@@ -3,37 +3,26 @@ import { NavLink } from "react-router-dom";
 import venturesImage from "../../img/homeVenturesProgram.svg";
 import consultingImage from "../../img/homeConsultingProgram.svg";
 import eventsImage from "../../img/homeEventsProgram.svg";
-import num1 from "../../img/num1.svg";
-import num2 from "../../img/num2.svg";
-import num3 from "../../img/num3.svg";
-import chevronBtn from "../../img/chevronBtn.svg";
-
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
-};
 
 const programs = [
   {
-    name: "EVENTS",
+    name: "Events",
     description:
-      "Attend our guest speaker events and technology to learn about the ways FinTech in changing industries.",
-    numberIcon: num1,
+      "Attend our guest speaker events and technology workshops to learn about the ways FinTech is changing industries.",
     img: eventsImage,
     navLink: "/events",
   },
   {
-    name: "FINNOVATE",
+    name: "Finnovate",
     description:
       "Develop the skills necessary to create and pitch your very own FinTech Startup.",
-    numberIcon: num2,
     img: venturesImage,
     navLink: "/finnovate",
   },
   {
-    name: "CONSULTING",
+    name: "Consulting",
     description:
       "Work with FinTech firms in the Boston area on professional consulting projects.",
-    numberIcon: num3,
     img: consultingImage,
     navLink: "/consulting",
   },
@@ -41,31 +30,20 @@ const programs = [
 
 export default function WhatWeDo() {
   return (
-    <div className="border-b border-solid border-b-gray-400">
-      <div className="pt-10 pl-10 text-xs font-bold text-white" style={{ fontFamily: "UsualLight" }}>
-        <h6>WHAT WE DO</h6>
-      </div>
-      <ul className="px-10 mb-10 divide-y divide-gray-800 md:px-20 lg:px-40 xl:px-80">
+    <section className="px-6 py-16 max-w-5xl mx-auto border-b border-gray-800">
+      <p className="text-sm text-gray-400 uppercase tracking-wide mb-8">What We Do</p>
+      <div className="space-y-10">
         {programs.map((program) => (
-          <NavLink key={program.name} onClick={scrollToTop} to={program.navLink}>
-            <li className="flex flex-col justify-between gap-6 py-5 md:flex-row">
-              <div className="flex flex-col items-center min-w-0 gap-4 md:flex-row">
-                <img className="flex-none h-40 bg-black w-60 md:h-60 md:w-80" src={program.img} alt="" />
-                <div className="min-w-0">
-                  <img className="pb-5" src={program.numberIcon} alt="" />
-                  <p className="text-2xl font-bold leading-8 text-white md:text-4xl md:leading-11" style={{ fontFamily: "Faucet", fontFeatureSettings: "'dlig' on, 'ss03' on, 'ss02' on, 'ss01' on" }}>{program.name}</p>
-                  <p className="mt-1 leading-6 text-white text-md md:text-lg" style={{ fontFamily: "UsualLight" }}>{program.description}</p>
-                </div>
-              </div>
-              <div className="hidden sm:flex sm:items-end">
-                <button>
-                  <img src={chevronBtn} alt="" />
-                </button>
-              </div>
-            </li>
+          <NavLink key={program.name} to={program.navLink} className="flex flex-col md:flex-row gap-6 group">
+            <img className="w-full md:w-64 h-40 object-cover bg-gray-900 rounded" src={program.img} alt={program.name} />
+            <div>
+              <h3 className="text-2xl font-faucet text-white mb-2">{program.name}</h3>
+              <p className="text-gray-300 mb-2">{program.description}</p>
+              <span className="text-brand-lime text-sm">Learn more &rarr;</span>
+            </div>
           </NavLink>
         ))}
-      </ul>
-    </div>
+      </div>
+    </section>
   );
 }

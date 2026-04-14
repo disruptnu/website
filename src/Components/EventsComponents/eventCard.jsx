@@ -1,18 +1,13 @@
 import React from "react";
 
-const EventCard = ({ image, header, alt, day, month }) => {
+export default function EventCard({ image, header, alt, day, month }) {
   return (
-    <div className="flex flex-col items-center max-w-xs overflow-hidden bg-white rounded-lg shadow-lg">
-      <img className="w-full" src={image} alt={alt} />
-      <div className="px-6 py-4">
-        <div className="mb-2 text-xl font-bold">{header}</div>
-        <p className="text-base text-gray-700">
-          <span className="font-bold">Date: </span>
-          {month} {day}
-        </p>
+    <div className="border border-gray-800 rounded-lg overflow-hidden">
+      <img className="w-full h-40 object-cover" src={image} alt={alt} />
+      <div className="p-4">
+        <h3 className="font-bold text-white mb-1">{header}</h3>
+        <p className="text-sm text-gray-400">{month} {day}</p>
       </div>
     </div>
   );
-};
-
-export default EventCard;
+}

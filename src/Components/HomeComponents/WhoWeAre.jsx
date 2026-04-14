@@ -1,38 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import readMoreArrow from "../../img/ReadMoreRightArrow.svg";
-
-const scrollToTop = () => {
-  window.scrollTo(0, 0);
-};
 
 export default function WhoWeAre() {
   return (
-    <div
-      className="border-b border-solid border-b-gray-400"
-      style={{ fontFamily: "UsualRegular" }}
-    >
-      <div
-        className="pt-5 pl-10 text-xs font-bold text-white"
-        style={{ fontFamily: "UsualLight" }}
-      >
-        <h6>WHO WE ARE</h6>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <p className="w-full px-8 md:w-2/3 lg:w-1/2 pb-8 mx-auto mt-24 text-2xl font-bold text-left text-white">
-          At Northeastern University, we have recognized the disruptive
-          influence of technology in finance and have started Disrupt to foster
-          collaboration aimed at reshaping the finance industry.
-        </p>
-        <div className="text-brand-lime mb-16">
-          <NavLink onClick={scrollToTop} to="/about">
-            <div className="flex items-center justify-center">
-              <p className="mr-2">Read more</p>
-              <img src={readMoreArrow} alt="rightArrow" className="mt-0.5" />
-            </div>
-          </NavLink>
-        </div>
-      </div>
-    </div>
+    <section className="px-6 py-16 max-w-5xl mx-auto border-b border-gray-800">
+      <p className="text-sm text-gray-400 uppercase tracking-wide mb-8">Who We Are</p>
+      <p className="text-2xl text-white mb-8">
+        At Northeastern University, we have recognized the disruptive
+        influence of technology in finance and have started Disrupt to foster
+        collaboration aimed at reshaping the finance industry.
+      </p>
+      <NavLink to="/about" className="text-brand-lime hover:underline">
+        Read more &rarr;
+      </NavLink>
+    </section>
   );
 }

@@ -1,55 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { newsletter } from "./NewsLetterItems/newsLetterConstants";
 
-function FeaturedCard(props) {
-    return (
-        <div className="flex flex-col items-center max-w-md px-4 mx-auto md:px-10">
-            <img
-                // className="w-full pb-2 rounded-sm"
-                className="w-[350px] h-[200px] bg-white flex items-center justify-center"
-                src={props.image}
-                alt={props.alt}
-            />
-            <div className="flex flex-col items-center justify-between w-full mt-2 md:flex-row">
-                <h3
-                    className="text-lg font-bold text-white md:text-xl"
-                    style={{fontFamily: "Faucet"}}
-                >
-                    {props.header}
-                </h3>
-                <NavLink
-                    to={props.navLink}
-                    className="px-4 py-2 mt-6 mb-4 text-sm text-white border border-white rounded-md hover:bg-white hover:text-black transition-all"
-                    style={{ fontFamily: "UsualLight" }}
-                >
-                    Read More
-                </NavLink>
-
-            </div>
-        </div>
-    );
-}
-
 export default function FeaturedNews() {
-    const featuredNews = newsletter.slice(0, 3);
+  const featured = newsletter.slice(0, 3);
 
-    return (
-        <div className="border-b border-gray-400">
-            <div className="pl-4 pt-4 pb-2 text-xs text-white font-bold">
-                <h6>/ FEATURED</h6>
-            </div>
-            <div className="flex flex-col items-center justify-center md:flex-row md:justify-around md:items-stretch">
-                {featuredNews.map((card) => (
-                    <FeaturedCard
-                        key={card.key}
-                        image={card.img}
-                        header={card.name}
-                        alt={card.alt}
-                        navLink={card.navLink}
-                    />
-                ))}
-            </div>
-        </div>
-    );
+  return (
+    <section className="px-6 py-16 max-w-5xl mx-auto border-b border-gray-800">
+      <p className="text-sm text-gray-400 uppercase tracking-wide mb-8">Featured</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {featured.map((item) => (
+          <a key={item.name} href={item.navLink} target="_blank" rel="noopener noreferrer" className="group">
+            <img className="w-full h-48 object-cover rounded mb-3" src={item.img} alt={item.name} />
+            <h3 className="text-lg font-bold text-white mb-2">{item.name}</h3>
+            <span className="text-brand-lime text-sm">Read more &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
 }
