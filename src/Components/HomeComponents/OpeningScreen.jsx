@@ -49,8 +49,8 @@ function ImageStrip({ items }) {
 
 export default function OpeningScreen() {
   return (
-    <section className="min-h-screen px-2 pt-2 pb-8 bg-white">
-      <div className="w-[99%] max-w-[1800px] mx-auto bg-surface-primary rounded-hero flex flex-col overflow-hidden">
+    <section className="min-h-screen px-2 pt-2 laptop:pt-0 pb-8 bg-white">
+      <div className="w-[99%] max-w-[1800px] mx-auto bg-surface-primary rounded-hero laptop:rounded-t-none flex flex-col overflow-hidden">
         {/* Hero content */}
         <div className="flex-1 flex flex-col items-center justify-center text-center px-6 pt-32 md:pt-40 pb-16 md:pb-24">
           <h1 className="hero-animate hero-animate-delay-1 text-5xl md:text-7xl font-display font-medium tracking-tight text-white mb-6">

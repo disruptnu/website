@@ -18,11 +18,13 @@ export default function HamburgerMenu({ hamburgerMenuOpen, toggleHamburgerMenu }
   }
 
   return createPortal(
-    <>
+    <div
+      className={`fixed inset-0 z-[70] ${hamburgerMenuOpen ? "" : "pointer-events-none"}`}
+    >
       {/* Backdrop */}
       {hamburgerMenuOpen && (
         <div
-          className="fixed inset-0 z-[60] bg-black/20 backdrop-blur-sm"
+          className="absolute inset-0 bg-black/20 backdrop-blur-sm"
           onClick={handleClose}
         />
       )}
@@ -31,9 +33,9 @@ export default function HamburgerMenu({ hamburgerMenuOpen, toggleHamburgerMenu }
       <nav
         aria-label="Mobile navigation"
         className={`
-          fixed top-0 right-0 z-[70] flex flex-col h-screen
+          absolute top-0 right-0 z-10 flex flex-col h-full
           transform transition-transform duration-300 ease-out
-          bg-surface-primary w-full max-w-sm
+          bg-surface-primary w-full max-w-sm pointer-events-auto
           ${hamburgerMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
@@ -45,11 +47,12 @@ export default function HamburgerMenu({ hamburgerMenuOpen, toggleHamburgerMenu }
             className="h-7 w-auto"
           />
           <button
-            onClick={handleClose}
+            onPointerDown={(e) => { e.stopPropagation(); handleClose(); }}
             aria-label="Close navigation menu"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition"
+            className="relative z-50 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 active:bg-white/20"
+            style={{ touchAction: "manipulation" }}
           >
-            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-5 h-5 text-white pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
           </button>
@@ -89,7 +92,7 @@ export default function HamburgerMenu({ hamburgerMenuOpen, toggleHamburgerMenu }
           </div>
         </div>
       </nav>
-    </>,
+    </div>,
     document.body
   );
 }
