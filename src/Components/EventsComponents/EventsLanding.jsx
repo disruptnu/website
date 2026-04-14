@@ -27,7 +27,7 @@ export default function EventsLanding() {
           </p>
           <p
             className="mx-auto text-left text-white"
-            style={{ fontFamily: "Usual-Regular" }}
+            style={{ fontFamily: "UsualRegular" }}
           >
             We host bi-weekly events ranging from fireside chats, technology
             workshops, and guest panels to give Northeastern skills and insight

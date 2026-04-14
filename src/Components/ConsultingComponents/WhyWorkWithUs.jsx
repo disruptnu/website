@@ -36,8 +36,8 @@ export default function WhyWorkWithUs() {
                     "Strategic Pitches for Untapped Markets",
                     "Product Development & Enhancement",
                 ].map((item, index) => (
-                    <div key={index} className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 flex items-start space-x-4 hover:border-[#BAFF29] transition duration-300">
-                        <div className="flex-shrink-0 w-10 h-10 bg-[#BAFF29] rounded-full flex items-center justify-center text-black font-bold text-xl">
+                    <div key={index} className="bg-surface-elevated border border-surface-border rounded-xl p-6 flex items-start space-x-4 hover:border-brand-lime transition duration-300">
+                        <div className="flex-shrink-0 w-10 h-10 bg-brand-lime rounded-full flex items-center justify-center text-black font-bold text-xl">
                             {index + 1}
                         </div>
                         <p className="text-lg font-usual-regular">{item}</p>
@@ -64,8 +64,8 @@ export default function WhyWorkWithUs() {
                         desc: "Comprehensive, data-driven recommendations and execution roadmaps.",
                     },
                 ].map((step, i) => (
-                    <div key={i} className="flex items-start space-x-5 bg-zinc-900 border border-zinc-700 rounded-xl p-6 hover:border-[#009AFF] transition duration-300">
-                        <div className="flex-shrink-0 w-10 h-10 bg-[#009AFF] rounded-full flex items-center justify-center font-bold text-white">
+                    <div key={i} className="flex items-start space-x-5 bg-surface-elevated border border-surface-border rounded-xl p-6 hover:border-brand-blue transition duration-300">
+                        <div className="flex-shrink-0 w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center font-bold text-white">
                             {i + 1}
                         </div>
                         <div>
@@ -121,8 +121,8 @@ export default function WhyWorkWithUs() {
                         ],
                     },
                 ].map((item, idx) => (
-                    <div key={idx} className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 hover:border-[#BAFF29] transition duration-300 shadow-lg">
-                        <p className="text-sm uppercase text-[#BAFF29] tracking-wide font-semibold">{item.period}</p>
+                    <div key={idx} className="bg-surface-elevated border border-surface-border rounded-xl p-6 hover:border-brand-lime transition duration-300 shadow-lg">
+                        <p className="text-sm uppercase text-brand-lime tracking-wide font-semibold">{item.period}</p>
                         <h3 className="text-2xl font-bold mt-1 mb-4">{item.title}</h3>
                         <ul className="list-disc pl-5 space-y-1 font-usual-regular text-base text-zinc-200">
                             {item.points.map((point, i) => (
@@ -137,12 +137,12 @@ export default function WhyWorkWithUs() {
 
         <section className="flex flex-col items-center justify-center w-full px-6 py-16 mt-20 bg-black border-t border-white">
         <h2 className="text-4xl text-center font-faucet mb-8" style={{ fontFeatureSettings: "'ss01' on" }}>
-          {/*INTERESTED IN <span className="text-[#009AFF]">ELEVATING</span> YOUR ORGANIZATION?*/}
-            JOIN US IN SHAPING <span className="text-[#009AFF]">FINTECH'S</span> FUTURE
+          {/*INTERESTED IN <span className="text-brand-blue">ELEVATING</span> YOUR ORGANIZATION?*/}
+            JOIN US IN SHAPING <span className="text-brand-blue">FINTECH'S</span> FUTURE
         </h2>
         <p
             className="mx-auto text-white text-center max-w-4xl px-4"
-            style={{ fontFamily: "Usual-Regular" }}
+            style={{ fontFamily: "UsualRegular" }}
         >
             We are committed to helping fintech companies refine their strategies, enhance user experiences, and navigate complex regulatory environments.
             Whether you are launching a new product, expanding into new markets, or optimizing existing operations, Disrupt Consulting is here to support your journey.
@@ -150,7 +150,7 @@ export default function WhyWorkWithUs() {
 
         <p className="flex items-center text-xl text-center font-usual-regular mt-8">
             Contact us at
-            <a href="mailto:elevatedisruptneu@gmail.com" className="ml-2 text-[#BAFF29] underline flex items-center">
+            <a href="mailto:elevatedisruptneu@gmail.com" className="ml-2 text-brand-lime underline flex items-center">
                 elevatedisruptneu@gmail.com
                 <img src={contactArrow} alt="Contact Arrow" className="ml-2" />
             </a>

@@ -3,7 +3,7 @@ import React from "react";
 export default function FundamentalsDescription() {
   return (
     <div className="font-bold border-b border-solid border-b-gray-400">
-      <div className="pt-5 pl-4 text-xs text-white sm:pl-10" style={{ fontFamily: "Usual-Light" }}>
+      <div className="pt-5 pl-4 text-xs text-white sm:pl-10" style={{ fontFamily: "UsualLight" }}>
         <h6>Disrupt Fundamentals</h6>
       </div>
       <div className="flex flex-col items-center justify-center px-4 sm:px-10">
@@ -13,7 +13,7 @@ export default function FundamentalsDescription() {
           }}>
           <span className="text-blue-500">ONE</span> MAIN <span className="text-blue-500">VISION</span>
         </p>
-        <div className="w-full mb-12 text-xl text-white sm:text-2xl" style={{ fontFamily: "Usual-Regular" }}>
+        <div className="w-full mb-12 text-xl text-white sm:text-2xl" style={{ fontFamily: "UsualRegular" }}>
           <p>
             Northeastern University and its students have recognized the disruptive power of technology in finance and have thus started the FinTech initiative on campus to become leaders of this field.
           </p>

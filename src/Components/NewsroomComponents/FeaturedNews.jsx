@@ -21,7 +21,7 @@ function FeaturedCard(props) {
                 <NavLink
                     to={props.navLink}
                     className="px-4 py-2 mt-6 mb-4 text-sm text-white border border-white rounded-md hover:bg-white hover:text-black transition-all"
-                    style={{ fontFamily: "Usual-Light" }}
+                    style={{ fontFamily: "UsualLight" }}
                 >
                     Read More
                 </NavLink>

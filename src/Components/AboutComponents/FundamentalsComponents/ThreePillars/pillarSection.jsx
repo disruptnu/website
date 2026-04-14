@@ -19,7 +19,7 @@ export default function PillarSection(props) {
       </h1>
       <p
         className="w-full mt-2 text-sm sm:text-md md:text-lg lg:text-xl"
-        style={{ fontFamily: "Usual-Regular" }}
+        style={{ fontFamily: "UsualRegular" }}
       >
         {props.description}
       </p>

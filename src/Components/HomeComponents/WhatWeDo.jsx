@@ -42,7 +42,7 @@ const programs = [
 export default function WhatWeDo() {
   return (
     <div className="border-b border-solid border-b-gray-400">
-      <div className="pt-10 pl-10 text-xs font-bold text-white" style={{ fontFamily: "Usual-Light" }}>
+      <div className="pt-10 pl-10 text-xs font-bold text-white" style={{ fontFamily: "UsualLight" }}>
         <h6>WHAT WE DO</h6>
       </div>
       <ul className="px-10 mb-10 divide-y divide-gray-800 md:px-20 lg:px-40 xl:px-80">
@@ -54,7 +54,7 @@ export default function WhatWeDo() {
                 <div className="min-w-0">
                   <img className="pb-5" src={program.numberIcon} alt="" />
                   <p className="text-2xl font-bold leading-8 text-white md:text-4xl md:leading-11" style={{ fontFamily: "Faucet", fontFeatureSettings: "'dlig' on, 'ss03' on, 'ss02' on, 'ss01' on" }}>{program.name}</p>
-                  <p className="mt-1 leading-6 text-white text-md md:text-lg" style={{ fontFamily: "Usual-Light" }}>{program.description}</p>
+                  <p className="mt-1 leading-6 text-white text-md md:text-lg" style={{ fontFamily: "UsualLight" }}>{program.description}</p>
                 </div>
               </div>
               <div className="hidden sm:flex sm:items-end">
