@@ -17,7 +17,7 @@ export default function WhoWeAre() {
       <FadeIn delay={150}>
         <p className="text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
           <span className="text-text-primary font-medium">Four branches</span>,
-          80+ members, and a track record that goes back six years. We're the
+          80+ members, and a track record that goes back seven years. We're the
           largest undergraduate fintech club at Northeastern, and everything we do
           produces something real.{" "}
           <NavLink to="/about" className="text-text-primary font-medium underline">

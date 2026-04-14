@@ -10,7 +10,7 @@ export default function WhyDisrupt() {
           </h1>
           <p className="text-lg text-gray-300 md:w-2/3">
             Founded in 2019, Disrupt started as a small group of Northeastern
-            undergrads who wanted to do more than talk about fintech. Six years
+            undergrads who wanted to do more than talk about fintech. Seven years
             later, we're the university's largest undergraduate fintech club
             with four active branches and over 85 members.
           </p>

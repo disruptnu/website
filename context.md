@@ -211,7 +211,7 @@ Leadership and club info. Keep it simple.
 
 **Club overview:**
 
-- When Disrupt was founded [TODO: get founding date]
+- Founded February 2019
 - Largest and oldest fintech club at Northeastern
 - Brief history if there's a compelling version
 
@@ -229,9 +229,19 @@ Leadership and club info. Keep it simple.
 
 ---
 
+## Technical Notes
+
+- **Stack:** React 18 + Vite + Tailwind CSS, hosted on Vercel
+- **Images:** All raster images converted to WebP with vite-plugin-image-optimizer for build-time compression. Originals backed up at `~/Downloads/disrupt/disrupt-website-original-images/`.
+- **Design system:** See `DESIGN-SYSTEM.md` for colors, typography, spacing, and component patterns.
+- **Outstanding work:** See `TODO.md` for placeholder content, missing integrations, and nice-to-haves.
+- **Apply page:** `/apply` shows team selection cards. Individual Apply buttons are placeholders (`href="#"`) awaiting Google Form/Typeform links.
+- **Deploy:** `npx vercel deploy --prod` from the repo root. Production URL: https://disruptnu.com
+
 ## Administrative Notes (not for site copy)
 
-- **Outreach branch** handles marketing, event logistics, and speaker sourcing. This is an internal operations team and does not need its own page or section on the site.
+- **Operations** is listed as a team on the Apply page but does not have its own branch page.
+- **Outreach branch** handles marketing, event logistics, and speaker sourcing. This is an internal operations team.
 - **Tech team** has been dissolved and reorganized into other branches.
 - The site features four main branches: Consulting, Quant, Research, and Finnovate.
 - Finhacks is featured prominently on the Events page, not buried as a sub-item.
