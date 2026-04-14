@@ -76,7 +76,7 @@ export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
   }, [hamburgerMenuOpen, toggleHamburgerMenu]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40">
+    <header className={`fixed top-0 left-0 right-0 z-40 ${hamburgerMenuOpen ? "pointer-events-none" : ""}`}>
       {/* Desktop header */}
       <div className="hidden laptop:flex max-w-[1800px] w-[99%] mx-auto items-center justify-between h-16 px-8">
         <Link to="/" className="flex-shrink-0">
