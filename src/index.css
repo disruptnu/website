@@ -28,15 +28,15 @@ code {
 
 @font-face {
   font-family: "Faucet";
-  src: url("../public/fonts/A2Z-Faucet-Ultra.otf");
+  src: url("/fonts/A2Z-Faucet-Ultra.otf");
 }
 
 @font-face {
   font-family: "Usual-Light";
-  src: url("../public/fonts/Usual-Light.otf");
+  src: url("/fonts/Usual-Light.otf");
 }
 
 @font-face {
   font-family: "Usual-Regular";
-  src: url("../public/fonts/Usual-Regular.otf");
+  src: url("/fonts/Usual-Regular.otf");
 }
