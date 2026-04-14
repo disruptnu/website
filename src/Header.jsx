@@ -34,6 +34,7 @@ function getEffectiveBgColor(el) {
 export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
   const location = useLocation();
   const [overDark, setOverDark] = useState(true);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   const detectBackground = useCallback(() => {
     // Sample a point just below the header center
@@ -59,10 +60,20 @@ export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
   }, []);
 
   useEffect(() => {
+    setHasScrolled(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
     detectBackground();
 
-    window.addEventListener("scroll", detectBackground, { passive: true });
-    return () => window.removeEventListener("scroll", detectBackground);
+    const handleScroll = () => {
+      if (window.scrollY > 10) setHasScrolled(true);
+      else setHasScrolled(false);
+      detectBackground();
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [detectBackground, location.pathname]);
 
   useEffect(() => {
@@ -130,15 +141,22 @@ export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
       {/* Mobile floating pill */}
       <div className="laptop:hidden flex justify-center pt-3 px-4">
         <div
-          className={`flex items-center justify-between w-full max-w-md rounded-full px-4 py-2 transition-colors duration-300 ${
-            overDark ? "bg-[#2a2a2a]" : "bg-[#ebebeb]"
+          className={`flex items-center justify-between w-full max-w-md rounded-full px-4 py-2 transition-all duration-300 ${
+            hasScrolled
+              ? overDark ? "bg-[#2a2a2a]" : "bg-[#ebebeb]"
+              : "bg-transparent"
           }`}
         >
-          <Link to="/" className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0 relative h-8">
             <img
-              src={overDark ? "/logos/Brandmark+Wordmark_Light_Large.png" : "/logos/Brandmark+Wordmark_Dark_Large.png"}
+              src="/logos/Brandmark+Wordmark_Light_Large.png"
               alt="Disrupt Logo"
-              className="h-8 w-auto"
+              className={`h-8 w-auto transition-opacity duration-300 ${overDark ? "opacity-100" : "opacity-0"}`}
+            />
+            <img
+              src="/logos/Brandmark+Wordmark_Dark_Large.png"
+              alt="Disrupt Logo"
+              className={`h-8 w-auto absolute inset-0 transition-opacity duration-300 ${overDark ? "opacity-0" : "opacity-100"}`}
             />
           </Link>
 

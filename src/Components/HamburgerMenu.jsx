@@ -44,7 +44,7 @@ export default function HamburgerMenu({ hamburgerMenuOpen, toggleHamburgerMenu }
           <img
             src="/logos/Brandmark+Wordmark_Light_Large.png"
             alt="Disrupt"
-            className="h-7 w-auto"
+            className="h-8 w-auto"
           />
           <button
             onPointerDown={(e) => { e.stopPropagation(); handleClose(); }}

@@ -84,10 +84,10 @@ export default function Footer() {
               </NavLink>
             </div>
 
-            {/* Club */}
+            {/* General */}
             <div className="space-y-2">
               <h4 className="font-bold mb-2 text-sm uppercase tracking-wide text-gray-500">
-                Club
+                General
               </h4>
               <NavLink
                 to="/events"

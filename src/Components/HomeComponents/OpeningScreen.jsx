@@ -79,9 +79,11 @@ export default function OpeningScreen() {
         </div>
 
         {/* Two-row scrolling image carousel */}
-        <div className="overflow-hidden pb-5 px-6 space-y-2 group">
+        <div className="relative overflow-hidden pb-5 px-6 space-y-2 group">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-primary to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-primary to-transparent z-10" />
           {/* Row 1 — scrolls left */}
-          <div className="flex will-change-transform animate-scroll-left group-hover-pause">
+          <div className="flex w-max will-change-transform animate-scroll-left group-hover-pause">
             <div className="flex gap-3 shrink-0 pr-3">
               <ImageStrip items={row1} />
             </div>
@@ -90,7 +92,7 @@ export default function OpeningScreen() {
             </div>
           </div>
           {/* Row 2 — scrolls right */}
-          <div className="flex will-change-transform scroll-right group-hover-pause">
+          <div className="flex w-max will-change-transform scroll-right group-hover-pause">
             <div className="flex gap-3 shrink-0 pr-3">
               <ImageStrip items={row2} />
             </div>
