@@ -33,30 +33,36 @@ function getEffectiveBgColor(el) {
 
 export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
   const location = useLocation();
-  const [overDark, setOverDark] = useState(true);
+  const [navDark, setNavDark] = useState(true);
+  const [logoDark, setLogoDark] = useState(true);
+  const [applyDark, setApplyDark] = useState(true);
   const [hasScrolled, setHasScrolled] = useState(false);
 
   const detectBackground = useCallback(() => {
-    // Sample a point just below the header center
-    const x = window.innerWidth / 2;
     const y = 40;
-
-    // Temporarily hide header so elementFromPoint hits the content behind it
     const header = document.querySelector("header");
     if (!header) return;
 
     header.style.pointerEvents = "none";
     header.style.visibility = "hidden";
-    const el = document.elementFromPoint(x, y);
+
+    // Sample three points: logo (left), nav (center), apply button (right)
+    const points = [
+      { x: 80, setter: setLogoDark },
+      { x: window.innerWidth / 2, setter: setNavDark },
+      { x: window.innerWidth - 80, setter: setApplyDark },
+    ];
+
+    for (const { x, setter } of points) {
+      const el = document.elementFromPoint(x, y);
+      if (el) {
+        const color = getEffectiveBgColor(el);
+        if (color) setter(isColorDark(color.r, color.g, color.b));
+      }
+    }
+
     header.style.pointerEvents = "";
     header.style.visibility = "";
-
-    if (!el) return;
-
-    const color = getEffectiveBgColor(el);
-    if (color) {
-      setOverDark(isColorDark(color.r, color.g, color.b));
-    }
   }, []);
 
   useEffect(() => {
@@ -90,17 +96,22 @@ export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
     <header className={`fixed top-0 left-0 right-0 z-40 ${hamburgerMenuOpen ? "pointer-events-none" : ""}`}>
       {/* Desktop header */}
       <div className="hidden laptop:flex max-w-[1800px] w-[99%] mx-auto items-center justify-between h-16 px-8">
-        <Link to="/" className="flex-shrink-0">
+        <Link to="/" className="flex-shrink-0 relative h-9">
           <img
-            src={overDark ? "/logos/Brandmark+Wordmark_Light_Large.png" : "/logos/Brandmark+Wordmark_Dark_Large.png"}
+            src="/logos/Brandmark+Wordmark_Light_Large.png"
             alt="Disrupt Logo"
-            className="h-9 w-auto"
+            className={`h-9 w-auto transition-opacity duration-300 ${logoDark ? "opacity-100" : "opacity-0"}`}
+          />
+          <img
+            src="/logos/Brandmark+Wordmark_Dark_Large.png"
+            alt="Disrupt Logo"
+            className={`h-9 w-auto absolute inset-0 transition-opacity duration-300 ${logoDark ? "opacity-0" : "opacity-100"}`}
           />
         </Link>
 
         <nav
           className={`flex items-center gap-0.5 rounded-full px-1.5 py-1 transition-colors duration-300 ${
-            overDark ? "bg-[#2a2a2a]" : "bg-[#ebebeb]"
+            navDark ? "bg-[#2a2a2a]" : "bg-[#ebebeb]"
           }`}
           aria-label="Main navigation"
         >
@@ -112,10 +123,10 @@ export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
               className={({ isActive }) =>
                 `px-4 py-1.5 rounded-full text-sm transition-colors ${
                   isActive
-                    ? overDark
+                    ? navDark
                       ? "bg-white/20 text-white font-medium"
                       : "bg-surface-primary text-white font-medium"
-                    : overDark
+                    : navDark
                       ? "text-white/60 hover:text-white font-normal"
                       : "text-text-secondary hover:text-text-primary font-normal"
                 }`
@@ -127,9 +138,9 @@ export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
         </nav>
 
         <a
-          href="#"
+          href="/apply"
           className={`px-5 py-2 font-medium rounded-full text-sm transition ${
-            overDark
+            applyDark
               ? "bg-brand-lime text-surface-primary hover:brightness-110"
               : "bg-surface-primary text-white hover:bg-surface-elevated"
           }`}
@@ -143,7 +154,7 @@ export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
         <div
           className={`flex items-center justify-between w-full max-w-md rounded-full px-4 py-2 transition-all duration-300 ${
             hasScrolled
-              ? overDark ? "bg-[#2a2a2a]" : "bg-[#ebebeb]"
+              ? navDark ? "bg-[#2a2a2a]" : "bg-[#ebebeb]"
               : "bg-transparent"
           }`}
         >
@@ -151,12 +162,12 @@ export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
             <img
               src="/logos/Brandmark+Wordmark_Light_Large.png"
               alt="Disrupt Logo"
-              className={`h-8 w-auto transition-opacity duration-300 ${overDark ? "opacity-100" : "opacity-0"}`}
+              className={`h-8 w-auto transition-opacity duration-300 ${logoDark ? "opacity-100" : "opacity-0"}`}
             />
             <img
               src="/logos/Brandmark+Wordmark_Dark_Large.png"
               alt="Disrupt Logo"
-              className={`h-8 w-auto absolute inset-0 transition-opacity duration-300 ${overDark ? "opacity-0" : "opacity-100"}`}
+              className={`h-8 w-auto absolute inset-0 transition-opacity duration-300 ${logoDark ? "opacity-0" : "opacity-100"}`}
             />
           </Link>
 
@@ -166,7 +177,7 @@ export default function Header({ hamburgerMenuOpen, toggleHamburgerMenu }) {
             aria-label="Toggle navigation menu"
             className="p-1"
           >
-            <svg className={`w-5 h-5 ${overDark ? "text-white" : "text-text-primary"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg className={`w-5 h-5 ${navDark ? "text-white" : "text-text-primary"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>

@@ -160,7 +160,7 @@ export default function WorkshopsChart() {
               </p>
             </div>
             <a
-              href="#"
+              href="/apply"
               className="px-8 py-3 bg-brand-lime text-surface-primary font-medium rounded-full text-sm hover:brightness-110 transition flex-shrink-0"
             >
               Apply

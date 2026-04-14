@@ -46,7 +46,7 @@ export default function Footer() {
                 Applications open at the start of each semester.
               </p>
               <a
-                href="#"
+                href="/apply"
                 className="inline-block px-6 py-2 bg-brand-lime text-surface-primary font-medium rounded-full text-sm hover:brightness-110 transition"
               >
                 Apply

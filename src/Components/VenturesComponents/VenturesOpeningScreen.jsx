@@ -25,7 +25,7 @@ export default function VenturesOpeningScreen() {
             </div>
             <div>
               <p className="text-2xl md:text-3xl font-display font-medium text-white">
-                $2,250+
+                $2,250
               </p>
               <p className="text-sm text-gray-400 mt-1">Prize pool</p>
             </div>

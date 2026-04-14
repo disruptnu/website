@@ -64,7 +64,7 @@ export default function OpeningScreen() {
           </p>
           <div className="hero-animate hero-animate-delay-3 flex items-center gap-3">
             <a
-              href="#"
+              href="/apply"
               className="px-8 py-3 bg-brand-lime text-surface-primary font-medium rounded-full text-sm hover:brightness-110 transition"
             >
               Apply

@@ -80,7 +80,7 @@ export default function HamburgerMenu({ hamburgerMenuOpen, toggleHamburgerMenu }
         {/* Bottom — Apply + socials */}
         <div className="px-8 pb-8 space-y-6">
           <a
-            href="#"
+            href="/apply"
             className="block w-full text-center px-6 py-3 bg-brand-lime text-surface-primary font-medium rounded-full text-sm hover:brightness-110 transition"
           >
             Apply

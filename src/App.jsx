@@ -7,6 +7,7 @@ import Quant from "./Components/Quant";
 import Research from "./Components/Research";
 import Events from "./Components/Events";
 import ImageGallery from "./Components/ImageGallery";
+import Apply from "./Components/Apply";
 import Layout from "./Components/Layout";
 import * as React from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
             <Route path="/finnovate" element={<Ventures />} />
             <Route path="/events" element={<Events />} />
             <Route path="/about" element={<About />} />
+            <Route path="/apply" element={<Apply />} />
             <Route path="/images" element={<ImageGallery />} />
           </Route>
           <Route path="/newsroom" element={<Navigate to="/research" replace />} />

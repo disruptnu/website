@@ -11,7 +11,7 @@ export default function WhoWeAre() {
           Who We Are
         </h2>
         <p className="text-base text-text-muted mb-8">
-          Northeastern's largest undergraduate fintech club since 2019.
+          The home for all things fintech.
         </p>
       </FadeIn>
       <FadeIn delay={150}>
