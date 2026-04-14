@@ -1,9 +1,9 @@
-import finnovate1 from "../../../img/finnovate1.PNG";
-import techWorkshop2 from "../../../img/tech-workshop2.svg";
-import finhack1 from "../../../img/FinhackImg1.PNG";
-import finnovate2 from "../../../img/homeVenturesProgram.svg";
-import finnovate3 from "../../../img/finnovate3.PNG";
-import finhack2 from "../../../img/FinhackImg2.PNG";
+import finnovate1 from "../../../img/finnovate1.webp";
+import techWorkshop2 from "../../../img/tech-workshop2.webp";
+import finhack1 from "../../../img/FinhackImg1.webp";
+import finnovate2 from "../../../img/homeVenturesProgram.webp";
+import finnovate3 from "../../../img/finnovate3.webp";
+import finhack2 from "../../../img/FinhackImg2.webp";
 
 export const CARD = [
   {

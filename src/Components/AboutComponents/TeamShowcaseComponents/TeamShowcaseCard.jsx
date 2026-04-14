@@ -7,6 +7,7 @@ export default function TeamShowcaseCard(props) {
         className="w-full rounded"
         src={props.image}
         alt={props.alt}
+        loading="lazy"
       />
     </div>
   );

@@ -24,13 +24,15 @@ export default function Layout() {
 
   return (
     <>
-      <Header
-        hamburgerMenuOpen={hamburgerMenuOpen}
-        toggleHamburgerMenu={toggleHamburgerMenu}
-      />
-      <main>
-        <Outlet />
-      </main>
+      <div className="relative z-10 bg-surface-light rounded-b-hero shadow-xl overflow-hidden">
+        <Header
+          hamburgerMenuOpen={hamburgerMenuOpen}
+          toggleHamburgerMenu={toggleHamburgerMenu}
+        />
+        <main>
+          <Outlet />
+        </main>
+      </div>
       <Footer />
     </>
   );

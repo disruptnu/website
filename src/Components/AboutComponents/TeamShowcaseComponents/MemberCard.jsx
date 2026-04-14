@@ -13,10 +13,11 @@ export default function MemberCard({ member }) {
           src={member.headshot}
           alt={`${member.name} headshot`}
           className="object-cover w-full h-full"
+          loading="lazy"
         />
       </div>
-      <h3 className="mt-3 text-sm font-bold text-white text-center">{member.name}</h3>
-      <p className="text-xs text-gray-400 text-center">{member.position}</p>
+      <h3 className="mt-3 text-sm font-bold text-text-primary text-center">{member.name}</h3>
+      <p className="text-xs text-text-muted text-center">{member.position}</p>
     </a>
   );
 }

@@ -8,7 +8,7 @@ export const Pillar = [
     numberIcon: num1,
     header: (
       <span>
-        WHAT'S<span className="text-blue-500"> FINTECH</span>
+        WHAT'S<span className="text-text-muted"> FINTECH</span>
       </span>
     ),
     description:
@@ -20,7 +20,7 @@ export const Pillar = [
     numberIcon: num2,
     header: (
       <span>
-        WHO'S <span className="text-blue-500"> INVOLVED</span>
+        WHO'S <span className="text-text-muted"> INVOLVED</span>
       </span>
     ),
     description:
@@ -32,7 +32,7 @@ export const Pillar = [
     numberIcon: num3,
     header: (
       <span>
-        WHAT'S OUR <span className="text-blue-500"> VISION</span>
+        WHAT'S OUR <span className="text-text-muted"> VISION</span>
       </span>
     ),
     description: `We aim to be a "one-stop-shop" for Fintech at Northeastern University & in the Boston area.`,

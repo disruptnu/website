@@ -1,85 +1,95 @@
 import React from "react";
+import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
-import disruptLogoOrig from "../img/logo_a.svg";
-import hamburgerIcon from "../img/hamburgerIcon.svg";
+
+const navLinks = [
+  { to: "/", label: "Home" },
+  { to: "/consulting", label: "Consulting" },
+  { to: "/quant", label: "Quant" },
+  { to: "/research", label: "Research" },
+  { to: "/finnovate", label: "Finnovate" },
+  { to: "/events", label: "Events" },
+  { to: "/about", label: "About" },
+];
 
 export default function HamburgerMenu({ hamburgerMenuOpen, toggleHamburgerMenu }) {
   function handleClose() {
     toggleHamburgerMenu();
   }
 
-  return (
-    <nav
-      aria-label="Main navigation"
-      className={`
-        fixed top-0 left-0 z-50 flex flex-col h-screen
-        transform transition-transform duration-300
-        bg-blue-500
-        w-64
-        ${hamburgerMenuOpen ? "translate-x-0" : "-translate-x-full"}
-      `}
-    >
-      <div className="flex items-center justify-between h-16 px-4 bg-black">
-        <NavLink to="/" onClick={handleClose}>
-          <img
-            src={disruptLogoOrig}
-            alt="Disrupt home"
-            className="w-12 brightness-90"
-          />
-        </NavLink>
+  return createPortal(
+    <>
+      {/* Backdrop */}
+      {hamburgerMenuOpen && (
+        <div
+          className="fixed inset-0 z-[60] bg-black/20 backdrop-blur-sm"
+          onClick={handleClose}
+        />
+      )}
 
-        <div className="flex items-center space-x-4">
-          <a
-            href="https://join.slack.com/t/disruptthefin-jlz8378/shared_invite/zt-2by2eubit-TX1I42vHghkBAW965jexlw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black text-sm font-bold bg-brand-lime px-4 py-2 rounded-md"
-          >
-            JOIN
-          </a>
+      {/* Menu panel */}
+      <nav
+        aria-label="Mobile navigation"
+        className={`
+          fixed top-0 right-0 z-[70] flex flex-col h-screen
+          transform transition-transform duration-300 ease-out
+          bg-surface-primary w-full max-w-sm
+          ${hamburgerMenuOpen ? "translate-x-0" : "translate-x-full"}
+        `}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between h-16 px-6">
+          <img
+            src="/logos/Brandmark+Wordmark_Light_Large.png"
+            alt="Disrupt"
+            className="h-7 w-auto"
+          />
           <button
             onClick={handleClose}
             aria-label="Close navigation menu"
-            className="p-0 bg-transparent border-none"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition"
           >
-            <img
-              src={hamburgerIcon}
-              alt=""
-              className="w-8 h-8 filter grayscale brightness-200 hover:cursor-pointer"
-            />
+            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
-      </div>
 
-      <div className="flex-grow overflow-y-auto py-6 px-4">
-        <NavItem to="/" label="Home" onClick={handleClose} />
-        <NavItem to="/about" label="About" onClick={handleClose} />
-        <NavItem to="/finnovate" label="Finnovate" onClick={handleClose} />
-        <NavItem to="/consulting" label="Consulting" onClick={handleClose} />
-        <NavItem to="/events" label="Events" onClick={handleClose} />
-        <NavItem to="/newsroom" label="Newsroom" onClick={handleClose} />
-      </div>
+        {/* Nav links */}
+        <div className="flex-grow flex flex-col justify-center px-8 -mt-16">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              end={link.to === "/"}
+              onClick={handleClose}
+              className={({ isActive }) =>
+                `block py-3 text-3xl font-display font-medium transition-colors ${
+                  isActive ? "text-white" : "text-gray-500 hover:text-gray-300"
+                }`
+              }
+            >
+              {link.label}
+            </NavLink>
+          ))}
+        </div>
 
-      <div className="flex flex-col items-end text-white text-base font-light pr-4 pb-4 space-y-2">
-        <a href="mailto:nufintech@gmail.com">Email</a>
-        <a href="https://www.instagram.com/neudisrupt" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.linkedin.com/company/neudisrupt/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://disrupt-fintech.medium.com/" target="_blank" rel="noopener noreferrer">Newsletter</a>
-      </div>
-    </nav>
-  );
-}
-
-function NavItem({ to, label, onClick }) {
-  return (
-    <div className="mb-4">
-      <NavLink
-        to={to}
-        onClick={onClick}
-        className="text-2xl font-bold text-white transition-all hover:ml-2"
-      >
-        {label}
-      </NavLink>
-    </div>
+        {/* Bottom — Apply + socials */}
+        <div className="px-8 pb-8 space-y-6">
+          <a
+            href="#"
+            className="block w-full text-center px-6 py-3 bg-brand-lime text-surface-primary font-medium rounded-full text-sm hover:brightness-110 transition"
+          >
+            Apply
+          </a>
+          <div className="flex gap-6 justify-center">
+            <a href="mailto:nufintech@gmail.com" className="text-sm text-gray-500 hover:text-white transition">Email</a>
+            <a href="https://www.instagram.com/neudisrupt" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-white transition">Instagram</a>
+            <a href="https://www.linkedin.com/company/neudisrupt/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-white transition">LinkedIn</a>
+          </div>
+        </div>
+      </nav>
+    </>,
+    document.body
   );
 }

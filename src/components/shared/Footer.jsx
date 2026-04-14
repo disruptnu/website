@@ -1,52 +1,161 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {
+  const footerRef = useRef(null);
+  const [footerHeight, setFooterHeight] = useState(0);
+
+  useEffect(() => {
+    if (!footerRef.current) return;
+
+    const updateHeight = () => {
+      setFooterHeight(footerRef.current.offsetHeight);
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+
+    const images = footerRef.current.querySelectorAll("img");
+    images.forEach((img) => {
+      if (!img.complete) {
+        img.addEventListener("load", updateHeight);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+      images.forEach((img) => img.removeEventListener("load", updateHeight));
+    };
+  }, []);
+
   return (
-    <footer className="border-t border-gray-800 px-6 py-16 max-w-5xl mx-auto text-white">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* Newsletter */}
-        <div>
-          <h3 className="text-xl font-faucet mb-4">Want More?</h3>
-          <p className="text-sm text-gray-400 mb-6">
-            Subscribe to our bi-weekly newsletter for event updates, job
-            opportunities, latest FinTech news and to connect with our community!
-          </p>
-          <div className="space-y-3">
+    <>
+      <div style={{ height: footerHeight }} />
+
+      <footer
+        ref={footerRef}
+        className="fixed bottom-0 left-0 right-0 bg-surface-primary px-6 pt-24 pb-10 text-white z-0"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Top row: CTA + nav columns */}
+          <div className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr] gap-x-6 gap-y-10 md:text-left mb-16 items-start">
+            {/* Join CTA */}
             <div>
-              <label htmlFor="footer-name" className="text-sm text-gray-400">Name</label>
-              <input id="footer-name" type="text" className="w-full mt-1 px-3 py-2 bg-black border border-gray-700 rounded text-white text-sm" />
+              <h3 className="text-xl font-display mb-4">Join Disrupt</h3>
+              <p className="text-sm text-gray-400 mb-6">
+                Applications open at the start of each semester.
+              </p>
+              <a
+                href="#"
+                className="inline-block px-6 py-2 bg-brand-lime text-surface-primary font-medium rounded-full text-sm hover:brightness-110 transition"
+              >
+                Apply
+              </a>
             </div>
-            <div>
-              <label htmlFor="footer-email" className="text-sm text-gray-400">Email</label>
-              <input id="footer-email" type="email" className="w-full mt-1 px-3 py-2 bg-black border border-gray-700 rounded text-white text-sm" />
+
+            {/* Branches */}
+            <div className="space-y-2">
+              <h4 className="font-bold mb-2 text-sm uppercase tracking-wide text-gray-500">
+                Branches
+              </h4>
+              <NavLink
+                to="/consulting"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                Consulting
+              </NavLink>
+              <NavLink
+                to="/quant"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                Quant
+              </NavLink>
+              <NavLink
+                to="/research"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                Research
+              </NavLink>
+              <NavLink
+                to="/finnovate"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                Finnovate
+              </NavLink>
             </div>
-            <button className="px-6 py-2 bg-brand-lime text-black font-bold rounded text-sm">
-              Subscribe
-            </button>
+
+            {/* Club */}
+            <div className="space-y-2">
+              <h4 className="font-bold mb-2 text-sm uppercase tracking-wide text-gray-500">
+                Club
+              </h4>
+              <NavLink
+                to="/events"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                Events
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                About
+              </NavLink>
+            </div>
+
+            {/* Socials */}
+            <div className="space-y-2">
+              <h4 className="font-bold mb-2 text-sm uppercase tracking-wide text-gray-500">
+                Socials
+              </h4>
+              <a
+                href="mailto:nufintech@gmail.com"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                Email
+              </a>
+              <a
+                href="https://www.instagram.com/neudisrupt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.linkedin.com/company/neudisrupt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://disrupt-fintech.medium.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-gray-400 hover:text-white"
+              >
+                Medium
+              </a>
+            </div>
+          </div>
+
+          {/* Oversized logo */}
+          <div className="flex justify-center mt-8 mb-10">
+            <img
+              src="/logos/Brandmark+Wordmark_Light_Large.png"
+              alt="Disrupt"
+              className="w-full opacity-15"
+            />
+          </div>
+
+          {/* Copyright */}
+          <div className="text-left text-xs text-gray-500">
+            &copy; {new Date().getFullYear()} Disrupt. All rights reserved.
           </div>
         </div>
-
-        {/* Navigation */}
-        <div className="space-y-2">
-          <h4 className="font-bold mb-2">Pages</h4>
-          <NavLink to="/about" className="block text-sm text-gray-400 hover:text-white">About</NavLink>
-          <NavLink to="/finnovate" className="block text-sm text-gray-400 hover:text-white">Finnovate</NavLink>
-          <NavLink to="/consulting" className="block text-sm text-gray-400 hover:text-white">Consulting</NavLink>
-          <NavLink to="/events" className="block text-sm text-gray-400 hover:text-white">Events</NavLink>
-          <NavLink to="/newsroom" className="block text-sm text-gray-400 hover:text-white">Newsroom</NavLink>
-          <NavLink to="/past-ventures" className="block text-sm text-gray-400 hover:text-white">Past Ventures</NavLink>
-        </div>
-
-        {/* Contact */}
-        <div className="space-y-2">
-          <h4 className="font-bold mb-2">Connect</h4>
-          <a href="mailto:nufintech@gmail.com" className="block text-sm text-gray-400 hover:text-white">Email</a>
-          <a href="https://www.instagram.com/neudisrupt" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-400 hover:text-white">Instagram</a>
-          <a href="https://www.linkedin.com/company/neudisrupt/" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-400 hover:text-white">LinkedIn</a>
-          <a href="https://disrupt-fintech.medium.com/" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-400 hover:text-white">Newsletter</a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }

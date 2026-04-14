@@ -1,7 +1,9 @@
 import React from "react";
-import WhoWeAre from "./HomeComponents/WhoWeAre";
 import OpeningScreen from "./HomeComponents/OpeningScreen";
+import WhoWeAre from "./HomeComponents/WhoWeAre";
 import WhatWeDo from "./HomeComponents/WhatWeDo";
+import WhatWeRun from "./HomeComponents/WhatWeRun";
+import Community from "./HomeComponents/Community";
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
       <OpeningScreen />
       <WhoWeAre />
       <WhatWeDo />
+      <WhatWeRun />
+      <Community />
     </>
   );
 }

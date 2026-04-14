@@ -1,111 +1,232 @@
-import React from "react";
-import { CARD } from "./ConsultingConstants";
-import ConsultingBenefitCard from "./ConsultingBenefitCard";
+import React, { useRef } from "react";
+import FadeIn from "../shared/FadeIn";
+
+const clients = [
+  { name: "Enigma Technologies", detail: "$400M valuation, Series C", url: "https://www.enigma.com/" },
+  { name: "JMAN Group", detail: "$140M valuation", url: "https://jmangroup.com/" },
+  { name: "Fishtail", detail: "$35M valuation", url: "https://fishtail.ai/" },
+  { name: "SigIQ", detail: "$10M seed round", url: "https://www.sigiq.ai/" },
+];
+
+const pastWork = [
+  {
+    period: "Fall 2024",
+    title: "Blockchain & AI Integration",
+    summary:
+      "Compliance analysis, secure tokenization for asset transactions, an AI-powered due diligence proposal, and referral-based marketing strategies.",
+  },
+  {
+    period: "Fall 2024",
+    title: "Front-End Development & UX",
+    summary:
+      "User research, behavioral analysis, strategic design improvements, and customer acquisition pipelines via digital marketing.",
+  },
+  {
+    period: "Spring 2023",
+    title: "Digital Insurance Sales Optimization",
+    summary:
+      "Product discovery research among college-age consumers, campus-focused marketing strategy, and cost-effective acquisition channels.",
+  },
+  {
+    period: "Spring 2023",
+    title: "Investor Engagement CRM",
+    summary:
+      "Custom CRM for centralized investor communication with real-time deal tracking and improved engagement visibility.",
+  },
+];
+
+const steps = [
+  {
+    title: "Weekly Syncs",
+    desc: "Regular check-ins with the client to stay aligned on what matters.",
+  },
+  {
+    title: "Mid-Semester Review",
+    desc: "A deeper look at progress and direction halfway through the engagement.",
+  },
+  {
+    title: "Final Deliverables",
+    desc: "Strategic recommendations, working prototypes, or both.",
+  },
+];
 
 export default function WhyWorkWithUs() {
+  const scrollRef = useRef(null);
+
+  const scroll = (dir) => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: dir * 400, behavior: "smooth" });
+  };
+
   return (
-    <div className="text-white">
-      {/* Benefits */}
-      <section className="px-6 py-16 max-w-5xl mx-auto border-b border-gray-800">
-        <h2 className="text-4xl font-faucet text-center mb-4">Why Work With Us?</h2>
-        <p className="text-lg text-gray-300 text-center mb-10">
-          Proven impact. Data-driven execution. Technical innovation. Cost-effective, student-powered consulting for fintech transformation.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {CARD.map((card) => (
-            <ConsultingBenefitCard
-              key={card.key}
-              header={card.header}
-              img={card.img}
-              alt={card.header}
-              description={card.description}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Our Approach */}
-      <section className="px-6 py-16 max-w-5xl mx-auto border-b border-gray-800">
-        <h2 className="text-4xl font-faucet text-center mb-10">Our Approach</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            "Macroeconomic, Competitor, and Market Research",
-            "Hypothesis Testing & Focus Groups",
-            "Regulatory Analysis & Compliance Strategy",
-            "Front-End Development & UX Optimization",
-            "Strategic Pitches for Untapped Markets",
-            "Product Development & Enhancement",
-          ].map((item, index) => (
-            <div key={index} className="border border-gray-800 rounded-lg p-6 flex items-start gap-4">
-              <span className="flex-shrink-0 w-8 h-8 bg-brand-lime rounded-full flex items-center justify-center text-black font-bold">
-                {index + 1}
-              </span>
-              <p className="text-gray-300">{item}</p>
+    <>
+      {/* Client Trust Bar */}
+      <section className="bg-white">
+        <div className="px-6 py-12 max-w-6xl mx-auto">
+          <FadeIn>
+            <p className="text-sm text-text-muted uppercase tracking-wide mb-6">Notable Clients</p>
+            <div className="flex flex-wrap gap-x-12 gap-y-4">
+              {clients.map((c) => (
+                <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="group">
+                  <p className="text-lg font-medium text-text-primary group-hover:underline">{c.name}</p>
+                  <p className="text-sm text-text-muted">{c.detail}</p>
+                </a>
+              ))}
             </div>
-          ))}
+          </FadeIn>
         </div>
       </section>
 
-      {/* Consulting Process */}
-      <section className="px-6 py-16 max-w-3xl mx-auto border-b border-gray-800">
-        <h2 className="text-4xl font-faucet text-center mb-10">Consulting Process</h2>
-        <div className="space-y-4">
-          {[
-            { title: "Weekly Updates", desc: "To ensure alignment and transparency through every phase." },
-            { title: "Mid-Semester Check-ins", desc: "Roughly 2 hours of feedback and reporting for strategy refinement." },
-            { title: "Final Deliverables", desc: "Comprehensive, data-driven recommendations and execution roadmaps." },
-          ].map((step, i) => (
-            <div key={i} className="border border-gray-800 rounded-lg p-6 flex items-start gap-4">
-              <span className="flex-shrink-0 w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold">
-                {i + 1}
-              </span>
+      {/* Two Tracks */}
+      <section>
+        <div className="px-6 py-20 max-w-6xl mx-auto">
+          <FadeIn>
+            <h2 className="text-5xl md:text-7xl font-display font-medium tracking-tight text-text-primary mb-3">
+              Two Tracks
+            </h2>
+            <p className="text-base text-text-muted mb-10">
+              Every engagement pairs both. Same client, different angles.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FadeIn delay={0}>
+              <div className="bg-surface-primary rounded-hero p-8 md:p-10">
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">Strategy</p>
+                <h3 className="text-2xl font-display font-medium text-white mb-5">Consultants</h3>
+                <ul className="space-y-2.5 text-gray-300 text-[15px]">
+                  <li>Go-to-market strategy</li>
+                  <li>Market research and sizing</li>
+                  <li>Competitive analysis</li>
+                  <li>Strategic recommendations and pitch decks</li>
+                </ul>
+              </div>
+            </FadeIn>
+            <FadeIn delay={150}>
+              <div className="bg-surface-primary rounded-hero p-8 md:p-10">
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">Development</p>
+                <h3 className="text-2xl font-display font-medium text-white mb-5">Developers</h3>
+                <ul className="space-y-2.5 text-gray-300 text-[15px]">
+                  <li>Software prototypes and MVPs</li>
+                  <li>API development and integration</li>
+                  <li>Full-stack proof of concepts</li>
+                  <li>Bug identification and technical audits</li>
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works — Horizontal Stepper */}
+      <section className="bg-white">
+        <div className="px-6 py-20 max-w-6xl mx-auto">
+          <FadeIn>
+            <h2 className="text-5xl md:text-7xl font-display font-medium tracking-tight text-text-primary mb-3">
+              How It Works
+            </h2>
+            <p className="text-base text-text-muted mb-14">
+              One semester, three checkpoints.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 relative">
+            <div className="hidden md:block absolute top-6 left-[16.67%] right-[16.67%] h-px bg-gray-200" />
+            {steps.map((step, i) => (
+              <FadeIn key={i} delay={i * 150}>
+                <div className="text-center relative">
+                  <div className="w-12 h-12 rounded-full bg-surface-primary text-white flex items-center justify-center mx-auto text-sm font-medium mb-5 relative z-10">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <h3 className="text-lg font-medium text-text-primary mb-2">{step.title}</h3>
+                  <p className="text-sm text-text-secondary max-w-xs mx-auto">{step.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Past Work — Carousel */}
+      <section>
+        <div className="py-20 max-w-6xl mx-auto">
+          <FadeIn>
+            <div className="flex items-end justify-between px-6 mb-8">
               <div>
-                <p className="font-bold mb-1">{step.title}</p>
-                <p className="text-sm text-gray-300">{step.desc}</p>
+                <h2 className="text-5xl md:text-7xl font-display font-medium tracking-tight text-text-primary mb-3">
+                  Past Work
+                </h2>
+                <p className="text-base text-text-muted">
+                  What we've delivered for real clients.
+                </p>
+              </div>
+              <div className="hidden sm:flex gap-2">
+                <button
+                  onClick={() => scroll(-1)}
+                  className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-text-secondary hover:bg-gray-100 transition"
+                  aria-label="Scroll left"
+                >
+                  &larr;
+                </button>
+                <button
+                  onClick={() => scroll(1)}
+                  className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-text-secondary hover:bg-gray-100 transition"
+                  aria-label="Scroll right"
+                >
+                  &rarr;
+                </button>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </FadeIn>
 
-      {/* Client Impact */}
-      <section className="px-6 py-16 max-w-5xl mx-auto border-b border-gray-800">
-        <h2 className="text-4xl font-faucet text-center mb-10">Client Impact</h2>
-        <div className="space-y-6">
-          {[
-            { period: "Spring 2023", title: "Optimizing Digital Insurance Sales", points: ["Research on financial product discovery among young consumers", "Marketing strategy refinement for college campuses", "Cost-effective acquisition methods identified", "Product positioning aligned with student adoption"] },
-            { period: "Spring 2023", title: "Enhancing Investor Engagement via CRM", points: ["Custom CRM built for centralized investor communication", "Real-time deal tracking features added", "Boosted investment engagement through better visibility"] },
-            { period: "Fall 2024", title: "Blockchain & AI Integration", points: ["Compliance and legal analysis for fintech firms", "Exploration of secure tokenization for asset transactions", "AI-powered due diligence proposal", "Referral-based marketing strategies developed"] },
-            { period: "Fall 2024", title: "Front-End Development & UX Optimization", points: ["User research and behavioral analysis", "Strategic design improvements for UX", "Customer acquisition via digital marketing campaigns"] },
-          ].map((item, idx) => (
-            <div key={idx} className="border border-gray-800 rounded-lg p-6">
-              <p className="text-sm text-brand-lime uppercase tracking-wide font-bold">{item.period}</p>
-              <h3 className="text-2xl font-bold mt-1 mb-3">{item.title}</h3>
-              <ul className="list-disc pl-5 space-y-1 text-gray-300">
-                {item.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
+          <FadeIn delay={150}>
+            <div
+              ref={scrollRef}
+              className="flex gap-5 overflow-x-auto px-6 pb-4 snap-x snap-mandatory"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {pastWork.map((item) => (
+                <div
+                  key={item.title}
+                  className="flex-shrink-0 w-[280px] sm:w-[360px] bg-white border border-gray-200 rounded-card p-6 snap-start"
+                >
+                  <p className="text-sm text-text-muted uppercase tracking-wide font-medium mb-3">
+                    {item.period}
+                  </p>
+                  <h3 className="text-xl font-medium text-text-primary mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">
+                    {item.summary}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </FadeIn>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="px-6 py-16 max-w-3xl mx-auto text-center border-t border-gray-800">
-        <h2 className="text-4xl font-faucet mb-6">
-          Join Us in Shaping <span className="text-brand-blue">Fintech's</span> Future
-        </h2>
-        <p className="text-gray-300 mb-6">
-          We are committed to helping fintech companies refine their strategies, enhance user experiences, and navigate complex regulatory environments.
-        </p>
-        <p>
-          Contact us at{" "}
-          <a href="mailto:elevatedisruptneu@gmail.com" className="text-brand-lime hover:underline">
-            elevatedisruptneu@gmail.com
-          </a>
-        </p>
+      {/* Apply CTA */}
+      <section className="bg-white">
+        <FadeIn>
+          <div className="px-6 py-16 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-2xl font-display font-medium text-text-primary mb-1">
+                Apply to Consulting
+              </h3>
+              <p className="text-text-secondary">
+                Applications open at the start of each semester.
+              </p>
+            </div>
+            <a
+              href="#"
+              className="px-8 py-3 bg-brand-lime text-surface-primary font-medium rounded-full text-sm hover:brightness-110 transition flex-shrink-0"
+            >
+              Apply
+            </a>
+          </div>
+        </FadeIn>
       </section>
-    </div>
+    </>
   );
 }

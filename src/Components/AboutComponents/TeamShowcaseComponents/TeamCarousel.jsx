@@ -10,7 +10,7 @@ import TeamShowcaseCard from "./TeamShowcaseCard";
 export default function TeamCarousel() {
   return (
     <section className="px-6 py-16 max-w-5xl mx-auto">
-      <h2 className="text-3xl md:text-5xl font-faucet text-white mb-10">
+      <h2 className="text-3xl md:text-5xl font-display font-medium text-text-primary mb-10">
         Disrupt is Collaborative, Inclusive, & Agile
       </h2>
       <Swiper

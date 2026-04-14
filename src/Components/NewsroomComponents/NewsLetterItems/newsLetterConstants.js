@@ -1,9 +1,9 @@
-import consultingImage from "../../../img/homeConsultingProgram.svg";
-import eventsImage from "../../../img/homeEventsProgram.svg";
-import unknown from "../../../img/eboard_photos/unknown.png";
-import deepseekOpenAI from "../../../img/DeepseekOpenAI.PNG";
-import evoFintech from "../../../img/evoFintech.png";
-import womenInTech from "../../../img/womenInTech.png";
+import consultingImage from "../../../img/homeConsultingProgram.webp";
+import eventsImage from "../../../img/homeEventsProgram.webp";
+import unknown from "../../../img/eboard_photos/unknown.webp";
+import deepseekOpenAI from "../../../img/DeepseekOpenAI.webp";
+import evoFintech from "../../../img/evoFintech.webp";
+import womenInTech from "../../../img/womenInTech.webp";
 export const newsletter = [
   {
     name: "Navigating the Waves of Change: DeepSeek vs. OpenAI",

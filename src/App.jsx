@@ -3,9 +3,10 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Ventures from "./Components/Ventures";
 import Consulting from "./Components/Consulting";
-import PastVentures from "./Components/PastVentures";
+import Quant from "./Components/Quant";
+import Research from "./Components/Research";
 import Events from "./Components/Events";
-import Newsroom from "./Components/Newsroom";
+import ImageGallery from "./Components/ImageGallery";
 import Layout from "./components/Layout";
 import * as React from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
@@ -13,20 +14,23 @@ import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
-    <div className="w-full bg-black">
+    <div className="w-full bg-surface-primary">
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/consulting" element={<Consulting />} />
+            <Route path="/quant" element={<Quant />} />
+            <Route path="/research" element={<Research />} />
             <Route path="/finnovate" element={<Ventures />} />
-            <Route path="/past-ventures" element={<PastVentures />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/newsroom" element={<Newsroom />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/images" element={<ImageGallery />} />
           </Route>
-          <Route path="/PastVentures" element={<Navigate to="/past-ventures" replace />} />
+          <Route path="/newsroom" element={<Navigate to="/research" replace />} />
+          <Route path="/past-ventures" element={<Navigate to="/finnovate" replace />} />
+          <Route path="/PastVentures" element={<Navigate to="/finnovate" replace />} />
         </Routes>
       </BrowserRouter>
     </div>

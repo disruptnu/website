@@ -1,56 +1,86 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { CARD } from "./PastVenturesConstants";
 
+const uniqueYears = [...new Set(CARD.map((card) => card.year))];
+
+function getDeckUrl(card) {
+  if (card.type === "figma") return card.figmaDeckLink;
+  if (card.type === "googleSlides") return card.googleSlidesFullLink || card.googleSlidesDeckLink;
+  if (card.type === "canva") return card.canvaFullLink;
+  return card.pdfFullLink || card.pdfDeckLink;
+}
+
 export default function PastVenturesGallery() {
-  const [openYear, setOpenYear] = useState(null);
-  const toggleYear = (year) => setOpenYear(openYear === year ? null : year);
-  const uniqueYears = [...new Set(CARD.map((card) => card.year))];
+  const scrollRef = useRef(null);
+
+  const scroll = (dir) => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: dir * 360, behavior: "smooth" });
+  };
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      {uniqueYears.map((year, index) => {
-        const projects = CARD.filter((card) => card.year === year);
-        return (
-          <div key={index} className="mb-4">
-            <button
-              onClick={() => toggleYear(year)}
-              className="w-full flex justify-between items-center border border-gray-800 rounded-lg px-6 py-4 text-white text-left hover:bg-gray-900"
-            >
-              <div>
-                <span className="text-xl font-bold">{year}</span>
-                <p className="text-sm text-gray-400 mt-1">
-                  {projects.map((p) => p.header).join(" / ")}
-                </p>
-              </div>
-              <span>{openYear === year ? "\u25B2" : "\u25BC"}</span>
-            </button>
+    <div>
+      <div className="hidden sm:flex justify-end gap-2 mb-6">
+        <button
+          onClick={() => scroll(-1)}
+          className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-text-secondary hover:bg-gray-100 transition"
+          aria-label="Scroll left"
+        >
+          &larr;
+        </button>
+        <button
+          onClick={() => scroll(1)}
+          className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-text-secondary hover:bg-gray-100 transition"
+          aria-label="Scroll right"
+        >
+          &rarr;
+        </button>
+      </div>
 
-            {openYear === year && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 p-4">
-                {projects.map((card) => (
-                  <div key={card.key} className="border border-gray-800 rounded-lg p-4 text-white">
-                    <div className="w-full h-48 overflow-hidden rounded mb-3 bg-gray-900">
-                      <iframe
-                        src={
-                          card.type === "figma" ? card.figmaEmbedLink
-                            : card.type === "googleSlides" ? card.googleSlidesEmbedLink
-                            : card.type === "canva" ? card.canvaEmbedLink
-                            : card.pdfEmbedLink
-                        }
-                        className="w-full h-full border-none"
-                        allowFullScreen
-                        title={card.header}
-                      />
+      <div
+        ref={scrollRef}
+        className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      >
+        {uniqueYears.map((year) => {
+          const projects = CARD.filter((c) => c.year === year);
+          return (
+            <div
+              key={year}
+              className="flex-shrink-0 w-[280px] sm:w-[320px] border border-gray-200 rounded-card p-6 snap-start"
+            >
+              <p className="text-sm font-medium text-text-primary mb-5">{year}</p>
+              <div className="space-y-4">
+                {projects.map((card) => {
+                  const place = card.header.match(/^(1st|2nd|3rd)/)?.[0];
+                  const name = card.header.replace(/^(1st|2nd|3rd):\s*/, "");
+                  const url = getDeckUrl(card);
+                  return (
+                    <div key={card.key} className="flex items-start gap-3">
+                      <span className="text-xs text-text-muted font-medium mt-1 w-5 flex-shrink-0">{place}</span>
+                      <div>
+                        {url ? (
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[15px] font-medium text-text-primary hover:underline"
+                          >
+                            {name}
+                          </a>
+                        ) : (
+                          <p className="text-[15px] font-medium text-text-primary">{name}</p>
+                        )}
+                        <p className="text-xs text-text-muted mt-0.5">{card.description}</p>
+                      </div>
                     </div>
-                    <h3 className="font-bold mb-1">{card.header}</h3>
-                    <p className="text-sm text-gray-400">{card.description}</p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
-            )}
-          </div>
-        );
-      })}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
-import testImage1 from "../img/testImage1.png";
-import testhighqual from "../img/high-qual-test-image.jpg";
+import testImage1 from "../img/testImage1.webp";
+import testhighqual from "../img/high-qual-test-image.webp";
 
 // ALl of the static text content for the website (headers, info, etc.) is stored in the Content folder.
 const content = {
