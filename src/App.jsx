@@ -7,7 +7,7 @@ import Quant from "./Components/Quant";
 import Research from "./Components/Research";
 import Events from "./Components/Events";
 import ImageGallery from "./Components/ImageGallery";
-import Layout from "./components/Layout";
+import Layout from "./Components/Layout";
 import * as React from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
