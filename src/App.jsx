@@ -11,11 +11,13 @@ import Apply from "./Components/Apply";
 import Layout from "./Components/Layout";
 import * as React from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <div className="w-full bg-surface-primary">
+      <Analytics />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
