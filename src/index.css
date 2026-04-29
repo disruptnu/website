@@ -2,41 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-html::-webkit-scrollbar, body::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Hide scrollbar for IE, Edge, and Firefox */
-html, body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@layer components {
+  .heading-display {
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .section-label {
+    @apply text-xs font-bold font-sans;
+  }
+
+  .hover-pause:hover {
+    animation-play-state: paused;
+  }
+
+  .group:hover .group-hover-pause {
+    animation-play-state: paused;
+  }
+
+  .scroll-right {
+    animation: scroll-right 35s linear infinite;
+  }
+
+  @keyframes scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
 }
 
-@font-face {
-  font-family: "Faucet";
-  src: url("../public/fonts/A2Z-Faucet-Ultra.otf");
+/* Hero on-load animation */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@font-face {
-  font-family: "Usual-Light";
-  src: url("../public/fonts/Usual-Light.otf");
+.hero-animate {
+  opacity: 0;
+  animation: hero-fade-up 0.5s ease-out forwards;
 }
 
-@font-face {
-  font-family: "Usual-Regular";
-  src: url("../public/fonts/Usual-Regular.otf");
+.hero-animate-delay-1 { animation-delay: 0.05s; }
+.hero-animate-delay-2 { animation-delay: 0.15s; }
+.hero-animate-delay-3 { animation-delay: 0.3s; }
+
+/* Fade-in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

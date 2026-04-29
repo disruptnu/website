@@ -1,93 +1,63 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      width: {
-        120: "450px",
-        130: "500px",
+      colors: {
+        brand: {
+          lime: "#b5f727",
+          blue: "#009AFF",
+        },
+        surface: {
+          primary: "#151515",
+          elevated: "#1e1e1e",
+          border: "#2e2e2e",
+          light: "#f8f8f8",
+          white: "#ffffff",
+        },
+        text: {
+          primary: "#151515",
+          secondary: "#4a4a4a",
+          muted: "#6b6b6b",
+        },
       },
 
       fontFamily: {
-        Faucet: ["Faucet", "sans-serif"],
-        UsualLight: ["UsualLight", "sans-serif"],
-        UsualRegular: ["UsualRegular", "sans-serif"],
-      },
-
-      fontSize: {
-        120: "120px",
-        56: "56px",
-        42: "42px",
-        32: "32px",
-        24: "24px",
-        16: "16px",
-        12: "12px",
-      },
-
-      lineHeight: {
-        72: "72px",
-        56: "56px",
-        32: "32px",
-        24: "24px",
-        16: "16px",
-      },
-
-      colors: {
-        navigationMenu: "#009AFF",
-        transparent: "transparent",
-        current: "currentColor",
-
-        white: "#ffffff",
-
-        primary: {
-          500: "#13A9B2",
-          400: "#42BAC1",
-          300: "#71CBD1",
-          200: "#A1DDE0",
-          100: "#B8E5E8",
-          50: "#E7F6F7",
-        },
-
-        neutral: {
-          500: "#053437",
-          400: "#375D5F",
-          300: "#5E7A7B",
-          200: "#9BAEAF",
-          100: "#B4C2C3",
-          50: "#E6EBEB",
-        },
-
-        accent: {
-          500: "#FFD771",
-          400: "#FFDF8D",
-          300: "#FFE7AA",
-          200: "#FFEFC6",
-          100: "#FFF3D4",
-          50: "#FFFBF1",
-        },
+        display: ['"DM Sans"', "sans-serif"],
+        sans: ['"DM Sans"', "sans-serif"],
       },
 
       screens: {
         mobile: "320px",
-
         tablet: "768px",
-
         laptop: "1024px",
-
         desktop: "1440px",
+      },
 
-        desktopMax: "1920px",
+      borderRadius: {
+        hero: "1.5rem",
+        card: "0.75rem",
+        image: "1rem",
       },
 
       brightness: {
         25: ".25",
       },
 
-      backgroundImage: {
-        "hero-bg": "url('../src/img/hero-bg.svg')",
-        "faq-bg": "url('../src/img/faq-bg.svg')",
-        "contact-bg": "url('../src/img/contact-us.svg')",
-        "features-bg": "url('../src/img/features-bg.svg')",
+      keyframes: {
+        "scroll-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "scroll-right": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
+
+      animation: {
+        "scroll-left": "scroll-left 30s linear infinite",
+        "scroll-right": "scroll-right 35s linear infinite",
       },
     },
   },

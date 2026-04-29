@@ -1,4 +1,4 @@
-import content from "../../Content/content.js";
+import content from "../../Content/content";
 import consultingImg1 from "../../img/consultingImg1.svg";
 import consultingImg2 from "../../img/consultingImg2.svg";
 import consultingImg3 from "../../img/consultingImg3.svg";

@@ -1,106 +1,74 @@
-# About
+# Disrupt Website
 
-The website for Disrupt, a FinTech-based Northeastern University student organization. The website is built using React and is hosted on Netlify. The website is currently live at disrupt.netlify.app
+The website for [Disrupt](https://disruptnu.com), Northeastern University's largest undergraduate fintech club.
 
-# Contributors
+## Stack
 
-- Preet Singh (Project Lead)
-- Brian Kapusta (Tech Lead) bkapusta2@gmail.com
-- Helen Miao (Developer) miao.he@northeastern.edu
+- **Framework:** React 18 + React Router
+- **Build tool:** Vite
+- **Styling:** Tailwind CSS
+- **Hosting:** Vercel
+- **Image optimization:** sharp, vite-plugin-image-optimizer, svgo
 
-# Getting Started with Create React App
+## Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```bash
+npm install
+npm run dev
+```
 
-## Available Scripts
+Opens at [http://localhost:3000](http://localhost:3000).
 
-In the project directory, you can run:
+## Build
 
-### `npm start`
+```bash
+npm run build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-_(If an instance is already open, it may suggest a different port [i.e. http://localhost:3001])_
+Outputs to `dist/`. The Vite image optimizer runs automatically during build.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deploying
 
-### `npm test`
+The site is hosted on Vercel under the project `disrupt-website`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npx vercel deploy --prod
+```
 
-### `npm run build`
+Production URL: https://disruptnu.com
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+  Components/
+    HomeComponents/       # Hero, WhoWeAre, WhatWeDo, Events, Community
+    ConsultingComponents/ # Consulting page sections
+    QuantComponents/      # Quant page sections
+    ResearchComponents/   # Research page sections
+    VenturesComponents/   # Finnovate page sections
+    EventsComponents/     # Events page sections
+    AboutComponents/      # About, Team, Leadership
+    shared/               # Footer, FadeIn
+  Content/                # Static text content
+  img/                    # Image assets (WebP)
+public/
+  logos/                  # Brand logos (PNG)
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Key Files
 
-### `npm run eject`
+- `context.md` - Brand voice, content guide, page-by-page requirements
+- `DESIGN-SYSTEM.md` - Colors, typography, spacing, component patterns
+- `TODO.md` - Outstanding tasks and placeholder content
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributors
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Arsh Jafri
+- Preet Singh
+- Brian Kapusta
+- Helen Miao
+- Connor Tessaro
+- Harsh Singh
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-# Basic rundown of local usage
-
-- npm start
-
-  - Starts the development server.
-
-- npm run build
-
-  - Bundles the app into static files for production.
-
-- npm test
-
-  - Starts the test runner.
-
-- npm run eject
-  - Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
-
-## To work locally:
-
-- run 'npm install' within the directory
-
-- run 'npm install react-router-dom' within the directory
-
-- run 'npm start'
+Last updated April 14, 2026 by Arsh Jafri.

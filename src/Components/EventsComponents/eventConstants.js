@@ -1,4 +1,4 @@
-import testImage1 from "../../img/testImage1.png";
+import testImage1 from "../../img/testImage1.webp";
 
 export const EVENT_DATA = [
   {
